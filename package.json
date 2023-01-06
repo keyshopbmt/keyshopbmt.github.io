@@ -53,6 +53,8 @@
     ]
   },
   "devDependencies": {
+    "@iconify/icons-ion": "^1.2.6",
+    "@iconify/react": "^4.0.1",
     "babel-plugin-module-resolver": "^4.1.0"
   }
 }
