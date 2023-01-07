@@ -1,0 +1,193 @@
+.iconbox3 .iconbox_wrapper .iconbox_content .read_more a span {
+    position: relative;
+    z-index: 2;
+}
+
+.iconbox3.second:after {
+    content: url("/public/assets/services/shadow_icon3.png");
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content .read_more a {
+    position: relative;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-left: 25px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+a {
+    color: #ff3b3e;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content .read_more {
+    margin-top: 30px;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content p {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-bottom: 0px;
+    font-family: "Mulish", sans-serif;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content h3 a {
+    color: #ff3b3e;
+}
+
+a {
+    color: #ff3b3e;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    outline: none;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content h3 {
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #ff3b3e;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_content {
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_icon .second_icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_icon img {
+    width: auto;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_icon .first_icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease;
+}
+
+.iconbox3 .iconbox_wrapper .iconbox_image {
+    position: relative;
+    margin-right: 40px;
+    min-width: 70px;
+}
+
+.iconbox3 .iconbox_wrapper {
+    display: flex;
+    padding: 60px;
+}
+
+.iconbox3.first {
+    background: #13131c;
+}
+
+@media screen and (min-width: 992px) {
+    .iconbox3 {
+        min-height: 360px;
+    }
+}
+
+.iconbox3 {
+    position: relative;
+    background: #13131c;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.pd_0 {
+    padding: 0px;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.services {
+    background: #fff7f7;
+}

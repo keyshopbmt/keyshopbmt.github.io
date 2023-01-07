@@ -86,37 +86,7 @@ export default function Navbar() {
                   Sản Phẩm
                 </Link>
                 <ul className="dropdown-menu">
-                <li>
-                    <a className="dropdown-item"  href="./following/civicr">
-                      Honda Civic Type R
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item"  href="./following/accord">
-                      Honda Accrod
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="./following/civic">
-                      Honda Civic
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="./following/crv">
-                      Honda Crv
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a className="dropdown-item" href="./following/hrv">
-                      Honda Hrv
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="./following/city">
-                      Honda City
-                    </a>
-                  </li>
+              
                 </ul>
               </li>
               <li className="nav-item dropdown">
@@ -132,25 +102,20 @@ export default function Navbar() {
                 <ul className="dropdown-menu">
                 <li>
                     <a className="dropdown-item"  href="./">
-                      Dịch vụ 1
+                     Sửa Khóa Và Làm Chìa
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item"  href="./">
-                    Dịch vụ 1
+                    Làm Remote Cửa Cuốn
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="./">
-                    Dịch vụ 1
+                    Chìa Khóa Ôtô Và Xe Máy
                     </a>
                   </li>
-                  <li>
-                    <a className="dropdown-item" href="./">
-                    Dịch vụ 1
-                    </a>
-                  </li>
-                  
+                 
                 
                 </ul>
               </li>

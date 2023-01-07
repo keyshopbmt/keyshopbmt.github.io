@@ -1,29 +1,35 @@
 import React from "react";
-import './home.css';
+import "./home.css";
 import Navbar from "../Navbar";
+import Services from "./Services";
 
 export default function Home() {
   return (
     <div className="home">
-    <Navbar/>
-   
+      <Navbar />
 
-            <div className="card text-bg-dark" id="thongdiep">
-                <img src="../assets/slider_bg1.jpg" className="card-img" alt="..." />
-                <div className="card-img-overlay">
-                    <div className="text-civic">
-                        <h3 className="card-title">DỊCH VỤ KHẨN CẤP: 0942975959</h3>
-                        <h2 className="text-card">DỊCH VỤ LUÔN SẴN SÀNG 24/7</h2>
+      <div className="card text-bg-dark" id="backgroup">
+        <img src="../assets/slider_bg1.jpg" className="card-img" alt="..." />
+        <div className="card-img-overlay">
+            <img src="./assets/1.png" alt="" className="img-1" />
+          <div className="card-textkey">
+            <h3 className="card-title">
+              DỊCH VỤ KHẨN CẤP: <span>0942975959</span>
+            </h3>
+            <h2 className="text-card">
+              DỊCH VỤ
+              <br /> <span>LUÔN SẴN SÀNG 24/7</span>
+            </h2>
 
-                        <p className="card-text">
-                            Tách mình khỏi những chuẩn mực cố định, Honda Civic chuyển mình để bứt phá trong từng đường
-                            nét <br />
-                            thiết kế và tính năng, kiến tạo nên những thành công mới cho chủ sở hữu
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-   </div>
+            <p>
+              Chúng tôi cung cấp các dịch vụ linh hoạt <br /> để đáp ứng nhu cầu
+              của khách hàng
+            </p>
+          </div>
+        </div>
+      </div>
+      <Services/>
+						
+    </div>
   );
 }
