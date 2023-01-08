@@ -1,13 +1,21 @@
-.iconbox3 .iconbox_wrapper .iconbox_content .read_more a span {
-    position: relative;
-    z-index: 2;
+a {
+    color: #007bff;
+
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
 }
 
-.iconbox3.second:after {
+.iconbox3 .iconbox_wrapper .iconbox_content .read_more a span {
+    position: relative;
+    z-index: 5;
+}
+
+
+.iconbox3.first:after {
     content: url("/public/assets/services/shadow_icon3.png");
     position: absolute;
-    right: 15px;
-    bottom: -15px;
+    right: -15px;
+    bottom: -40px;
 }
 
 .iconbox3 .iconbox_wrapper .iconbox_content .read_more a {
@@ -29,12 +37,7 @@ a {
     outline: none;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
+
 
 .iconbox3 .iconbox_wrapper .iconbox_content .read_more {
     margin-top: 30px;
@@ -95,6 +98,13 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    z-index: 5;
+    
+}
+
+.iconbox_content span{
+    color: red;
+    
 }
 
 .iconbox3 .iconbox_wrapper .iconbox_icon .second_icon {
@@ -131,18 +141,13 @@ img {
 
 .iconbox3 .iconbox_wrapper {
     display: flex;
-    padding: 60px;
+    padding: 60px 80px;
 }
 
 .iconbox3.first {
     background: #13131c;
 }
 
-@media screen and (min-width: 992px) {
-    .iconbox3 {
-        min-height: 360px;
-    }
-}
 
 .iconbox3 {
     position: relative;
@@ -156,29 +161,8 @@ img {
     padding: 0px;
 }
 
-@media (min-width: 992px) {
-    .col-lg-4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
 
-@media (min-width: 768px) {
 
-    
-    .col-md-6 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,7 +171,100 @@ img {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+    text-decoration-line:none;
+    text-align: left;
 }
+
+.iconbox3.second:after {
+    content: url("/public/assets/services/shadow_icon1.png");
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+}
+.iconbox3 .iconbox_wrapper .iconbox_image {
+    position: relative;
+    margin-right: 40px;
+    min-width: 70px;
+}
+.iconbox3 .iconbox_wrapper {
+    display: flex;
+    padding: 60px;
+    
+}
+.iconbox3.second {
+    background: #1e1e2a;
+}
+
+
+.iconbox3 {
+    position: relative;
+    background: #13131c;
+    margin: 0px 0px 0px 0px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+.pd_0 {
+    padding: 0px;
+}
+.iconbox3.third:after {
+    content: url("/public/assets/services/shadow_icon2.png");
+    position: absolute;
+    right: 15px;
+    bottom: -30px;
+}
+
 .services {
     background: #fff7f7;
 }
+
+@media screen and (min-width: 992px) {
+    .iconbox3 {
+        min-height: 360px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media (min-width: 768px) {
+
+    
+    .col-md-6 {
+       
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 992px){
+.col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+}
+@media (min-width: 768px){
+.col-md-6 {
+    
+-webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+@media screen and (min-width: 992px){
+    .iconbox3 {
+        min-height: 360px;
+    }
+} 

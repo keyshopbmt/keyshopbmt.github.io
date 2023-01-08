@@ -70,11 +70,10 @@ dl, ol, ul {
     position: relative;
 }
 
-img {
-    max-width: 100%;
-}
+
 
 img {
+    max-width: 100%;
     vertical-align: middle;
     border-style: none;
 }
