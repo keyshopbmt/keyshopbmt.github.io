@@ -2,6 +2,8 @@ import React from "react";
 import "./home.css";
 import Navbar from "../Navbar";
 import Services from "./Services";
+import History from "./History";
+import Common from "./Common/Common";
 
 export default function Home() {
   return (
@@ -29,7 +31,8 @@ export default function Home() {
         </div>
       </div>
       <Services/>
-						
+			<History/>
+      <Common/>		
     </div>
   );
 }

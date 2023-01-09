@@ -17,8 +17,8 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Household Security Device Installation</a></h3>
-									<p>We offering you comprehensive services to the industrial, commercial, residential &amp; automotive sectors. </p>
+									<h3><a href="/">Lắp Đặt Thiết Bị An Ninh Hộ Gia Đình</a></h3>
+									<p>Chúng tôi cung cấp  các dịch vụ toàn diện cho công trình, doanh nghiệp, khu dân cư.  </p>
 									<div className="read_more">
 										<a href="/"><span>CHI TIẾT</span></a>
 									</div>
@@ -36,8 +36,8 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Automobile Door lock Opening</a></h3>
-									<p>We will provide you and your company with professional, prompt, efficient and competitive service.</p>
+									<h3><a href="/">Mở Khóa Cửa Ôtô và Xe Máy</a></h3>
+									<p>Chúng tôi sẽ cung cấp cho bạn và công ty của bạn dịch vụ chuyên nghiệp, nhanh chóng, hiệu quả và cạnh tranh.</p>
 									<div className="read_more">
 										<a href="/"><span>CHI TIẾT</span></a>
 									</div>
@@ -55,8 +55,8 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Openning Locked House Door</a></h3>
-									<p>Our team include the trained locksmiths experienced architectural hardware specialists &amp; lock experts.  </p>
+									<h3><a href="/">Mở Cửa Nhà Bị Khóa</a></h3>
+									<p>Nhóm của chúng tôi bao gồm các thợ khóa được đào tạo có kinh nghiệm lâu năm & chuyên gia khóa.</p>
 									<div className="read_more">
 										<a href="/"><span>CHI TIẾT</span></a>
 									</div>
