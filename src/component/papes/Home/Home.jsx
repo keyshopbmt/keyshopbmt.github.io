@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import Services from "./Services";
 import History from "./History";
 import Common from "./Common/Common";
+import Testimonial from "./Testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <Services/>
 			<History/>
       <Common/>		
+      <Testimonial/>
     </div>
   );
 }
