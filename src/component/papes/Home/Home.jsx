@@ -5,6 +5,7 @@ import Services from "./Services";
 import History from "./History";
 import Common from "./Common/Common";
 import Testimonial from "./Testimonial/Testimonial";
+import Footer from "../Footer";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
 			<History/>
       <Common/>		
       <Testimonial/>
+      <Footer/>
     </div>
   );
 }
