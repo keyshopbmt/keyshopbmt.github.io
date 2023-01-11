@@ -12,13 +12,13 @@ export default function Navbar() {
             <div className="header_social">
               <ul className="top_social">
                 <li className="facebook">
-                  <a href="#">
+                  <a href="https://www.facebook.com/tienphatexpertkeyworld">
                     <MDBIcon color="white" icon="fa-brands fa-facebook" />
                   </a>
                 </li>
 
                 <li className="mail">
-                  <a href="#">
+                  <a href="/">
                     <MDBIcon color="white" icon="fa-regular fa-envelope " />
                   </a>
                 </li>
@@ -28,7 +28,7 @@ export default function Navbar() {
               <div className="schedule">
                 <img src="assets/clock.png" alt="schedule" />{" "}
                 <div>
-                  Monday - Sunday <span>(7.00am-9.00pm)</span>
+                  Thứ 2 - Chủ Nhật <span>(7.00am-9.00pm)</span>
                 </div>
               </div>
               <div className="phone">
@@ -93,7 +93,7 @@ export default function Navbar() {
                 <Link
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
-                  to="./following"
+                  to="./services"
                   role="button"
                   aria-expanded="false"
                 >

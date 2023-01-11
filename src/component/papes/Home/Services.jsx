@@ -17,10 +17,10 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Lắp Đặt Thiết Bị An Ninh Hộ Gia Đình</a></h3>
+									<h3><a href="/" style={{ textDecoration: 'none'}}>Lắp Đặt Thiết Bị An Ninh Hộ Gia Đình</a></h3>
 									<p>Chúng tôi cung cấp  các dịch vụ toàn diện cho công trình, doanh nghiệp, khu dân cư.  </p>
 									<div className="read_more">
-										<a href="/"><span>CHI TIẾT</span></a>
+										<a href="/" style={{ textDecoration: 'none', color:'#dc3545' }}><span>CHI TIẾT</span></a>
 									</div>
 								</div>
 							</div>
@@ -36,10 +36,10 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Mở Khóa Cửa Ôtô và Xe Máy</a></h3>
+									<h3><a href="/" style={{ textDecoration: 'none' }}>Mở Khóa Cửa Ôtô và Xe Máy</a></h3>
 									<p>Chúng tôi sẽ cung cấp cho bạn và công ty của bạn dịch vụ chuyên nghiệp, nhanh chóng, hiệu quả và cạnh tranh.</p>
 									<div className="read_more">
-										<a href="/"><span>CHI TIẾT</span></a>
+										<a href="/" style={{ textDecoration: 'none', color:'#dc3545' }}><span>CHI TIẾT</span></a>
 									</div>
 								</div>
 							</div>
@@ -55,10 +55,10 @@ export default function Services() {
 									</div>
 								</div>
 								<div className="iconbox_content">
-									<h3><a href="/">Mở Cửa Nhà Bị Khóa</a></h3>
-									<p>Nhóm của chúng tôi bao gồm các thợ khóa được đào tạo có kinh nghiệm lâu năm & chuyên gia khóa.</p>
+									<h3><a href="/" style={{ textDecoration: 'none' }}>Mở Cửa Nhà Bị Khóa</a></h3>
+									<p>Nhóm của chúng tôi bao gồm các thợ khóa được đào tạo có kinh nghiệm lâu năm và chuyên gia khóa.</p>
 									<div className="read_more">
-										<a href="/"><span>CHI TIẾT</span></a>
+										<a href="/" style={{ textDecoration: 'none', color:'#dc3545' }}><span>CHI TIẾT</span></a>
 									</div>
 								</div>
 							</div>

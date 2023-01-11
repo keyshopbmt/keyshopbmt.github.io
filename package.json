@@ -10,6 +10,7 @@
     "better-react-carousel": "^1.1.1",
     "bootstrap": "^5.2.3",
     "font-awesome": "^4.7.0",
+    "google-map-react": "^2.2.0",
     "gsap-trial": "^3.11.4",
     "loaders.css": "^0.1.2",
     "mdb-react-ui-kit": "^4.1.0",
