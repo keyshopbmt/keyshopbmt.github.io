@@ -28,7 +28,7 @@ export default function Navbar() {
               <div className="schedule">
                 <img src="assets/clock.png" alt="schedule" />{" "}
                 <div>
-                  Thứ 2 - Chủ Nhật <span>(7.00am-9.00pm)</span>
+                  Thứ 2 - Chủ Nhật <span>(7.00am-6.00pm)</span>
                 </div>
               </div>
               <div className="phone">

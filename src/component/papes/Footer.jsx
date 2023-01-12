@@ -63,7 +63,7 @@ export default function Footer() {
                     <span className="title_line"></span>
                   </h4>
                   <div className="contact_info">
-                    <h4>trthang1990@gmail.com</h4>
+                    <h4>keyshopbmt@gmail.com</h4>
                     <h4>
                       Số 10 Nguyễn Chí Thanh, Phường Tân An
                       <br /> Tp Buôn Ma Thuột, Đắk Lắk, Việt Nam
@@ -71,7 +71,7 @@ export default function Footer() {
                     <div className="phone">
                       <img src="assets/phone2.png" alt="phone" />
                       <div>
-                        <span>Thứ 2- CN (7am - 9pm)</span>
+                        <span>Thứ 2- CN (7am - 6pm)</span>
                         <br />
                         0942975959
                       </div>
