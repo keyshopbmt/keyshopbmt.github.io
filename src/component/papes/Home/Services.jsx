@@ -7,7 +7,7 @@ export default function Services() {
         <div className="services">
 				<div className="row g-0 ">
 					<div className="col-lg-4 col-md-6 pd_0">
-						<div className="iconbox3 first">
+						<div className="iconbox3 first h-100">
 							<div className="iconbox_wrapper">
 								<div className="iconbox_image">
 									<div className="iconbox_icon">
@@ -27,7 +27,7 @@ export default function Services() {
 						</div>
 					</div>
 					<div className="col-lg-4 col-md-6 pd_0">
-						<div className="iconbox3 second">
+						<div className="iconbox3 second h-100">
 							<div className="iconbox_wrapper">
 								<div className="iconbox_image">
 									<div className="iconbox_icon">
@@ -46,7 +46,7 @@ export default function Services() {
 						</div>
 					</div>
 					<div className="col-lg-4 col-md-6 pd_0">
-						<div className="iconbox3 third">
+						<div className="iconbox3 third h-100">
 							<div className="iconbox_wrapper">
 								<div className="iconbox_image">
 									<div className="iconbox_icon">
