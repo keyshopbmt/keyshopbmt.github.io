@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.css";
-import GoogleMapReact from 'google-map-react';
-import { MDBRow, MDBCol, MDBInput, MDBTextArea, MDBBtn } from 'mdb-react-ui-kit';
+
 
 export default function Footer() {
   return (

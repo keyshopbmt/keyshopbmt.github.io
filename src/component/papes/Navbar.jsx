@@ -17,11 +17,7 @@ export default function Navbar() {
                   </a>
                 </li>
 
-                <li className="mail">
-                  <a href="/">
-                    <MDBIcon color="white" icon="fa-regular fa-envelope " />
-                  </a>
-                </li>
+             
               </ul>
             </div>
             <div className="header_info">
