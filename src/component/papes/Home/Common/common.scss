@@ -102,7 +102,7 @@ p {
 .iconbox2 .iconbox_wrapper .iconbox_content {
     position: relative;
     background: #13131c;
-    padding: 45px 45px 45px 45px;
+    padding: 45px 45px 45px 37px;
     margin: -135px 20px 0px 20px;
     transition: all 0.5s ease;
 }
@@ -167,6 +167,17 @@ h1 {
         padding-left: 0px;
         padding-right: 0px;
     }
+    .iconbox2 .iconbox_wrapper .iconbox_content {
+        position: relative;
+        background: #13131c;
+        padding: 45px 45px 45px 45px;
+        margin: -135px 20px 0px 20px;
+        transition: all 0.5s ease;
+    }
+    
+    .container {
+        max-width: 1140px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -178,11 +189,7 @@ h1 {
 
 
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
+
 
 @media (min-width: 992px) {
     .container {
@@ -205,6 +212,8 @@ h1 {
         flex: 0 0 41.666667%;
         max-width: 41.666667%;
     }
+  
+    
 }
 
 @media (min-width: 768px) {
@@ -218,6 +227,7 @@ h1 {
         flex: 0 0 50%;
         max-width: 50%;
     }
+
 }
 
 @media (min-width: 576px) {
