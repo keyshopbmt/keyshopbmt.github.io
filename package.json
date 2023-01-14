@@ -20,6 +20,7 @@
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^18.2.0",
+    "react-facebook": "^9.0.12",
     "react-fontawesome": "^1.7.1",
     "react-leaflet": "^4.2.0",
     "react-loaders": "^3.0.1",
@@ -27,13 +28,14 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "react-social-media-embed": "^2.3.3",
     "redux": "^4.2.0",
     "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
