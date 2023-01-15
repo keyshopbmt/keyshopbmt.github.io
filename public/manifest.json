@@ -3,12 +3,12 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "keyshopbmt.png",
+      "sizes": "80x80 64x64 32x32 24x24",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "keyshop.png",
       "type": "image/png",
       "sizes": "192x192"
     },
