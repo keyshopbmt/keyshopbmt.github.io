@@ -1,11 +1,11 @@
 import React from "react";
 import "./home.css";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar/Navbar";
 import Services from "./Services/Services";
 import History from "./History";
 import Common from "./Common/Common";
 import Testimonial from "./Testimonial/Testimonial";
-import Footer from "../Footer";
+import Footer from "../Footer/Footer";
 
 export default function Home() {
   return (

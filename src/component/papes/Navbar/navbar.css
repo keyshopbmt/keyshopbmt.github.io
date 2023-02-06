@@ -153,13 +153,32 @@ img {
     position: relative;
     background: #1e1e2a;
     z-index: 2;
+    
 }
+.button-services{
+    padding-right: 5.1rem;
+    
+    
+}
+.nav-services{
+    padding-left: 6.6rem;
+    padding-right: 2px;
+    
+}
+
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .button-services{
+        padding-right: 0.7rem;
+    }
+    .nav-services{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 }
 
@@ -174,6 +193,10 @@ img {
     .container {
         max-width: 960px;
     }
+    .button-services{
+        padding-right: 2.7rem;
+    }
+   
 }
 
 @media (min-width: 768px) {

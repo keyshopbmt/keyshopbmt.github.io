@@ -1,9 +1,19 @@
-import React from "react";
+import {React, useState} from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
 
 export default function Navbar() {
+  const [isServiceButtonHovering, setIsHoveringServiceButton] = useState(false);
+
+  const handleMouseEnterServiceButton = () => {
+    setIsHoveringServiceButton(true);
+  };
+
+  const handleMouseLeaveServiceButton = () => {
+    setIsHoveringServiceButton(false);
+  };
+
   return (
     <header className="header">
       <div className="top_bar">
@@ -12,7 +22,7 @@ export default function Navbar() {
             <div className="header_social">
               <ul className="top_social">
                 <li className="facebook">
-                  <a href="https://www.facebook.com/tienphatexpertkeyworld">
+                  <a href="https://www.facebook.com/chiakhoaotobmt">
                     <MDBIcon color="white" icon="fa-brands fa-facebook" />
                   </a>
                 </li>
@@ -28,11 +38,11 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="phone">
-                <img src="assets/phone.png" alt="phone" />
+                <img src="assets/phone.png" alt="phone"/>
                 <div>
-                  <span>Liên Hệ</span>
+                  <span>Liên Hệ : </span>
                   <br />
-                  (+084)0942975959
+                     0942975959
                 </div>
               </div>
             </div>
@@ -66,7 +76,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse fs-3 " id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Trang chủ
                 </a>
               </li>
@@ -85,15 +95,20 @@ export default function Navbar() {
               
                 </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown button-services" >
+                <a className="nav-services" href="/dichvu" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
+                 color: isServiceButtonHovering ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButton} onMouseLeave={handleMouseLeaveServiceButton}>
+                  Dịch Vụ
+                </a>
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle "
                   data-bs-toggle="dropdown"
-                  to="./services"
+              
+                  
                   role="button"
                   aria-expanded="false"
                 >
-                  Dịch vụ
+                  
                 </Link>
                 <ul className="dropdown-menu">
                 <li>
