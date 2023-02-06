@@ -37,8 +37,10 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run add-domain && gh-pages -d build",
+    "bd": "npm run build && npm run deploy",
     "build": "react-scripts build",
+    "add-domain": "echo \"https://keyshopbmt.com\" > build/CNAME",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
