@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="middle_bar_inner">
             <div className="logo">
 
-              <a >
+              <a href="/">
                 <img src="assets/logo1.png" alt="logo" />
               </a>
             </div>
@@ -122,11 +122,15 @@ export default function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="./">
-                    Chìa Khóa Ôtô Và Xe Máy
+                    <a className="dropdown-item" href="/carkey">
+                    Chìa Khóa Ôtô 
                     </a>
                   </li>
-                 
+                  <li>
+                    <a className="dropdown-item" href="./">
+                    Chìa Khóa Xe Máy
+                    </a>
+                  </li>
                 
                 </ul>
               </li>

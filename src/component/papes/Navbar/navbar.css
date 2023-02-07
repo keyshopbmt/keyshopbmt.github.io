@@ -161,7 +161,7 @@ img {
     
 }
 .nav-services{
-    padding-left: 6.6rem;
+    padding-left: 7rem;
     padding-right: 2px;
     
 }
@@ -246,7 +246,13 @@ a {
 .header .logo img {
     max-width: 120px;
     margin-top: -20px;
-
+}
+.button-services{
+    padding-right: 15.1rem;
+}
+.nav-services{
+    padding-left: 17rem;
    
+    
 }
 }
