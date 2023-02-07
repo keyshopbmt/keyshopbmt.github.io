@@ -5,7 +5,30 @@
 .card-car h3{
     font-size: 10px;
 }
+.title-car h2{
+    text-align: left;
+    padding-left: 20px;
+}
+.row-title{
+    background-color: #edf1f4 !important;
+    padding-left: 10px;
+    text-align: left;
+}
+.row-title h4 span{
+    color: red;
+    padding-left: 20px;
+}
+.car-img{
+    margin-right: 20px;
+}
+.carkey-title{
+    text-align: left;
+}
+.image-keycar{
+    float: right;
+    width: 40%;
 
+}
 
 @media (min-width:768px){
     .card-car{
@@ -14,6 +37,12 @@
     .card-car h3{
         font-size: 1.75rem;   
 
+    }
+    .row-title{   
+        padding-left: 40px;
+    }
+    .car-img {
+        padding-right: 70px;
     }
 }
 
