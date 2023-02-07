@@ -11,12 +11,11 @@
 .card-title,
 .text-card{
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1;
 
 }
 .card-textkey p{
     font-size: 14px;
-    
     line-height: 1;
     font-weight: 500;
 }
