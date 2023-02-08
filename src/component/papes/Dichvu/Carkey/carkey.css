@@ -1,9 +1,15 @@
+body{
+    background-color: #edf1f4 !important;
+}
 .card-car{
     margin-top: 16rem;
     color: aliceblue;
 }
 .card-car h3{
     font-size: 10px;
+}
+.title-car{
+    padding-top: 20px;
 }
 .title-car h2{
     text-align: left;
@@ -17,6 +23,7 @@
 .row-title h4 span{
     color: red;
     padding-left: 20px;
+    
 }
 .car-img{
     margin-right: 20px;
@@ -24,10 +31,34 @@
 .carkey-title{
     text-align: left;
 }
-.image-keycar{
-    float: right;
+.carkey-title{
+    padding: 20px 25px;
+    
+}
+.easy-step ,
+.step-image{
+    padding-top: 20px;
+}
+.image-no1{
+    padding-left: 10px;
     width: 40%;
+    
+}
+.image-call{
+    width: 40%;
+}
+.easy-step h4 {
+    font-size: 15px;
+}
+.type-keycar{
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+}
 
+.type-keycar-title{
+    padding-top: 20px;
 }
 
 @media (min-width:768px){
@@ -43,6 +74,29 @@
     }
     .car-img {
         padding-right: 70px;
+    }
+    .image-no1{
+        padding-left: 4.1rem;
+        width: 43%;
+    }
+    .image-call{
+        padding-left: 3rem;
+        width: 50%;
+    }
+    .easy-step h4 span{
+        padding-left: 2.2rem;
+    }
+    .easy-step h4{
+        font-size: 1.2rem;
+    }
+    .type-keycar{
+        font-size: 1.2rem;
+    }
+    .type-keycar-title{
+        font-size: 1rem;
+    }
+    .replacing-carkey{
+        padding-top: 40px;
     }
 }
 
