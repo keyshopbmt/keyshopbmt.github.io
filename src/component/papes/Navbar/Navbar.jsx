@@ -76,16 +76,16 @@ export default function Navbar() {
           <div className="collapse navbar-collapse fs-3 " id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active" aria-current="page" to="/">
                   Trang chủ
-                </a>
+                </Link>
               </li>
               
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
-                  to="./following"
+                  to="./product"
                   role="button"
                   aria-expanded="false"
                 >
@@ -96,10 +96,10 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item dropdown button-services" >
-                <a className="nav-services" href="/dichvu" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
+                <Link className="nav-services" href="/dichvu" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
                  color: isServiceButtonHovering ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButton} onMouseLeave={handleMouseLeaveServiceButton}>
                   Dịch Vụ
-                </a>
+                </Link>
                 <Link
                   className="nav-link dropdown-toggle "
                   data-bs-toggle="dropdown"
@@ -112,35 +112,35 @@ export default function Navbar() {
                 </Link>
                 <ul className="dropdown-menu">
                 <li>
-                    <a className="dropdown-item"  href="./">
+                    <Link className="dropdown-item"  to="./">
                      Sửa Khóa Và Làm Chìa
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item"  href="./">
+                  <Link className="dropdown-item"  to="./">
                     Làm Remote Cửa Cuốn
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/carkey">
+                  <Link className="dropdown-item" to="/carkey">
                     Chìa Khóa Ôtô 
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="./">
+                  <Link className="dropdown-item" to="./">
                     Chìa Khóa Xe Máy
-                    </a>
+                    </Link>
                   </li>
                 
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./news">
+               <Link className="nav-link" to="./news">
                   Tin Tức
-                </a>
+                  </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Liên Hệ</a>
+               <Link className="nav-link" to="#">Liên Hệ</Link>
               </li>
             </ul>
             

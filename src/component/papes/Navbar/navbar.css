@@ -8,6 +8,7 @@ body {
     font-weight: 400;
     text-align: left;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 ::after, ::before {
@@ -20,6 +21,7 @@ body {
     color: #ffffff;
     display: block;
     outline: none;
+    z-index: 5;
 }
 
 a {
