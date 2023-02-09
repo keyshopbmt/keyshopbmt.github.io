@@ -1,104 +1,144 @@
-body{
+body {
     background-color: #edf1f4 !important;
+   
 }
-.card-car{
-    margin-top: 16rem;
+
+
+.card-car {
+    margin-top: 1.5rem;
     color: aliceblue;
 }
-.card-car h3{
+
+.card-car h3 {
     font-size: 10px;
 }
-.title-car{
-    padding-top: 20px;
-}
-.title-car h2{
-    text-align: left;
-    padding-left: 20px;
-}
-.row-title{
-    background-color: #edf1f4 !important;
+
+
+
+.row-title {
+    
     padding-left: 10px;
     text-align: left;
 }
-.row-title h4 span{
+
+.row-title h4 span {
     color: red;
     padding-left: 20px;
-    
+
 }
-.car-img{
+
+.car-img {
     margin-right: 20px;
 }
-.carkey-title{
+
+.carkey-title {
     text-align: left;
 }
-.carkey-title{
+
+.carkey-title {
     padding: 20px 25px;
-    
+
 }
-.easy-step ,
-.step-image{
+
+.easy-step,
+.step-image {
     padding-top: 20px;
 }
-.image-no1{
+
+.image-no1 {
     padding-left: 10px;
     width: 40%;
-    
+
 }
-.image-call{
+
+.image-call {
     width: 40%;
 }
+
 .easy-step h4 {
     font-size: 15px;
 }
-.type-keycar{
+
+.type-keycar {
     padding-top: 20px;
     text-align: left;
     padding-left: 20px;
     font-size: 20px;
 }
+.car-remote{
+    padding-top: 20px;
+}
+ .car-remote h2{
+    text-align: center;
+ } 
+ 
 
-.type-keycar-title{
+.type-keycar-title {
     padding-top: 20px;
 }
 
-@media (min-width:768px){
-    .card-car{
-        margin-top: 13rem;
+@media (min-width:768px) {
+    .card-car {
+        margin-top: 4rem;
     }
-    .card-car h3{
-        font-size: 1.75rem;   
+
+    .card-car h3 {
+        font-size: 1.75rem;
 
     }
-    .row-title{   
+
+    .row-title {
         padding-left: 40px;
     }
+
     .car-img {
         padding-right: 70px;
     }
-    .image-no1{
+
+    .image-no1 {
         padding-left: 4.1rem;
         width: 43%;
     }
-    .image-call{
+
+    .image-call {
         padding-left: 3rem;
         width: 50%;
     }
-    .easy-step h4 span{
+
+    .easy-step h4 span {
         padding-left: 2.2rem;
     }
-    .easy-step h4{
+
+    .easy-step h4 {
         font-size: 1.2rem;
     }
-    .type-keycar{
+    .car-remote{
+        padding-top: 40px;
+
+    }
+
+    .type-keycar {
         font-size: 1.2rem;
     }
-    .type-keycar-title{
-        font-size: 1rem;
+
+    .type-keycar-title {
+        font-size: 1.2rem;
     }
-    .replacing-carkey{
+
+    .replacing-carkey {
         padding-top: 40px;
     }
+
+    .information-carkey {
+        border-style: solid !important;
+        border-width: 0 0 0 5px !important;
+        border-color: rgba(241, 61, 61, 1) !important;
+        margin-left: 70px;
+        padding-top: 20px;
+    }
+
+    .information-carkey h3 p {
+        padding-left: 25px;
+        text-align: left;
+    }
 }
-
-
-
