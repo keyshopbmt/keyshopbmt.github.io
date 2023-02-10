@@ -1,9 +1,14 @@
 import React from "react";
+import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
 import "./carkey.css";
 import Easystep from "./easystep/Easystep";
+import Footercar from "./footer-keycar/Footercar";
 import Keycar from "./keycar/Keycar";
+import Remotecar from "./remote-car/Remotecar";
+import Replacing from "./replacing/Replacing";
 import Titlecar from "./titlecar/Titlecar";
+import Transponder from "./transponder/Transponder";
 import Typekeycar from "./typekeycar/Typekeycar";
 
 export default function Carkey() {
@@ -30,9 +35,12 @@ export default function Carkey() {
     <Keycar/>
     <Easystep/>
     <Typekeycar/>
+    <Replacing/>
+    <Remotecar/>
+    <Transponder/>
+    <Footercar/>
+    <Footer/>
 
-    
-     
     </div>
   );
 }

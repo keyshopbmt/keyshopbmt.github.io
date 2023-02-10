@@ -1,9 +1,7 @@
 body {
     background-color: #edf1f4 !important;
-   
+
 }
-
-
 .card-car {
     margin-top: 1.5rem;
     color: aliceblue;
@@ -13,10 +11,8 @@ body {
     font-size: 10px;
 }
 
-
-
 .row-title {
-    
+
     padding-left: 10px;
     text-align: left;
 }
@@ -31,51 +27,7 @@ body {
     margin-right: 20px;
 }
 
-.carkey-title {
-    text-align: left;
-}
 
-.carkey-title {
-    padding: 20px 25px;
-
-}
-
-.easy-step,
-.step-image {
-    padding-top: 20px;
-}
-
-.image-no1 {
-    padding-left: 10px;
-    width: 40%;
-
-}
-
-.image-call {
-    width: 40%;
-}
-
-.easy-step h4 {
-    font-size: 15px;
-}
-
-.type-keycar {
-    padding-top: 20px;
-    text-align: left;
-    padding-left: 20px;
-    font-size: 20px;
-}
-.car-remote{
-    padding-top: 20px;
-}
- .car-remote h2{
-    text-align: center;
- } 
- 
-
-.type-keycar-title {
-    padding-top: 20px;
-}
 
 @media (min-width:768px) {
     .card-car {
@@ -95,16 +47,6 @@ body {
         padding-right: 70px;
     }
 
-    .image-no1 {
-        padding-left: 4.1rem;
-        width: 43%;
-    }
-
-    .image-call {
-        padding-left: 3rem;
-        width: 50%;
-    }
-
     .easy-step h4 span {
         padding-left: 2.2rem;
     }
@@ -112,33 +54,5 @@ body {
     .easy-step h4 {
         font-size: 1.2rem;
     }
-    .car-remote{
-        padding-top: 40px;
 
-    }
-
-    .type-keycar {
-        font-size: 1.2rem;
-    }
-
-    .type-keycar-title {
-        font-size: 1.2rem;
-    }
-
-    .replacing-carkey {
-        padding-top: 40px;
-    }
-
-    .information-carkey {
-        border-style: solid !important;
-        border-width: 0 0 0 5px !important;
-        border-color: rgba(241, 61, 61, 1) !important;
-        margin-left: 70px;
-        padding-top: 20px;
-    }
-
-    .information-carkey h3 p {
-        padding-left: 25px;
-        text-align: left;
-    }
 }
