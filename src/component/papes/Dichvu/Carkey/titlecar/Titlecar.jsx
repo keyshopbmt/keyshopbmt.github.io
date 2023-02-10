@@ -4,7 +4,7 @@ import './titlecar.css';
 export default function Titlecar() {
   return (
     <div className="title-car">
-        <h2>Dịch vụ sửa chữa và thay thế chìa khóa Ôtô tại Key Shop Bmt</h2>
+        <h2><b>Dịch vụ sửa chữa và thay thế chìa khóa Ôtô tại Key Shop Bmt</b></h2>
 
         <div className="row-title">
           <h4>

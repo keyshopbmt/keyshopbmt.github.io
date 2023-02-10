@@ -1,8 +1,27 @@
-.title-car {
-    padding-top: 20px;
-}
 
 .title-car {
+    padding-top: 20px;
     text-align: left;
-    padding-left: 20px;
+}
+.title-car h2 h4 {
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 24px;
+}
+.title-car p{
+    font-size:18px;
+}
+
+@media (min-width:768px){
+    .title-car h2 h4 {
+        font-size: 1.125rem;
+        font-weight: 500;
+       
+    }
+    .title-car p{
+        font-size:1rem;
+    }
+    .title-car h2{
+        padding-left: 26px;
+    }
 }
