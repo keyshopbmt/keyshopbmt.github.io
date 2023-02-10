@@ -1,0 +1,30 @@
+.car-remote {
+    padding-top: 20px;
+}
+
+.car-remote h2 {
+    text-align: center;
+}
+.information-carkey{
+    text-align: left;
+    padding-left: 10px;
+}
+
+@media (min-width:768px) {
+
+    .information-carkey {
+        border-style: solid !important;
+        border-width: 0 0 0 5px !important;
+        border-color: rgba(241, 61, 61, 1) !important;
+        margin-left: 70px;
+        padding-top: 20px;
+    }
+    .information-carkey h3 p {
+        padding-left: 10px;
+        text-align: left;
+    }
+    .car-remote {
+        padding-top: 40px;
+
+    }
+}
