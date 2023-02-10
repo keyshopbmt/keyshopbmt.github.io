@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./keycar.css";
 
 export default function Keycar() {
   return (
@@ -11,7 +12,7 @@ export default function Keycar() {
       style={{ width: "350px", height: "500px", paddingLeft: "10px" }}
     />
     <div className="carkey-title">
-      <h3>Làm chìa khóa Ôtô dễ dàng</h3>
+      <h3><b>Làm chìa khóa Ôtô dễ dàng</b></h3>
       <p>
         Chúng tôi cung cấp nhiều loại dịch vụ làm chìa khóa Ôtô , nếu bạn bị
         mất tất cả chìa khóa Ôtô, chúng tôi có thể khôi phục bộ chìa khóa bị
@@ -29,7 +30,7 @@ export default function Keycar() {
         Cần chìa khóa xe mới ? Hãy gọi ngay cho chúng tôi:{" "}
         <span> 0942975959</span>
       </button>
-      <h3>Tiết kiệm chi phí làm chìa khóa xe của bạn</h3>
+      <h3 style={{paddingTop:"15px"}}><b>Tiết kiệm chi phí làm chìa khóa xe của bạn</b></h3>
       <p>
         Nhiều người đổ xô đến đại lý địa phương của họ để nhận dịch vụ thay
         thế chìa khóa Ôtô. Cuối cùng, họ thường phải trả rất nhiều tiền cho
