@@ -96,7 +96,7 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item dropdown button-services" >
-                <Link className="nav-services" href="/dichvu" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
+                <Link className="nav-services" to="/dichvu" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
                  color: isServiceButtonHovering ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButton} onMouseLeave={handleMouseLeaveServiceButton}>
                   Dịch Vụ
                 </Link>
