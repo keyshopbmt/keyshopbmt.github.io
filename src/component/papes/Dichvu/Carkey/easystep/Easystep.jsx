@@ -2,11 +2,12 @@ import React from 'react';
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import "./easystep.css";
 
 export default function Easystep() {
   return (
     <div className="easy-step">
-    <h2>4 Bước đơn giản để thay thế chìa khóa xe Ôtô của bạn</h2>
+    <h2><b>4 Bước đơn giản để thay thế chìa khóa xe Ôtô của bạn</b></h2>
     <Container className="step-image">
       <Row md={4}>
         <Col>
