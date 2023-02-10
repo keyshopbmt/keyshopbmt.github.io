@@ -1,0 +1,12 @@
+.transponder{
+    text-align: left;
+    padding-left: 20px;
+}
+@media (min-width:768px){
+    .transponder{
+        text-align: center;
+    }
+    .transponder-car{
+        padding-left: 20px;
+    }
+}
