@@ -10,7 +10,7 @@ export default function Replacing() {
       className="rounded-4 shadow-4 float-start m-2"
       style={{ width: "350px", height: "300px" ,paddingRight:"20px"}}
     />
-    <h2><b>Thay chìa khóa Ôtô ngày càng khó</b></h2>
+    <h2><b>Làm chìa khóa Ôtô ngày càng khó</b></h2>
     <div className="replacing-key">
       <h3><b>
 
@@ -46,10 +46,10 @@ export default function Replacing() {
       </h3>
       <p>
         Đây là lý do tại sao chúng tôi tại Key Shop BMT đầu tư mạnh vào
-        công nghệ và thiết bị mới để cung cấp dịch vụ thay thế chìa khóa ô
-        tô cho nhiều loại phương tiện. Nếu cần thay chìa khóa từ xa, bạn
-        có thể tin tưởng vào nhóm của chúng tôi tại Key Shop BMT để cung
-        cấp cho bạn dịch vụ thay thế chìa khóa ô tô chuyên nghiệp.
+        công nghệ và thiết bị mới để cung cấp dịch vụ làm chìa khóa 
+        Ôtô cho nhiều loại phương tiện. Nếu cần làm chìa khóa, bạn
+        có thể tin tưởng vào nhóm của chúng tôi tại Key Shop BMT sẽ cung
+        cấp cho bạn dịch vụ làm chìa khóa Ôtô chuyên nghiệp.
       </p>
     </div>
   </div>

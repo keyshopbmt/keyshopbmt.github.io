@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import {keyShop} from "../Db";
 
 
 export default function Footer() {
@@ -30,7 +31,7 @@ export default function Footer() {
                   <div className="footer_nav" >
                     <ul className="footer_menu" >
                       <li className="menu-item" >
-                        <a href="#" style={{ textDecoration: 'none', color:'#dc3545' }}>Mở Khóa Cửa Ôtô</a>
+                        <a href="/carkey" style={{ textDecoration: 'none', color:'#dc3545' }}>Mở Khóa Cửa Ôtô</a>
                       </li>
                       <li className="menu-item">
                         <a href="#" style={{ textDecoration: 'none', color:'#dc3545' }}>Mở Cửa Nhà Bị Khóa</a>
@@ -53,7 +54,7 @@ export default function Footer() {
                   data-aos-duration="900"
                 >
                   <div className="logo_footer d-none d-md-none d-lg-block">
-                    <a href="index.html">
+                    <a href="/">
                       <img src="assets/logo2.png" alt="Locksmith" />
                     </a>
                   </div>
@@ -62,7 +63,7 @@ export default function Footer() {
                     <span className="title_line"></span>
                   </h4>
                   <div className="contact_info">
-                    <h4>keyshopbmt@gmail.com</h4>
+                    <h4>{keyShop.mail}</h4>
                     <h4>
                       Số 10 Nguyễn Chí Thanh, Phường Tân An
                       <br /> Tp Buôn Ma Thuột, Đắk Lắk, Việt Nam
@@ -70,9 +71,9 @@ export default function Footer() {
                     <div className="phone">
                       <img src="assets/phone2.png" alt="phone" />
                       <div>
-                        <span>Thứ 2- CN (7am - 6pm)</span>
-                        <br />
-                        0942975959
+                        Thứ 2- CN <span>(7:00 a.m - 6:00 p.m)</span>
+                
+                        <h4>{keyShop.phone}</h4>
                       </div>
                     </div>
                   </div>

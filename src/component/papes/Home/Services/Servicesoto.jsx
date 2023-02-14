@@ -16,7 +16,7 @@ export default function Servicesoto() {
 									<h3><a href="/" style={{ textDecoration: 'none' }}>Mở Khóa Cửa Ôtô và Xe Máy</a></h3>
 									<p>Chúng tôi sẽ cung cấp cho bạn và công ty của bạn dịch vụ chuyên nghiệp, nhanh chóng, hiệu quả và cạnh tranh.</p>
 									<div className="read_more">
-										<a href="/" style={{ textDecoration: 'none', color:'#dc3545' }}><span>CHI TIẾT</span></a>
+										<a href="/carkey" style={{ textDecoration: 'none', color:'#dc3545' }}><span>CHI TIẾT</span></a>
 									</div>
 								</div>
 							</div>

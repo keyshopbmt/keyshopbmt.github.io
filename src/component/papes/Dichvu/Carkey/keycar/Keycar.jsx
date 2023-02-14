@@ -1,5 +1,6 @@
 import React from 'react';
 import "./keycar.css";
+import { keyShop } from "../Db";
 
 export default function Keycar() {
   return (
@@ -28,12 +29,11 @@ export default function Keycar() {
       </p>
       <button className="btn btn-secondary btn-lg btn-block">
         Cần chìa khóa xe mới ? Hãy gọi ngay cho chúng tôi:{" "}
-        <span> 0942975959</span>
+        <span> {keyShop.phone}</span>
       </button>
       <h3 style={{paddingTop:"15px"}}><b>Tiết kiệm chi phí làm chìa khóa xe của bạn</b></h3>
       <p>
-        Nhiều người đổ xô đến đại lý địa phương của họ để nhận dịch vụ thay
-        thế chìa khóa Ôtô. Cuối cùng, họ thường phải trả rất nhiều tiền cho
+        Nhiều người đổ xô đến đại lý địa phương của họ để làm chìa khóa Ôtô. Cuối cùng, họ thường phải trả rất nhiều tiền cho
         chìa khóa xe mới của mình. Thật không may, họ không biết rằng có
         những lựa chọn thay thế rẻ hơn có thể tiết kiệm thời gian và tiền
         bạc mà không ảnh hưởng đến chất lượng của chìa khóa thông minh. Một

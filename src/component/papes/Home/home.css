@@ -3,32 +3,30 @@
 }
 .card-textkey{
     text-align: left;
-    margin-top: 18px;
+    margin-top: 10px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 300;
     
 }
-.card-title,
-.text-card{
-    font-size: 16px;
-    line-height: 1;
+.card-textkey h3{
+    font-size: 14px;
 
 }
+
 .card-textkey p{
     font-size: 14px;
-    line-height: 1;
-    font-weight: 500;
+    line-height: 1.2;
 }
 .img-1{
-    width: 32%;
+    width: 44%;
     z-index: 2;
     float: right;
 }
 @media (min-width :62rem){
     .img-1{
         float: right;
-        width: 47%;
-        padding-right: 40px;
+        width: 49%;
+        padding-right: 57px;
     }
 .card-textkey {
     
@@ -42,8 +40,9 @@
     border-left: 3px solid #ff3b3e;
     padding-left: 20px;
 }
-.card-title{
+.card-textkey h3{
     font-size: 30px;
+
 }
 .text-card{
     font-size: 25px;

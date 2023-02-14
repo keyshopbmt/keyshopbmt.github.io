@@ -1,5 +1,6 @@
 import React from 'react';
 import './typekeycar.css';
+import { keyShop } from "../Db";
 
 export default function Typekeycar() {
   return (
@@ -18,7 +19,7 @@ export default function Typekeycar() {
         ngừng nghiên cứu và tìm hiểu thị trường. Nó cho phép chúng tôi thay
         thế càng nhiều chìa khóa Ôtô càng tốt cho khách hàng của mình.
         <b>
-          Chúng tôi có thể sao chép hoặc thay thế chìa khóa xe bị mất bằng
+          Chúng tôi có thể sao chép hoặc làm chìa khóa xe bị mất bằng
           chìa khóa mới cho hầu hết các loại xe
         </b>
       </p>
@@ -47,7 +48,7 @@ export default function Typekeycar() {
       </ul>
       <button className="btn btn-secondary btn-lg btn-block">
         Để đặt hẹn, xin vui lòng gọi đường dây chính của chúng tôi:
-        <span> 0942975959</span>
+        <span>  {keyShop.phone}</span>
       </button>
     </div>
    

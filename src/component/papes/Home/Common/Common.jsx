@@ -22,7 +22,7 @@ export default function Common() {
                                     <div className="iconbox_content  ">
                                         <h3><a href="/" style={{ textDecoration: 'none', color:'#dc3545' }}>Mở Khóa Cửa Ôtô</a></h3>
                                         <div className="read_more">
-											<a href="/" style={{ textDecoration: 'none' }}><span style={{color:'white'}} >Nhận Dịch Vụ</span></a>
+											<a href="/carkey" style={{ textDecoration: 'none' }}><span style={{color:'white'}} >Nhận Dịch Vụ</span></a>
 										</div>
 									</div>
                                 </div>

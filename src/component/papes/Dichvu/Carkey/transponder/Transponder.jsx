@@ -80,14 +80,14 @@ export default function Transponder() {
             />
             <h3><b>
 
-              Proximity key / Comfort access key
+             Chìa khóa Proximity / Chìa khóa Comfort access
             </b>
               </h3>
             <p>
           
               <b>Chìa khóa thông minh</b> hay còn gọi là
-              <b> Proximity key </b> là loại chìa khóa thông minh dạng nút
-              bấm đi kèm với một lưỡi gạt khẩn cấp bên trong nó.{" "}
+              <b> chìa khóa Proximity</b> là loại chìa khóa thông minh dạng nút
+              bấm đi kèm với một lưỡi gạt khẩn cấp bên trong nó.
             </p>
           </MDBCol>
         </MDBRow>

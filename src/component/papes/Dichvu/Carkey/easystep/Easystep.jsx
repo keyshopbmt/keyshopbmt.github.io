@@ -3,11 +3,12 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "./easystep.css";
+import { keyShop } from "../Db";
 
 export default function Easystep() {
   return (
     <div className="easy-step">
-    <h2><b>4 Bước đơn giản để thay thế chìa khóa xe Ôtô của bạn</b></h2>
+    <h2><b>4 Bước đơn giản để làm chìa khóa xe Ôtô của bạn</b></h2>
     <Container className="step-image">
       <Row md={4}>
         <Col>
@@ -24,7 +25,7 @@ export default function Easystep() {
           />
           <h4>Liên hệ với chúng tôi:</h4>
           <h4>
-            <span>0942975959</span>
+            <span> {keyShop.phone}</span>
           </h4>
         </Col>
         <Col>

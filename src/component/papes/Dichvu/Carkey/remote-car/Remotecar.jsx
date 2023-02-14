@@ -11,10 +11,9 @@ export default function Remotecar() {
         alt=""
         className="rounded-4 shadow-4 float-start m-4"
         style={{
-          width: "60px",
-          height: "40px",
-          paddingLeft: "10px",
-          paddingRight: "20px",
+          width: "50px",
+          height: "50px",
+          
         }}
       />
 
@@ -38,10 +37,9 @@ export default function Remotecar() {
           alt=""
           className="rounded-4 shadow-4 float-start m-4"
           style={{
-            width: "60px",
-            height: "40px",
-            paddingLeft: "10px",
-            paddingRight: "20px",
+            width: "50px",
+            height: "50px",
+            
           }}
         />
         <div className="information-carkey">
@@ -66,10 +64,9 @@ export default function Remotecar() {
             alt=""
             className="rounded-4 shadow-4 float-start m-4"
             style={{
-              width: "60px",
-              height: "40px",
-              paddingLeft: "10px",
-              paddingRight: "20px",
+              width: "50px",
+              height: "50px",
+            
             }}
           />
           <div className="information-carkey">
@@ -90,7 +87,7 @@ export default function Remotecar() {
               </span>
             </p>
             <p>
-              <span style={{ paddingLeft: "20px" }}>
+              <span >
                 Sau khi lưỡi dao được cắt, công việc sẽ hoàn thành và bạn
                 sẽ có một chìa khóa dự phòng mới cho Ôtô của mình!
               </span>

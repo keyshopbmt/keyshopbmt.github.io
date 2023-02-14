@@ -24,7 +24,7 @@ export default function Carkey() {
     <div className="card-img-overlay">
       <div className="card-car">
         <h3>
-          THAY THẾ CHÌA KHÓA ÔTÔ PHẢI CHĂNG VÀ CHUYÊN NGHIỆP
+          SỬA VÀ LÀM CHÌA KHÓA ÔTÔ CHUYÊN NGHIỆP
           <br />
           TẠI KEYSHOP BMT
         </h3>

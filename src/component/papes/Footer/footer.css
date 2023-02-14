@@ -173,25 +173,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer .contact_info .phone span {
     font-family: "Mulish", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .footer .contact_info .phone {
     position: relative;
     font-family: "Nunito Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 22px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     flex: auto;
     color: #ffffff;
-    line-height: 32px;
+    line-height: 25px;
     padding: 30px 30px;
     margin-top: 25px;
     border: 1px dashed #ff3b3e;
     word-break: break-word;
+   
 }
 .footer .footer_contact {
     position: relative;
@@ -209,6 +210,11 @@ h1, h2, h3, h4, h5, h6 {
 img {
     overflow-clip-margin: content-box;
     overflow: clip;
+}
+.phone h4{
+   line-height: 10px;
+    font-size: 22px;
+    font-weight: 400;
 }
 .footer .footer_contact {
     position: relative;
@@ -234,6 +240,14 @@ img {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+}
+.footer .contact_info .phone span {
+font-size: 22px;
+}
+.phone h4{
+   font-weight: 600;
+    font-size: 34px;
+    line-height: 20px;
 }
 
 }

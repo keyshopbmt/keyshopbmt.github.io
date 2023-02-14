@@ -20,14 +20,16 @@ export default function Home() {
             <h3 className="card-title">
               DỊCH VỤ KHẨN CẤP: <span>0942975959</span>
             </h3>
-            <h2 className="text-card">
+            <h3 className="text-card">
               DỊCH VỤ
               <br /> <span>LUÔN SẴN SÀNG 24/7</span>
-            </h2>
+            </h3>
 
             <p>
-              Chúng tôi cung cấp các dịch vụ linh hoạt <br /> để đáp ứng nhu cầu
+          
+               Chúng tôi cung cấp các dịch vụ linh hoạt để đáp ứng nhu cầu
               của khách hàng
+          
             </p>
           </div>
         </div>
