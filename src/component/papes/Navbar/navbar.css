@@ -24,6 +24,7 @@ body {
    
 }
 
+
 a {
 
     text-decoration: none;
@@ -46,6 +47,7 @@ a {
 .header .header_social .top_social {
     padding: 0px;
     margin-bottom: 0px;
+    margin-left: -6px;
 }
 
 dl, ol, ul {
@@ -113,7 +115,7 @@ img {
     font-family: "Nunito Sans", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,16 +164,23 @@ img {
     
     
 }
-.nav-services{
-    padding-left: 7rem;
-    padding-right: 2px;
-    
+.nav-item{
+    margin-left: 0rem;
+}
+ 
+
+.button-services {
+    padding-right: 4.5rem;
+}
+.nav a{
+    color:#000000b3
 }
 
 
 @media (min-width: 1200px) {
-    .container {
+    .containern {
         max-width: 1170px;
+        margin-left: 36rem;
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -185,14 +194,14 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
+    .containern {
         max-width: 1170px;
-        padding: 0px;
+        margin-left: 36rem;
     }
 }
 
 @media (min-width: 992px) {
-    .container {
+    .containern {
         max-width: 960px;
     }
     .button-services{
@@ -202,20 +211,37 @@ img {
 }
 
 @media (min-width: 768px) {
-    .container {
+    .containern {
         max-width: 720px;
+        margin-left: 34.2rem;
     }
+    .nav-item{
+        margin-left: 0rem;
+    }
+  
 }
 
+
 @media screen and (max-width: 991px) {
-    .container {
+    .containern {
         max-width: 100%;
+        margin-left: 1.2rem;
+    }
+    .nav{
+        padding-left: 91px;
+    }
+    .navbar-toggler-icon {
+        margin-left: 17.5rem;
+       
     }
 }
 
 .header .logo a {
     display: inline-block;
    
+}
+.nav-services {
+    padding-left: 0rem;
 }
 
 a {
@@ -246,15 +272,16 @@ a {
 }
 @media screen and (max-width: 991px){
 .header .logo img {
-    max-width: 120px;
+    max-width: 100px;
     margin-top: -20px;
 }
 .button-services{
-    padding-right: 15.1rem;
+    padding-right: 0 rem;
 }
 .nav-services{
-    padding-left: 17rem;
-   
-    
+    padding-left: 6.8rem;   
+}
+.nav{
+    margin-left: 91px;
 }
 }

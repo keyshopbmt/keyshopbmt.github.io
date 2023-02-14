@@ -1,5 +1,6 @@
 import {React, useState} from "react";
 import "./navbar.css";
+import {keyShop} from "../Db";
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
 
@@ -13,16 +14,32 @@ export default function Navbar() {
   const handleMouseLeaveServiceButton = () => {
     setIsHoveringServiceButton(false);
   };
+  const [isServiceButtonNew, setIsHoveringServiceButtonNew] = useState(false);
+  const handleMouseEnterServiceButtonNew = () => {
+    setIsHoveringServiceButtonNew(true);
+  };
+
+  const handleMouseLeaveServiceButtonNew = () => {
+    setIsHoveringServiceButtonNew(false);
+  };
+  const [isServiceButtonContact, setIsHoveringServiceButtonContact] = useState(false);
+  const handleMouseEnterServiceButtonContact = () => {
+    setIsHoveringServiceButtonContact(true);
+  };
+
+  const handleMouseLeaveServiceButtonContact = () => {
+    setIsHoveringServiceButtonContact(false);
+  };
 
   return (
     <header className="header">
       <div className="top_bar">
-        <div className="container">
+        <div className="containern">
           <div className="top_bar_inner">
             <div className="header_social">
               <ul className="top_social">
                 <li className="facebook">
-                  <a href="https://www.facebook.com/chiakhoaotobmt">
+                  <a href={keyShop.facebook}>
                     <MDBIcon color="white" icon="fa-brands fa-facebook" />
                   </a>
                 </li>
@@ -32,9 +49,9 @@ export default function Navbar() {
             </div>
             <div className="header_info">
               <div className="schedule">
-                <img src="assets/clock.png" alt="schedule" />{" "}
+                <img src="assets/clock.png" alt="schedule" />
                 <div>
-                  Thứ 2 - Chủ Nhật <span>(7.00am-6.00pm)</span>
+                  Thứ 2 - Chủ Nhật <span>(7:00 a.m - 6:00 p.m)</span>
                 </div>
               </div>
               <div className="phone">
@@ -42,7 +59,7 @@ export default function Navbar() {
                 <div>
                   <span>Liên Hệ : </span>
                   <br />
-                     0942975959
+                    {keyShop.phone}
                 </div>
               </div>
             </div>
@@ -51,7 +68,7 @@ export default function Navbar() {
       </div>
 
       <div className="middle_bar">
-        <div className="container">
+        <div className="container" >
           <div className="middle_bar_inner">
             <div className="logo">
 
@@ -75,7 +92,7 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse fs-3 " id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <li className="nav">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Trang chủ
                 </Link>
@@ -110,7 +127,7 @@ export default function Navbar() {
                 >
                   
                 </Link>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu"  style={{width:"132%"}} >
                 <li>
                     <Link className="dropdown-item"  to="./">
                      Sửa Khóa Và Làm Chìa
@@ -134,13 +151,13 @@ export default function Navbar() {
                 
                 </ul>
               </li>
-              <li className="nav-item">
-               <Link className="nav-link" to="./news">
+              <li className="nav">
+               <Link className="nav-link" style={{ color: isServiceButtonNew ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonNew} onMouseLeave={handleMouseLeaveServiceButtonNew} to="./news">
                   Tin Tức
                   </Link>
               </li>
-              <li className="nav-item">
-               <Link className="nav-link" to="#">Liên Hệ</Link>
+              <li className="nav">
+               <Link className="nav-link" style={{ color: isServiceButtonContact ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonContact} onMouseLeave={handleMouseLeaveServiceButtonContact} to="#">Liên Hệ</Link>
               </li>
             </ul>
             
