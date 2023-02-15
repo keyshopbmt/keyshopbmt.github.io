@@ -144,7 +144,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                  <Link className="dropdown-item" to="./">
+                  <Link className="dropdown-item" to="/motokey">
                     Chìa Khóa Xe Máy
                     </Link>
                   </li>
