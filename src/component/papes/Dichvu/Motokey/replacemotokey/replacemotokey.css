@@ -1,7 +1,4 @@
 
-.row>* {
-    max-width: 50% !important;
-}
 
 .replacemotokey{
     text-align: left;
@@ -34,9 +31,7 @@
     .replacemotokey h2{
         font-size: 24px;
     }
-    .row>* {
-        max-width: 100% !important;
-    }
+   
     .img-logo{
         width: 50%;
         height: 70%;
