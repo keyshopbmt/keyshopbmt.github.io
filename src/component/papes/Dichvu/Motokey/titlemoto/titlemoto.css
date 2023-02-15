@@ -1,0 +1,54 @@
+.title-moto{
+    padding-top: 20px;
+}
+.title-moto h2{
+    font-size: 24px;
+}
+.title-motokey h3 p{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.title-motokey h3{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.title-motokey p{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.image-titlemoto{
+    width: 100%;
+    height: 70%;
+    padding-right: 20px;
+}
+.image-titlemotorcycle{
+   width: 100%;
+  
+   padding-right: 20px;
+   padding-left: 10px;
+}
+.motokey-title{
+    text-align: left;
+    padding: 20px 25px;
+}
+@media (min-width:62rem){
+    .title-moto h2{
+        font-size: 30px;
+    }
+    .title-motokey{
+        padding-left: 20px;
+    }
+    .title-motokey h3{
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 400;
+    } 
+    .title-motokey p{
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+   
+}
