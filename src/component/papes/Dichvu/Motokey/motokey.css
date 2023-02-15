@@ -1,0 +1,14 @@
+.card-moto h3{
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+
+
+@media (min-width :62rem){
+    .card-moto h3{
+        padding-top: 6rem;
+        font-size: 30px;
+    }
+    
+}
