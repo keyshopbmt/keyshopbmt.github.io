@@ -14,8 +14,11 @@
     font-size: 18px;
 }
 .img-logo{
-    width: 40%;
+    width: 50%;
     height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .replacemotokey p span{
     font-weight: 400;
@@ -34,8 +37,7 @@
    
     .img-logo{
         width: 50%;
-        height: 70%;
-        
+        height: 70%;   
       
     }
 }
