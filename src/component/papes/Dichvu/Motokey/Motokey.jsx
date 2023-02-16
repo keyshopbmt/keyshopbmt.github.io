@@ -4,6 +4,8 @@ import Replacemotokey from './replacemotokey/Replacemotokey';
 import Titlemoto from './titlemoto/Titlemoto';
 import './motokey.css';
 import Proceduremoto from './proceduremoto/Proceduremoto';
+import Footermotokey from './footer-motokey/Footermotokey';
+import Footer from '../../Footer/Footer';
 
 export default function Motokey() {
   return (
@@ -28,6 +30,8 @@ export default function Motokey() {
     <Titlemoto/>
     <Replacemotokey/>
     <Proceduremoto/>
+    <Footermotokey/>
+    <Footer/>
     </div>
   )
 }
