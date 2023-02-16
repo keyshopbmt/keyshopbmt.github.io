@@ -6,7 +6,7 @@ import { keyShop } from "../Db";
 export default function Footercar() {
   return (
     <div className='footer-keycar'>
-        <h2>Cần một dịch vụ làm chìa khóa Ôtô bị mất của bạn ở tp Buôn Ma Thuột?</h2>
+        <h2>Cần dịch vụ làm chìa khóa Ôtô bị mất của bạn ở tp Buôn Ma Thuột?</h2>
         <p>Key Shop BMT cung cấp dịch vụ làm khóa Ôtô ở thành phố Buôn Ma Thuột và các khu vực lân cận. Chúng tôi cung cấp dịch vụ làm lại chìa khóa Ôtô bị mất, dịch vụ sao chép chìa khóa bộ phát đáp và cung cấp các giải pháp hệ thống chìa khóa bộ phát đáp bảo mật cao cho hầu hết các phương tiện.</p>
         <p>Chúng tôi luôn đảm bảo rằng chúng tôi đang thực hiện dịch vụ làm chìa khóa Ôtô một cách chuyên nghiệp. Nếu bạn đang ở thành phố Buôn Ma Thuột và bạn cần dịch vụ sửa khóa Ôtô, đừng ngần ngại liên hệ với chúng tôi. Gọi cho chúng tôi ngay hôm nay </p>
         <div className='footer-car'>

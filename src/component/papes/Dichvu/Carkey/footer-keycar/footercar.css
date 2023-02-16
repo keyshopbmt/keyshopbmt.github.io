@@ -2,8 +2,12 @@
     padding-top: 20px;
 }
 .footer-keycar p{
+    font-size: 14px;
+}
+.footer-keycar p{
     text-align: left;
     padding-left: 20px;
+    font-size: 14px;
 }
 .image-face,.image-phone {
     width: 15%;
@@ -36,6 +40,9 @@
         padding-top: 40px;
         padding-left: 10px;
     }
+    .footer-keycar p{
+        font-size: 18px;
+    }
     .footer-car h5{
         text-align: center;
         padding-top: 5px;
@@ -51,6 +58,7 @@
     .footer-car p{
         text-align: left ;
         padding-left: 5.2rem;
+        font-size: 18px;
     }
     .image-man{
         width: 35%;
