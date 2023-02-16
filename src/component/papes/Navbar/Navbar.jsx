@@ -127,7 +127,7 @@ export default function Navbar() {
                 >
                   
                 </Link>
-                <ul className="dropdown-menu"  style={{width:"132%"}} >
+                <ul className="dropdown-menu"  >
                 <li>
                     <Link className="dropdown-item"  to="./">
                      Sửa Khóa Và Làm Chìa

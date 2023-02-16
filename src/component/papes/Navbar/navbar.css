@@ -148,9 +148,7 @@ img {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    position: relative;
-   
-
+    position: relative;  
 }
 
 .header .top_bar {
@@ -174,6 +172,9 @@ img {
 }
 .nav a{
     color:#000000b3
+}
+.dropdown-menu{
+    width:132% !important;
 }
 
 
@@ -207,6 +208,9 @@ img {
     .button-services{
         padding-right: 2.7rem;
     }
+    .dropdown-menu{
+        width: 166% !important;
+    }
    
 }
 
@@ -218,6 +222,7 @@ img {
     .nav-item{
         margin-left: 0rem;
     }
+    
   
 }
 
@@ -284,4 +289,5 @@ a {
 .nav{
     margin-left: 91px;
 }
+
 }
