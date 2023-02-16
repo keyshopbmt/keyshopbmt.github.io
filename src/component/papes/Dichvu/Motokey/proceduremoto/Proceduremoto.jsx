@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './proceduremoto.css';
 
 export default function Proceduremoto() {
   return (
     <div className='procedure-motokey'>
-            <h2>Các bước làm chìa khóa xe máy</h2>
+            <h2><b>Các bước làm chìa khóa xe máy</b></h2>
 <div className='procedure-moto'>
           
       <img
@@ -39,15 +40,12 @@ export default function Proceduremoto() {
         <div className="procedure-keymoto">
           <h3><b>
 
-          
+          Sau đó kỹ thuật viên tiến hành làm chìa khóa
           </b>
           </h3>
           <p>
             <span>
-              Dựa trên thông tin bạn cung cấp, kỹ thuật viên sẽ xác định
-              remote có phù hợp với xe của bạn và chuẩn bị cho công việc.
-              Khi kỹ thuật viên đến địa điểm của bạn, anh ta sẽ ngay lập
-              tức tiến hành thay thế chìa khóa mới cho Ôtô của bạn.
+            Sau khi xác minh thông tin của bạn, bạn cần tìm tổ hợp cơ khí cho xe máy của mình để cắt chìa khóa mới. Mỗi phím có các rãnh riêng (còn gọi là vết cắt) và không có hai phím nào được cắt giống nhau. Kỹ thuật viên có thể có được các vết cắt ban đầu bằng hai cách: Bằng cách trích xuất một trong các hình trụ và giải mã nó hoặc bằng cách sử dụng một công cụ đọc đặc biệt.
             </span>
           </p>
         </div>
@@ -65,26 +63,15 @@ export default function Proceduremoto() {
           <div className="procedure-keymoto">
             <h3><b>
               
-              Bước hoàn thiện
+            Cắt chìa khóa xe máy mới đúng tổ hợp
             </b>
               </h3>
             <p>
               <span>
-                Bước cuối cùng, tùy thuộc vào loại chìa khóa remote mà bạn
-                có. Nếu loại remote bạn có không phải là loại chìa khóa
-                thông thường, kỹ thuật viên sẽ phải lấy "mã khóa" cơ khí
-                của bạn và cắt lưỡi dao. Lưỡi dao có thể là lưỡi cắt tiêu
-                chuẩn hoặc lưỡi cắt laser. Tất cả các kỹ thuật viên của
-                chúng tôi đều được trang bị các công cụ phù hợp và có thể
-                cắt cả hai loại một cách dễ dàng.
+              Sau khi giải mã thành công xi lanh, kỹ thuật viên sẽ tiến hành cắt chìa khóa xe máy mới bằng máy cắt chuyên dụng. Anh ta sẽ cắt chiếc chìa khóa theo các đường rãnh mà anh ta đã giải mã được từ khối trụ trước đó. Cắt chìa khóa xe máy không phải là một nhiệm vụ dễ dàng vì trong số chúng yêu cầu cài đặt đặc biệt và thẻ cắt độc đáo.
               </span>
             </p>
-            <p>
-              <span >
-                Sau khi lưỡi dao được cắt, công việc sẽ hoàn thành và bạn
-                sẽ có một chìa khóa dự phòng mới cho Ôtô của mình!
-              </span>
-            </p>
+          
           </div>
         </div>
         <div className="procedure-moto">
@@ -106,19 +93,7 @@ export default function Proceduremoto() {
               </h3>
             <p>
               <span>
-                Bước cuối cùng, tùy thuộc vào loại chìa khóa remote mà bạn
-                có. Nếu loại remote bạn có không phải là loại chìa khóa
-                thông thường, kỹ thuật viên sẽ phải lấy "mã khóa" cơ khí
-                của bạn và cắt lưỡi dao. Lưỡi dao có thể là lưỡi cắt tiêu
-                chuẩn hoặc lưỡi cắt laser. Tất cả các kỹ thuật viên của
-                chúng tôi đều được trang bị các công cụ phù hợp và có thể
-                cắt cả hai loại một cách dễ dàng.
-              </span>
-            </p>
-            <p>
-              <span >
-                Sau khi lưỡi dao được cắt, công việc sẽ hoàn thành và bạn
-                sẽ có một chìa khóa dự phòng mới cho Ôtô của mình!
+              Nếu xi lanh đã được rút ra, điều duy nhất còn lại cần làm là đặt nó trở lại. Tuy nhiên, nếu bạn có xe máy được trang bị hệ thống chìa khóa chip, kỹ thuật viên sẽ cần tháo mô-đun điện ra khỏi xe máy, đọc dữ liệu được lưu trữ chứa dữ liệu "mật khẩu" phù hợp của bạn cho chiếc xe máy cụ thể đó và ghi đè lên bằng dữ liệu của chính anh ta. dữ liệu. Sau thủ tục này, anh ta sẽ phải lắp ráp lại mọi thứ và bạn sẽ có một chiếc chìa khóa mới để khởi động xe máy.
               </span>
             </p>
           </div>

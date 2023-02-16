@@ -1,0 +1,42 @@
+.procedure-moto{
+    text-align: left;
+}
+.procedure-keymoto h3{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+.procedure-keymoto p{
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.procedure-motokey{
+    padding-top: 20px;
+}
+
+@media (min-width :62rem){
+
+    .procedure-keymoto {
+        border-style: solid !important;
+        border-width: 0 0 0 5px !important;
+        border-color: rgba(241, 61, 61, 1) !important;
+        margin-left: 90px;
+        padding-top: 20px;
+    }
+    .procedure-keymoto{
+        text-align: left;
+        padding-left: 20px;
+    }
+    .procedure-keymoto h3{
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+    .procedure-keymoto p{
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 300;
+    }
+  
+}
