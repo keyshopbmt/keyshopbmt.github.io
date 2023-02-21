@@ -1,0 +1,17 @@
+
+
+
+@media (min-width : 62rem){
+    .iframe-fb-container {
+        text-align: center;
+        width:300%;
+        height:700px;
+        display:inline-block;
+    }
+    
+    .iframe-fb {
+        width: 300% !important;
+        height: 700px;
+        overflow: hidden;
+    }
+}

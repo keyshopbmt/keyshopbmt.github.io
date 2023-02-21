@@ -1,0 +1,21 @@
+.title-services a {
+    text-decoration: none;
+    color: black; 
+}
+.title-services a :hover{
+    background-color: transparent;
+}
+.title-dichvu {
+    padding-left: 30px;
+}
+.title-dichvu h4 {
+    padding-left: 30px;
+}
+
+.title-dichvu p {
+    padding-left: 30px;
+}
+.title-dichvu span {
+    padding-left: 30px;
+    text-decoration: underline;
+}

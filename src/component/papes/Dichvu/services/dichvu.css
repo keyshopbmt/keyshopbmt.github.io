@@ -1,0 +1,37 @@
+.dichvu-contact{
+    background-color: rgba(20,32,89,1) !important;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.dichvu h3{
+    padding-top: 12px;
+    font-size: 14px;
+}
+.col-md-2{
+    z-index: 3;
+    margin-left: 0px;
+    padding-top: 0px;
+}
+
+
+
+@media (min-width :62rem){
+    .dichvu h3{
+        padding-top: 6rem;
+        font-size: 30px;
+    }
+
+    .dichvu-contact{
+        padding-left: 40px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .col-md-2{
+        z-index: 3;
+       
+        margin-left: 50px;
+        padding-top: 25px;
+    }
+}
