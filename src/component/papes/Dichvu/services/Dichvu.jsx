@@ -3,6 +3,7 @@ import Navbar from '../../Navbar/Navbar';
 import './dichvu.css';
 import { MDBRow, MDBCol} from "mdb-react-ui-kit";
 import Titleservices from './titleservices/Titleservices';
+import Serviceskey from './services-key/Serviceskey';
 
 export default function Dichvu() {
   return (
@@ -36,6 +37,7 @@ export default function Dichvu() {
     </div>
     </div>
    <Titleservices/> 
+   <Serviceskey/>
 
     </div>
   )
