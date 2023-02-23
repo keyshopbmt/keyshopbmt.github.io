@@ -14,14 +14,7 @@ export default function Navbar() {
   const handleMouseLeaveServiceButton = () => {
     setIsHoveringServiceButton(false);
   };
-  const [isServiceButtonNew, setIsHoveringServiceButtonNew] = useState(false);
-  const handleMouseEnterServiceButtonNew = () => {
-    setIsHoveringServiceButtonNew(true);
-  };
-
-  const handleMouseLeaveServiceButtonNew = () => {
-    setIsHoveringServiceButtonNew(false);
-  };
+ 
   const [isServiceButtonContact, setIsHoveringServiceButtonContact] = useState(false);
   const handleMouseEnterServiceButtonContact = () => {
     setIsHoveringServiceButtonContact(true);
@@ -151,11 +144,7 @@ export default function Navbar() {
                 
                 </ul>
               </li>
-              <li className="nav">
-               <Link className="nav-link" style={{ color: isServiceButtonNew ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonNew} onMouseLeave={handleMouseLeaveServiceButtonNew} to="./news">
-                  Tin Tức
-                  </Link>
-              </li>
+            
               <li className="nav">
                <Link className="nav-link" style={{ color: isServiceButtonContact ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonContact} onMouseLeave={handleMouseLeaveServiceButtonContact} to="#">Liên Hệ</Link>
               </li>
