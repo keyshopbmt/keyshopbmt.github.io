@@ -1,17 +1,20 @@
-import React from 'react'
+import React from 'react';
+import './keyservices.css';
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 
 export default function Keyservices() {
   return (
+    <div>
     <div className="key-locksmith">
     <h2>
-      <b>Thợ Khóa giỏi nhất thành phố Buôn Ma Thuột </b>
+      <b>Thợ Khóa tốt nhất thành phố Buôn Ma Thuột </b>
     </h2>
     <div className="key-services-title">
     <img
-            src="../assets/services/dichvu/customer-holding-car-key-524w.jpg"
+            src="../assets/services/dichvu/keyshop.jpg"
             alt=""
             className="rounded-4 shadow-4 float-end m-4"
-            style={{ width: "350px", height: "400px", paddingLeft: "10px" }}
+            style={{ width: "400px", height: "640px", paddingLeft: "20px" }}
           />
           <div className="key-title">
 
@@ -37,13 +40,29 @@ export default function Keyservices() {
           Cho dù chìa khóa của bạn bị đánh cắp, bạn đánh rơi hoặc vô tình xả xuống bồn cầu, đội ngũ trực điện thoại của chúng tôi luôn sẵn sàng hỗ trợ bạn. Chúng tôi rất sẵn lòng đến bất cứ nơi nào bạn ở và giúp bạn thay chìa khóa.
           </p>
           <h3>
-            <b>Thợ khóa đáng tin cậy ở Buôn Ma Thuột</b>
+            <b>Các thợ khóa chuyên nghiệp</b>
           </h3>
-          
+          <p>Tại Key Shop BMT, chúng tôi sẵn sàng trợ giúp bạn bằng cách cung cấp các dịch vụ làm chìa khóa tốt nhất hiện có ở thành phố Buôn Ma Thuột. Chúng tôi cố gắng cung cấp dịch vụ tốt cho khách hàng và cung cấp các giải pháp hiệu quả với giá cả phải chăng cho tất cả các nhu cầu về chìa khóa của bạn. Các dịch vụ của chúng tôi bao gồm dịch vụ thợ khóa dân cư cho cộng đồng địa phương và dịch vụ thợ khóa thương mại cho các công ty và đại lý ô tô địa phương.</p>
+          <p>Sự hài lòng của khách hàng luôn là ưu tiên số một của chúng tôi, đây là lý do tại sao chúng tôi luôn cung cấp các dịch vụ chuyên nghiệp.<b> Giá cả của chúng tôi hoàn toàn minh bạch, vì khách hàng của chúng tôi luôn biết giá trước khi bắt đầu bất kỳ dịch vụ</b>. Bạn kiểm tra trước khi thanh toán hóa đơn để đảm bảo bạn hoàn toàn hài lòng với dịch vụ đã hoàn thành.</p>
           </div>
-         
         
     </div>
   </div>
+         <div className='title-booking'>
+          <MDBRow>
+            <MDBCol md='4'>
+              <h3>Cần một bộ chìa khóa mới?<br/>
+            Liên hệ với chúng tôi ngay hôm nay!</h3>
+            </MDBCol>
+            <MDBCol md='4'>
+              <p>Đặt hẹn dễ dàng, thợ khóa của chúng tôi sẽ được cử đến địa điểm của bạn; và cung cấp cho bạn một bộ chìa khóa mới.</p>
+              </MDBCol>
+              <MDBCol md='3'>
+              <a className="btn btn-danger" href="/" role="button">Liên Hệ</a>
+              </MDBCol>
+          </MDBRow>
+         </div>
+
+    </div>
   )
 }

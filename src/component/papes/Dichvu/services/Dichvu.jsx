@@ -4,6 +4,7 @@ import './dichvu.css';
 import { MDBRow, MDBCol} from "mdb-react-ui-kit";
 import Titleservices from './titleservices/Titleservices';
 import Serviceskey from './services-key/Serviceskey';
+import Keyservices from './key-services/Keyservices';
 
 export default function Dichvu() {
   return (
@@ -30,7 +31,7 @@ export default function Dichvu() {
       <p>Khi bạn mất chìa khóa, đó là một tình huống căng thẳng. Key Shop BMT là nơi sửa và làm chìa khóa uy tín ở thành phố Buôn Ma Thuột, cung cấp nhiều dịch vụ sửa và làm chìa khóa ở thành phố Buôn Ma Thuột và các khu vực lân cận, bao gồm các dịch vụ khẩn cấp và không khẩn cấp. Đội ngũ của chúng tôi luôn sẵn sàng trợ giúp bạn.</p>
     </MDBCol>
     <MDBCol md="2">
-    <a className="btn btn-danger" href="/" role="button">Đặt Lịch Hẹn</a>
+    <a className="btn btn-danger" href="/" role="button">Liên Hệ</a>
     </MDBCol>
     </MDBRow>
 
@@ -38,6 +39,7 @@ export default function Dichvu() {
     </div>
    <Titleservices/> 
    <Serviceskey/>
+   <Keyservices/>
 
     </div>
   )
