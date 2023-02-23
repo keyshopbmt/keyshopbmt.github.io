@@ -6,6 +6,7 @@ import History from "./History";
 import Common from "./Common/Common";
 import Testimonial from "./Testimonial/Testimonial";
 import Footer from "../Footer/Footer";
+import {keyShop} from "../Db";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
             <img src="./assets/1.png" alt="" className="img-1" />
           <div className="card-textkey">
             <h3 className="card-title">
-              DỊCH VỤ KHẨN CẤP: <span>0942975959</span>
+              DỊCH VỤ KHẨN CẤP: <span> {keyShop.phone}</span>
             </h3>
             <h3 className="text-card">
               DỊCH VỤ

@@ -1,5 +1,6 @@
-import React from 'react'
-import './common.scss'
+import React from 'react';
+import './common.scss';
+import {keyShop} from "../Db";
 
 export default function Common() {
   return (
@@ -59,7 +60,7 @@ export default function Common() {
                             </div>
                         </div>
 					</div>
-					<h6 className="explore_all">Nếu Bạn Gặp Các Vấn Đề Về Khóa,<a href="/" style={{ textDecoration: 'none', textAlign:'center' }}>Hãy Khám Phá Các Dịch Vụ</a> Hoặc Gọi Tới <span style={{color:'red'}}>0942975959 (Mr.Tiến)</span> </h6>
+					<h6 className="explore_all">Nếu Bạn Gặp Các Vấn Đề Về Khóa,<a href="/" style={{ textDecoration: 'none', textAlign:'center' }}>Hãy Khám Phá Các Dịch Vụ</a> Hoặc Gọi Tới <span style={{color:'red'}}> {keyShop.phone}(Mr.Tiến)</span> </h6>
 				</div>
 			</div>
             <div className="banner type_3 aos-init aos-animate" data-aos="fade-up">
@@ -75,7 +76,11 @@ export default function Common() {
 							<div className="col-lg-5">
 								<div className="banner_phone">
 									<img src="assets/phone3.png" alt=""/>
-									<span> 0942975959 </span>
+									<span style={{paddingLeft:"15px"}}>{keyShop.phone} </span>
+                                
+                                    <span style={{paddingLeft:"80px"}}> {keyShop.phones}  </span>
+                                    <br />
+                                    <span style={{paddingLeft:"80px"}}>  {keyShop.telephone} </span>
 								</div>
 							</div>
 						</div>

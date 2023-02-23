@@ -1,5 +1,6 @@
-import React from 'react'
-import './history.css'
+import React from 'react';
+import './history.css';
+import {keyShop} from "../Db";
 
 export default function History() {
   return (
@@ -31,7 +32,7 @@ export default function History() {
 										to altering the code of the lock so that it will work with different 
 										key or a completely new one. You have purchased a new lock &amp; 
 										want it to match the rest of the locks.</p>
-										<h5 className="appoint">Liên Hệ <span>0942975959 (Mr.Tiến)</span></h5>
+										<h5 className="appoint">Liên Hệ <span>{keyShop.phone} (Mr.Tiến)</span></h5>
 								</div>
 								<div className="read_more aos-init aos-animate" data-aos="fade-up">
 									<a className="button" href="#">Chi Tiết</a>
