@@ -5,6 +5,9 @@ import { MDBRow, MDBCol} from "mdb-react-ui-kit";
 import Titleservices from './titleservices/Titleservices';
 import Serviceskey from './services-key/Serviceskey';
 import Keyservices from './key-services/Keyservices';
+import Chipkey from './chip-key/Chipkey';
+import Footerservices from './footer-services/Footerservices';
+import Footer from '../../Footer/Footer';
 
 export default function Dichvu() {
   return (
@@ -40,7 +43,9 @@ export default function Dichvu() {
    <Titleservices/> 
    <Serviceskey/>
    <Keyservices/>
-
+   <Chipkey/>
+   <Footerservices/>
+    <Footer/>
     </div>
   )
 }
