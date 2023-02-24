@@ -14,7 +14,7 @@ export default function Keyservices() {
             src="../assets/services/dichvu/keyshop.jpg"
             alt=""
             className="rounded-4 shadow-4 float-end m-4"
-            style={{ width: "400px", height: "640px", paddingLeft: "20px" }}
+            style={{ width: "300px", height: "600px", paddingLeft: "20px" }}
           />
           <div className="key-title">
 
