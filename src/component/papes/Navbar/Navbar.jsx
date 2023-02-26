@@ -146,7 +146,7 @@ export default function Navbar() {
               </li>
             
               <li className="nav">
-               <Link className="nav-link" style={{ color: isServiceButtonContact ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonContact} onMouseLeave={handleMouseLeaveServiceButtonContact} to="#">Liên Hệ</Link>
+               <Link className="nav-link" style={{ color: isServiceButtonContact ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterServiceButtonContact} onMouseLeave={handleMouseLeaveServiceButtonContact} to="/contact">Liên Hệ</Link>
               </li>
             </ul>
             

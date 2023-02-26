@@ -74,6 +74,8 @@ export default function Footer() {
                         Thứ 2- CN <span>(7:00 a.m - 6:00 p.m)</span>
                 
                         <h4>{keyShop.phone}</h4>
+                        <h4> {keyShop.phones}</h4>
+                        <h4>{keyShop.telephone}</h4>
                       </div>
                     </div>
                   </div>

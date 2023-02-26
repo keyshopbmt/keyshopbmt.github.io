@@ -4,6 +4,8 @@ export const keyShop =
         title: "Key Shop BMT",
         mail:"keyshopbmt@gmail.com",
         adress : "Số 10 Nguyễn Chí Thanh, Phường Tân An, Tp Buôn Ma Thuột, Đắk Lắk",
-        phone : "0942975959",   
+        phone : "0942975959",  
+        phones :"0917249595" , 
+        telephone : "0911429595" 
        
     };

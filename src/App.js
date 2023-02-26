@@ -4,6 +4,7 @@ import {publicRoutes} from './routes';
 
 
 
+
 function App() {
   return (
    <Router>
@@ -24,6 +25,7 @@ function App() {
                     })}
     
      </Routes>
+     
       </div>
    </Router>
   );
