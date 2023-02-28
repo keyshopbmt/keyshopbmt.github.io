@@ -158,18 +158,19 @@ img {
     
 }
 .button-services{
+    padding-right: 5.5rem;
+      
+}
+.button-product{
     padding-right: 5.1rem;
-    
-    
+      
 }
 .nav-item{
     margin-left: 0rem;
 }
  
 
-.button-services {
-    padding-right: 4.5rem;
-}
+
 .nav a{
     color:#000000b3
 }
@@ -178,7 +179,7 @@ img {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 62rem) {
     .containern {
         max-width: 1170px;
         margin-left: 36rem;
@@ -188,18 +189,32 @@ img {
     .button-services{
         padding-right: 0.7rem;
     }
-    .nav-services{
+    .nav-services {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-}
-
-@media screen and (min-width: 1200px) {
-    .containern {
-        max-width: 1170px;
-        margin-left: 36rem;
+    .nav-product{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .button-product{
+        padding-right: 2.7rem;
+    }
+    .navbar-expand-lg .navbar-collapse{
+        --bs-navbar-nav-link-padding-x: 1.5rem;
+        margin-left: 17.5rem;
+    }
+    .header .logo a {
+        display: inline-block;
+        margin-top: -70px;
+    }
+    .header .logo img {
+        transition: all 0.5s ease;
     }
 }
+    
+
+
 
 @media (min-width: 992px) {
     .containern {
@@ -208,8 +223,19 @@ img {
     .button-services{
         padding-right: 2.7rem;
     }
+    .button-product{
+        padding-right: 2.7rem;
+    }
     .dropdown-menu{
         width: 166% !important;
+    }
+    .nav-services {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .nav-product{
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
    
 }
@@ -222,6 +248,7 @@ img {
     .nav-item{
         margin-left: 0rem;
     }
+    
     
   
 }
@@ -245,9 +272,6 @@ img {
     display: inline-block;
    
 }
-.nav-services {
-    padding-left: 0rem;
-}
 
 a {
     color: #ff3b3e;
@@ -261,29 +285,17 @@ a {
     z-index: 3;
     text-align: center;
 }
-@media (min-width: 62rem){
 
-    .navbar-expand-lg .navbar-collapse{
-        --bs-navbar-nav-link-padding-x: 1.5rem;
-        margin-left: 17.5rem;
-    }
-    .header .logo a {
-        display: inline-block;
-        margin-top: -70px;
-    }
-}
-.header .logo img {
-    transition: all 0.5s ease;
-}
 @media screen and (max-width: 991px){
 .header .logo img {
     max-width: 100px;
     margin-top: -20px;
 }
-.button-services{
-    padding-right: 0 rem;
-}
+
 .nav-services{
+    padding-left: 6.8rem;   
+}
+.nav-product{
     padding-left: 6.8rem;   
 }
 .nav{

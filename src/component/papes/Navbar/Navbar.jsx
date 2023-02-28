@@ -14,7 +14,26 @@ export default function Navbar() {
   const handleMouseLeaveServiceButton = () => {
     setIsHoveringServiceButton(false);
   };
+
+
+
+
+
+  const [isProductButtonHovering, setIsHoveringProductButton] = useState(false);
+
+  const handleMouseEnterProductButton = () => {
+    setIsHoveringProductButton(true);
+  };
+
+  const handleMouseLeaveProductButton = () => {
+    setIsHoveringProductButton(false);
+  };
+
+
  
+
+
+
   const [isServiceButtonContact, setIsHoveringServiceButtonContact] = useState(false);
   const handleMouseEnterServiceButtonContact = () => {
     setIsHoveringServiceButtonContact(true);
@@ -91,15 +110,20 @@ export default function Navbar() {
                 </Link>
               </li>
               
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown button-product" >
+                <Link className="nav-product" to="/sanpham" style={{float:"left", paddingTop:"0.5rem", textDecoration:"none",
+                 color: isProductButtonHovering ? "#000000b3": "#0000008c"}} onMouseEnter={handleMouseEnterProductButton} onMouseLeave={handleMouseLeaveProductButton}>
+                  Sản Phẩm
+                </Link>
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle "
                   data-bs-toggle="dropdown"
-                  to="./product"
+              
+                  
                   role="button"
                   aria-expanded="false"
                 >
-                  Sản Phẩm
+                  
                 </Link>
                 <ul className="dropdown-menu">
               
