@@ -26,13 +26,11 @@ export default function History() {
 							<div className="experience_content">
 								<div className="section_header aos-init aos-animate" data-aos="fade-up">
 									<div className="shadow_icon"><img src="assets/services/shadow_icon1.png" alt=""/></div>
-									<h6 className="section_sub_title">KEY SHOP BMT</h6>
+									<h5 className="section_sub_title">KEY SHOP BMT</h5>
 									<h1 className="section_title">Cung Cấp Dịch Vụ Nhanh Chóng</h1>
-									<p className="section_desc">When a locksmith is discussing re-keying that are referring 
-										to altering the code of the lock so that it will work with different 
-										key or a completely new one. You have purchased a new lock &amp; 
-										want it to match the rest of the locks.</p>
-										<h5 className="appoint">Liên Hệ <span>{keyShop.phone} (Mr.Tiến)</span></h5>
+										<p className="section_desc"></p>
+										<h5 className="appoint">Liên Hệ: <span>{keyShop.phone} (Mr.Tiến)</span> 
+										</h5>
 								</div>
 								<div className="read_more aos-init aos-animate" data-aos="fade-up">
 									<a className="button" href="#">Chi Tiết</a>

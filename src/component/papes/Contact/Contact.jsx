@@ -4,6 +4,7 @@ import { keyShop } from "../Db";
 import Navbar from '../Navbar/Navbar';
 import './contact.css';
 import Footer from '../Footer/Footer';
+import News from '../News/News';
 
 export default function Contact() {
   return (
@@ -50,6 +51,7 @@ export default function Contact() {
         </MDBCol>
         </MDBRow>
     </div>
+    <News/>
     <Footer/>
     </div>
     

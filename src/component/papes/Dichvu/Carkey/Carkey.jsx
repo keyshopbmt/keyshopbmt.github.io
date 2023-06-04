@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../Footer/Footer";
 import Navbar from "../../Navbar/Navbar";
+import News from "../../News/News";
 import "./carkey.css";
 import Easystep from "./easystep/Easystep";
 import Footercar from "./footer-keycar/Footercar";
@@ -14,33 +15,33 @@ import Typekeycar from "./typekeycar/Typekeycar";
 export default function Carkey() {
   return (
     <div>
-      <Navbar/>
-      <div className="card text-bg-dark" >
-    <img
-      src="../assets/services/carkey/backgroup.jpg"
-      className="card-img"
-      alt=""
-    />
-    <div className="card-img-overlay">
-      <div className="card-car">
-        <h3>
-          SỬA VÀ LÀM CHÌA KHÓA ÔTÔ CHUYÊN NGHIỆP
-          <br />
-          TẠI KEYSHOP BMT
-        </h3>
+      <Navbar />
+      <div className="card text-bg-dark">
+        <img
+          src="../assets/services/carkey/backgroup.jpg"
+          className="card-img"
+          alt=""
+        />
+        <div className="card-img-overlay">
+          <div className="card-car">
+            <h3>
+              SỬA VÀ LÀM CHÌA KHÓA ÔTÔ CHUYÊN NGHIỆP
+              <br />
+              TẠI KEYSHOP BMT
+            </h3>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-    <Titlecar/>
-    <Keycar/>
-    <Easystep/>
-    <Typekeycar/>
-    <Replacing/>
-    <Remotecar/>
-    <Transponder/>
-    <Footercar/>
-    <Footer/>
-
+      <News />
+      <Titlecar />
+      <Keycar />
+      <Easystep />
+      <Typekeycar />
+      <Replacing />
+      <Remotecar />
+      <Transponder />
+      <Footercar />
+      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Keyservices from './key-services/Keyservices';
 import Chipkey from './chip-key/Chipkey';
 import Footerservices from './footer-services/Footerservices';
 import Footer from '../../Footer/Footer';
+import News from '../../News/News';
 
 export default function Dichvu() {
   return (
@@ -39,6 +40,7 @@ export default function Dichvu() {
     </MDBRow>
     </div>
     </div>
+    <News/>
    <Titleservices/> 
    <Serviceskey/>
    <Keyservices/>

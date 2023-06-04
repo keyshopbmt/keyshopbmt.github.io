@@ -1,42 +1,43 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import "./news.css";
 
-
 export default function News() {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const toggleCheck = () => {
+    setIsChecked(!isChecked);
+    const sosElement = document.getElementById("sos_fb_slider");
+    sosElement.style.right = isChecked ? "-305px" : "0px";
+  };
 
   return (
-    <div >
+    <div>
       <div
-   
+        onClick={toggleCheck}
         id="sos_fb_slider"
         className="soslider_class soslider_inner "
-       style={{ width: "300px",
-       height: "500px",
-       zIndex: "1000",
-       background: "none 0px 0px repeat scroll rgb(59, 89, 152)",
-       borderRadius: "0px",
-       padding: "5px 0px 0px 5px",
-       top: "62.5px",
-       right: "-305px"
-       
-      }}
+        style={{
+          width: "300px",
+          height: "500px",
+          zIndex: "1000",
+          background: "none 0px 0px repeat scroll rgb(59, 89, 152)",
+          borderRadius: "0px",
+          padding: "5px 0px 0px 5px",
+          top: "62.5px",
+          right: "-305px",
+        }}
       >
-        <div  >
-          
-
+        <div>
           <img
             src="../assets/9_right.png"
-           
             style={{
               display: "block",
               position: "absolute",
               left: "-24px",
               top: "208px",
               cursor: "pointer",
-              
             }}
-            
           />
         </div>
 
@@ -52,21 +53,17 @@ export default function News() {
             overflow: "hidden",
           }}
         >
-          <div
-            
-          >
-       
-              <iframe
-                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftienphatexpertkeyworld&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=false&appId"
-                width="340"
-                height="500"
-                style={{ border: "none", overflow: "hidden" }}
-                scrolling="no"
-                frameborder="0"
-                allowfullscreen="true"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              ></iframe>
-          
+          <div>
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftienphatexpertkeyworld&tabs=timeline&width=290&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="290"
+              height="500"
+              style={{ border: "none", overflow: "hidden" }}
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
           </div>
           <div
             id="sos-fbw"
