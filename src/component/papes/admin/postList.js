@@ -2,8 +2,6 @@ import * as React from "react";
 import { Children, Fragment, cloneElement, memo } from "react";
 import BookIcon from "@mui/icons-material/Book";
 import { makeStyles } from "@mui/styles";
-import lodashGet from "lodash/get";
-import jsonExport from "jsonexport/dist";
 import {
   BulkDeleteButton,
   BulkExportButton,
@@ -33,13 +31,6 @@ const PostFilter = (props) => (
   </Filter>
 );
 
-// const exporter = (posts) => {
-//   const data = posts.map((post) => ({
-//     ...post,
-//     backlinks: lodashGet(post, "backlinks", []).map((backlink) => backlink.url),
-//   }));
-//   jsonExport(data, (csv) => downloadCSV(csv, "posts"));
-// };
 const exporter = (posts) => {
   const postsForExport = posts.map((post) => {
     const { backlinks, author, ...postForExport } = post; // omit backlinks and author
@@ -103,14 +94,7 @@ const PostListActionToolbar = ({ children, ...props }) => {
   );
 };
 const ListActions = (props) => {
-  const {
-    className,
-    basePath,
-    total,
-    resource,
-    currentSort,
-    exporter,
-  } = props;
+  const { className, basePath, total, resource, currentSort, exporter } = props;
   const config = {
     logging: true,
     validateRow: async (row) => {

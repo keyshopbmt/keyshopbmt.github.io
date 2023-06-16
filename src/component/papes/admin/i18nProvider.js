@@ -11,4 +11,5 @@ export const i18nProvider = polyglotI18nProvider(
         { locale: 'en', name: 'English' },
         { locale: 'vi', name: 'Vietnamese' }
     ],
+    { allowMissing: true }
 );

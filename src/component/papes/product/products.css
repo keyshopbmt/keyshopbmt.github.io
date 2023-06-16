@@ -1,0 +1,48 @@
+
+
+
+.mylabel {
+    margin-left: 5px;
+    margin-top: -1px;
+   
+}
+.category{
+    display: flex;
+}
+
+.mylabel span {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: -5px;
+    font-weight: 400;
+}
+
+
+
+
+@media (min-width: 992px) {
+    .products{
+        display: flex;
+    }
+
+    .mylabel {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin: 2px;
+        margin-left: 110px;
+    }
+
+    .mylabel span {
+        margin-left: 10px;
+        font-size: 20px;
+        margin-top: -5px;
+        padding-top: -6px;
+        font-weight: 400;
+    }
+    .category{
+        display: block;
+    }
+
+
+}

@@ -4,6 +4,8 @@ import Carkey from "../component/papes/Dichvu/Carkey/Carkey";
 import Motokey from "../component/papes/Dichvu/Motokey/Motokey";
 import Contact from "../component/papes/Contact/Contact";
 import Ad from "../component/papes/admin/admin";
+import ProductList from "../component/papes/product/ProductList";
+import  Product  from "../component/papes/product/product";
 
 const publicRoutes = [
   { path: "/", component: Home },
@@ -11,6 +13,8 @@ const publicRoutes = [
   { path: "/contact", component: Contact },
   { path: "/carkey", component: Carkey },
   { path: "/motokey", component: Motokey },
+  { path: "/product", component: ProductList },
+  { path: "/product/:id", component: Product },
   { path: "/*", component: Ad },
 ];
 

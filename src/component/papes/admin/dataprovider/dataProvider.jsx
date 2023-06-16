@@ -40,18 +40,23 @@ const dataProvider = (
     const options = {
       headers: {
         Accept: "application/json",
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         ...headers(),
       },
     };
 
     if (body) {
-      options.body = JSON.stringify(
-        _lodash.default.omit(body, [idParamApi, idParamAdmin])
-      );
-      options.headers["Content-Type"] = "application/json";
+      let optionBody = _lodash.default.omit(body, [idParamApi, idParamAdmin]);
+      if (Object.keys(optionBody).length === 0) {
+        console.log("Object is empty"); // 👉️ this runs
+      } else {
+        options.body = JSON.stringify(optionBody);
+  
+        options.headers["Content-Type"] = "application/json";
+        console.log("Object is NOT empty");
+      }
     }
-
+    console.log(body);
     switch (type) {
       case CREATE:
         options.method = "POST";
@@ -69,6 +74,7 @@ const dataProvider = (
 
       default:
         options.method = "GET";
+        options.body = undefined;
     }
 
     return options;
@@ -200,9 +206,9 @@ const dataProvider = (
         id,
       });
     url.pathname = path.filter(Boolean).join("/");
-    // console.log(options)
+    console.log(options);
     let response = await ftch(url.toString(), options);
-    
+
     try {
       response = await response.json();
     } catch (e) {
