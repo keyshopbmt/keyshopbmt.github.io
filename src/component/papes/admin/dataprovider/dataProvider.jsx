@@ -56,7 +56,6 @@ const dataProvider = (
         console.log("Object is NOT empty");
       }
     }
-    console.log(body);
     switch (type) {
       case CREATE:
         options.method = "POST";
@@ -206,7 +205,7 @@ const dataProvider = (
         id,
       });
     url.pathname = path.filter(Boolean).join("/");
-    console.log(options);
+    // console.log(options);
     let response = await ftch(url.toString(), options);
 
     try {
