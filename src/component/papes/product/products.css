@@ -1,12 +1,10 @@
-
-
-
 .mylabel {
     margin-left: 5px;
     margin-top: -1px;
-   
+
 }
-.category{
+
+.category {
     display: flex;
 }
 
@@ -21,28 +19,93 @@
 
 
 @media (min-width: 992px) {
-    .products{
+    .products {
         display: flex;
+    }
+
+    .category {
+        display: block;
+    }
+
+    .category h3 {
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .search-input {
+        width: 70%;
+        outline: none;
+        border-radius: 5px;
+        margin-left: -45px;
+        border: 1px solid #999;
+    }
+
+    .category h4 {
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 
     .mylabel {
         display: flex;
-        gap: 5px;
-        align-items: center;
-        margin: 2px;
-        margin-left: 110px;
+        gap: 10px;
+        justify-content: stretch;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: -10px;
     }
 
-    .mylabel span {
-        margin-left: 10px;
-        font-size: 20px;
-        margin-top: -5px;
-        padding-top: -6px;
+    .mylabel p {
+        margin-top: 15px;
+        align-items: left;
+        font-size: 18px;
         font-weight: 400;
     }
-    .category{
-        display: block;
+
+
+    .slider-input {
+        width: 14rem;
+        margin-left: 40px;
+        margin-top: 10px;
     }
 
+    .pageLimit {
+        width: 85%;
+        margin-left: 35px;
+    }
+
+    .main {
+        display: flex;
+        margin-left: 30px;
+    }
+
+    .main .fieldMin .fieldMax {
+        align-items: left;
+    }
+
+    .field {
+        width: 35%;
+    }
+
+    .field input {
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 3px;
+        border: 1px solid #999;
+    }
+    .main .separator {
+        width: 20px;
+        display: flex;
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clearFilter {
+        margin-left: -50px;
+    }
 
 }

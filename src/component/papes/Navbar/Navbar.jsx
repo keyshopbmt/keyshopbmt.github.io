@@ -61,13 +61,13 @@ export default function Navbar() {
             </div>
             <div className="header_info">
               <div className="schedule">
-                <img src="assets/clock.png" alt="schedule" />
+                <img src="/assets/clock.png" alt="schedule" />
                 <div>
                   Thứ 2 - Chủ Nhật <span>(7:00 a.m - 6:00 p.m)</span>
                 </div>
               </div>
               <div className="phone">
-                <img src="assets/phone.png" alt="phone"/>
+                <img src="/assets/phone.png" alt="phone"/>
                 <div>
                   <span>Liên Hệ : </span>
                   <br />
@@ -85,7 +85,7 @@ export default function Navbar() {
             <div className="logo">
 
               <a href="/">
-                <img src="assets/logo1.png" alt="logo" />
+                <img src="/assets/logo1.png" alt="logo" />
               </a>
             </div>
             <nav className="navbar navbar-expand-lg bg-white py-3 shadow-sm ">
