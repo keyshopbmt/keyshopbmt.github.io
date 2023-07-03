@@ -5,12 +5,12 @@ import "./products.css";
 import Slider from "@mui/material/Slider";
 import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+
 
 let searchParams = {};
 
@@ -151,11 +151,6 @@ export default function Products() {
 
     fetchUserData(searchParams);
   };
-  const clearFilters = () => {
-    fetchUserData({
-      searchParams: null,
-    });
-  };
   const loadMore = () => {
     setLimt((prevValue) => prevValue + 6);
   };
@@ -181,49 +176,127 @@ export default function Products() {
           </div>
           <div>
             <Hidden xsDown>
-              <h4>Loại:</h4>
-              {categories.map((item) => (
-                <div className="checkbox" key={item.category}>
-                  <label className="mylabel">
-                    <input
-                      type="checkbox"
-                      value={item.category}
-                      onChange={() => updateCategory(item)}
-                      checked={item.checked}
-                    />
-                    <p>{item.category}</p>
-                  </label>
-                </div>
-              ))}
+              <div className="categoryProduct">
+                <h4>Loại:</h4>
+                
+                  {categories.map((item) => (
+                    <div className="checkbox" key={item.category}>
+                      <label className="mylabel">
+                        <input
+                          type="checkbox"
+                          value={item.category}
+                          onChange={() => updateCategory(item)}
+                          checked={item.checked}
+                        />
+                        <p>{item.category}</p>
+                      </label>
+                    </div>
+                  ))}
+                
+              </div>
 
               <div className="price">
                 <h4>Khoảng Giá:</h4>
                 <div className="price-row">
-                  <form className="main" onChange={filteredPrices}>
-                    <div className="field">
+                  <div className="field">
+                    <input
+                      type="text"
+                      id="min"
+                      value={searchParams.minPrice}
+                      onChange={(e) => (searchParams.minPrice = e.target.value)}
+                      placeholder="min"
+                    />
+                  </div>
+                  <div className="separator">-</div>
+                  <div className="field">
+                    <input
+                      type="text"
+                      id="max"
+                      value={searchParams.maxPrice}
+                      onChange={(e) => (searchParams.maxPrice = e.target.value)}
+                      placeholder="max"
+                    />
+                  </div>
+                </div>
+                <div className="slider-input">
+                  <Slider
+                    getAriaLabel={() => "Price range"}
+                    value={[searchParams.maxPrice, searchParams.minPrice]}
+                    min={minMaxPrice[0]}
+                    max={minMaxPrice[1]}
+                    onChange={debouncedHandler}
+                    valueLabelDisplay="auto"
+                    // getAriaValueText={valuetext}
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  className="btn btn-light btn-sm clearFilter"
+                  onClick={(e) => resetSearch()}
+                >
+                  Clear Filters
+                </button>
+              </div>
+            </Hidden>
+            <Hidden smUp>
+              <IconButton onClick={() => setOpen(true)}>
+                <FilterAltIcon />
+              </IconButton>
+            </Hidden>
+          </div>
+          <SwipeableDrawer
+            anchor="right"
+            open={open}
+            onOpen={() => setOpen(true)}
+            onClose={() => setOpen(false)}
+          >
+            <div
+              onClick={() => setOpen(false)}
+              onKeyPress={() => setOpen(false)}
+              role="button"
+              tabIndex={0}
+            >
+              <IconButton>
+                <ChevronRightIcon />
+              </IconButton>
+            </div>
+            <Divider />
+            <List>
+              <div className="categoryProduct">
+                <h4>Loại:</h4>
+                {categories.map((item) => (
+                  <div className="checkbox" key={item.category}>
+                    <label className="mylabel">
                       <input
-                        type="text"
-                        id="min"
-                        value={searchParams.minPrice}
-                        onChange={(e) =>
-                          (searchParams.minPrice = e.target.value)
-                        }
-                        placeholder="min"
+                        type="checkbox"
+                        value={item.category}
+                        onChange={() => updateCategory(item)}
+                        checked={item.checked}
                       />
-                    </div>
-                    <div className="separator">-</div>
-                    <div className="field">
-                      <input
-                        type="text"
-                        id="max"
-                        value={searchParams.maxPrice}
-                        onChange={(e) =>
-                          (searchParams.maxPrice = e.target.value)
-                        }
-                        placeholder="max"
-                      />
-                    </div>
-                  </form>
+                      <p>{item.category}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+
+              <div className="price">
+                <h4>Khoảng Giá:</h4>
+                <div className="price-row">
+                  <input
+                    type="text"
+                    id="min"
+                    value={searchParams.minPrice}
+                    onChange={(e) => (searchParams.minPrice = e.target.value)}
+                    placeholder="min"
+                  />
+                  <input
+                    type="text"
+                    id="max"
+                    value={searchParams.maxPrice}
+                    onChange={(e) => (searchParams.maxPrice = e.target.value)}
+                    placeholder="max"
+                  />
                 </div>
                 <div className="slider-input">
                   <Slider
@@ -246,86 +319,6 @@ export default function Products() {
                   Clear Filters
                 </button>
               </div>
-            </Hidden>
-            <Hidden smUp>
-              <IconButton onClick={() => setOpen(true)}>
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
-          </div>
-          <SwipeableDrawer
-            anchor="right"
-            open={open}
-            onOpen={() => setOpen(true)}
-            onClose={() => setOpen(false)}
-          >
-            <div
-              onClick={() => setOpen(false)}
-              onKeyPress={() => setOpen(false)}
-              role="button"
-              tabIndex={0}
-            >
-              <IconButton>
-                <ChevronRightIcon />
-              </IconButton>
-            </div>
-            <Divider />
-            <List>
-              {categories.map((item) => (
-                <div className="checkbox" key={item.category}>
-                  <label className="mylabel">
-                    <input
-                      type="checkbox"
-                      value={item.category}
-                      onChange={() => updateCategory(item)}
-                      checked={item.checked}
-                    />
-                    <p>{item.category}</p>
-                  </label>
-                </div>
-              ))}
-
-              <div className="price">
-                <div className="price-row">
-                  <form className="main" onChange={filteredPrices}>
-                    <input
-                      type="text"
-                      id="min"
-                      value={searchParams.minPrice}
-                      onChange={(e) => (searchParams.minPrice = e.target.value)}
-                      placeholder="min"
-                    />
-                    <input
-                      type="text"
-                      id="max"
-                      value={searchParams.maxPrice}
-                      onChange={(e) => (searchParams.maxPrice = e.target.value)}
-                      placeholder="max"
-                    />
-                  </form>
-                </div>
-                <div className="slider-input">
-                  <Slider
-                    getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice]}
-                    min={minMaxPrice[0]}
-                    max={minMaxPrice[1]}
-                    onChange={debouncedHandler}
-                    valueLabelDisplay="auto"
-
-                    // getAriaValueText={valuetext}
-                  />
-                </div>
-              </div>
-              <div className="filter-clear">
-                <button
-                  type="filter-clear"
-                  className="btn btn-light btn-sm"
-                  onClick={clearFilters}
-                >
-                  Clear Filters
-                </button>
-              </div>
             </List>
           </SwipeableDrawer>
         </div>
@@ -333,11 +326,11 @@ export default function Products() {
         <div className="row col-md-9 d-flex ">
           {data.slice(0, pageLimit).map((product) => (
             <div className="col-md-3" key={product.id}>
-              <div className="card">
+              <div className="card-product">
                 <Link to={`/product/${product.id}`}>
                   <img
                     src={product.image}
-                    className="card-img-top h-200 w-200"
+                    className="card-img-product"
                     alt={product.title}
                   />
                 </Link>
