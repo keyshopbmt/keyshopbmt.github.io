@@ -45,9 +45,9 @@ const CloudinaryImageInput = () => {
         }
       }
     );
-  
+
     myWidget.open();
-  }
+  };
   useEffect(() => {
     formContext.setValue("image", image);
   });
@@ -72,15 +72,36 @@ const CloudinaryImageInput = () => {
   );
 };
 
-export const PostCreate = (props) => {
-  // const cld = new Cloudinary({
-  //   cloud: {
-  //     cloudName: "dbs44uzyv",
-  //     apiKey: "768982511158683",
-  //     apiSecret: "5zXBTKhIx2U2ZQQdCneb5miCtDM",
-  //   },
-  // });
+const convertDateToString = (value) => {
+  // value is a `Date` object
+  if (!(value instanceof Date) || isNaN(value.getDate())) return "";
+  const pad = "00";
+  const yyyy = value.getFullYear().toString();
+  const MM = (value.getMonth() + 1).toString();
+  const dd = value.getDate().toString();
+  return `${yyyy}-${(pad + MM).slice(-2)}-${(pad + dd).slice(-2)}`;
+};
 
+const dateFormatter = (value) => {
+  // null, undefined and empty string values should not go through dateFormatter
+  // otherwise, it returns undefined and will make the input an uncontrolled one.
+  if (value == null || value === "") return "";
+  if (value instanceof Date) return convertDateToString(value);
+  // Valid dates should not be converted
+  if (dateFormatter.test(value)) return value;
+
+  return convertDateToString(new Date(value));
+};
+const dateParser = (value) => {
+  //value is a string of "YYYY-MM-DD" format
+  const match = dateParser.exec(value);
+  if (match === null) return;
+  const d = new Date(match[1], parseInt(match[2], 10) - 1, match[3]);
+  if (isNaN(d.getDate())) return;
+  return d;
+};
+
+export const PostCreate = (props) => {
   return (
     <Create {...props}>
       <SimpleForm>
@@ -89,7 +110,12 @@ export const PostCreate = (props) => {
         <TextInput source="description" validate={[required()]} fullWidth />
         <TextInput source="category" validate={[required()]} fullWidth />
         <CloudinaryImageInput />
-        <DateInput source="date_create" />
+        <DateInput
+          source="date"
+          format={dateFormatter}
+          parse={dateParser}
+          defaultValue={new Date()}
+        />
       </SimpleForm>
     </Create>
   );

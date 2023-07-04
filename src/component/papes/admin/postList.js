@@ -46,7 +46,7 @@ const exporter = (posts) => {
       "description",
       "category",
       "image",
-      "date_create",
+      "date",
     ], // order fields in the export
   });
   downloadCSV(csv, "posts"); // download as 'posts.csv` file
@@ -54,6 +54,12 @@ const exporter = (posts) => {
 
 const useStyles = makeStyles((theme) => ({
   title: {
+    maxWidth: "20em",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  },
+  image: {
     maxWidth: "20em",
     overflow: "hidden",
     textOverflow: "ellipsis",
@@ -135,10 +141,6 @@ const rowClick = (record) => {
   return "show";
 };
 
-const PostPanel = ({ record }) => (
-  <div dangerouslySetInnerHTML={{ __html: record.body }} />
-);
-
 const PostList = (props) => {
   const classes = useStyles();
 
@@ -147,17 +149,16 @@ const PostList = (props) => {
       {...props}
       bulkActionButtons={<PostListBulkActions />}
       filters={<PostFilter />}
-      exporter={exporter}
       actions={<ListActions />}
     >
-      <Datagrid rowClick={rowClick} expand={PostPanel} optimized>
+      <Datagrid rowClick={rowClick} optimized>
         <TextField source="id" />
         <TextField source="title" cellClassName={classes.title} />
         <NumberField source="price" />
         <TextField source="description" />
         <TextField source="category" />
-        <TextField source="image" />
-        <DateField source="date_create" />
+        <TextField source="image" cellClassName={classes.image} />
+        <DateField source="date" />
         <PostListActionToolbar>
           <EditButton />
           <ShowButton />

@@ -7,6 +7,7 @@ import PostList from "./postList";
 import { PostCreate } from "./postCreate";
 import Dashboard from "./Dashboard";
 import { i18nProvider } from "./i18nProvider";
+import "./admin.css"
 
 export const httpClient = () => {
   const { token } = JSON.parse(localStorage.getItem("auth")) || {};

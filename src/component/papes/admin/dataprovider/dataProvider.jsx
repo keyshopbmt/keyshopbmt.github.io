@@ -48,12 +48,12 @@ const dataProvider = (
     if (body) {
       let optionBody = _lodash.default.omit(body, [idParamApi, idParamAdmin]);
       if (Object.keys(optionBody).length === 0) {
-        console.log("Object is empty"); // 👉️ this runs
+        // console.log("Object is empty"); // 👉️ this runs
       } else {
         options.body = JSON.stringify(optionBody);
   
         options.headers["Content-Type"] = "application/json";
-        console.log("Object is NOT empty");
+        // console.log("Object is NOT empty");
       }
     }
     switch (type) {
