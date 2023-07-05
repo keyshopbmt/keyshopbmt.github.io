@@ -6,12 +6,18 @@ import {
   DateInput,
   required,
   NumberInput,
+  useRecordContext,
 } from "react-admin";
-import { useFormContext } from "react-hook-form";
+import get from 'lodash/get';
+import { useFormContext, useForm } from "react-hook-form";
 
-const CloudinaryImageInput = () => {
-    const [image, setImage] = useState("");
+
+const CloudinaryImageInput = (props) => {
+    const {source} = props;
+    const record = useRecordContext();
+    const [image, setImage] = useState(get(record, source, ""));
     const formContext = useFormContext();
+    const form = useForm();
   
     const openUploadWidget = () => {
       var myWidget = window.cloudinary.createUploadWidget(
@@ -49,7 +55,7 @@ const CloudinaryImageInput = () => {
       myWidget.open();
     };
     useEffect(() => {
-      formContext.setValue("image", image);
+      formContext.setValue("image", image, { shouldDirty: true });
     });
     return (
       <>
@@ -61,13 +67,7 @@ const CloudinaryImageInput = () => {
         >
           Upload
         </button>
-        <img id="uploadedimage" src=""></img>
-        <input
-          id="input_image"
-          name="image"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
+        <img id="uploadedimage" src={image}></img>
       </>
     );
   };
@@ -113,7 +113,7 @@ const PostEdit = (props) => (
       <NumberInput source="price" />
       <TextInput source="description" validate={[required()]} fullWidth />
       <TextInput source="category" />
-      <CloudinaryImageInput />
+      <CloudinaryImageInput source="image" />
       <DateInput
         source="date"
         format={dateFormatter}
