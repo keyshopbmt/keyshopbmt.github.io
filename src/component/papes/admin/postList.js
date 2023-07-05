@@ -16,6 +16,7 @@ import {
   DateField,
   NumberField,
   TopToolbar,
+  ImageField,
 } from "react-admin"; // eslint-disable-line import/no-unresolved
 import ResetViewsButton from "./ResetViewsButton";
 
@@ -157,7 +158,7 @@ const PostList = (props) => {
         <NumberField source="price" />
         <TextField source="description" />
         <TextField source="category" />
-        <TextField source="image" cellClassName={classes.image} />
+        <ImageField source="image" title="title"  cellClassName={classes.image} />
         <DateField source="date" />
         <PostListActionToolbar>
           <EditButton />
