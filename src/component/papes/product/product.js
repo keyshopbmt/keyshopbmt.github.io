@@ -28,11 +28,11 @@ function Product() {
           <img
             src={product.image}
             alt="product.title"
-            height="400px"
-            width="400px"
+            height="350px"
+            width="650px"
           />
         </div>
-        <div className="col-md-6 ">
+        <div className="col-md-6 ps-5">
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h1 className="display-5">{product.title}</h1>
           <h4 className="display-6 fw-bold my-4">Giá: {product.price} vnđ</h4>

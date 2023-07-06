@@ -163,7 +163,7 @@ export default function Products() {
       </div>
       <div className="products">
         <div className="col-md-3 category">
-          <h3>Category:</h3>
+          <h3>BỘ LỌC TÌM KIẾM:</h3>
           <div className="input-box">
             <input
               type="search"
