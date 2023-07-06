@@ -8,6 +8,20 @@
     width: 20px !important;
     margin-top: -2px !important;
 }
-.css-i91xiw-MuiList-root-RaMenu-root {
-    margin-top: 0.5em !important;
+.css-1d6wzja-MuiButton-startIcon {
+    margin-top: 10px;
+}
+.css-uwxfgq-MuiPaper-root-MuiAppBar-root-RaAppBar-root .RaAppBar-menuButton {
+    margin-right: 0.2em;
+    margin-top: 10px;
+}
+.css-krc73u-MuiButtonBase-root-MuiMenuItem-root-RaMenuItemLink-root .RaMenuItemLink-icon {
+    min-width: 40px;
+    margin-top: 11px;
+}
+.css-y6rp3m-MuiButton-startIcon {
+    display: inherit;
+    margin-top: 10px;
+    margin-right: 8px;
+    margin-left: -2px;
 }
