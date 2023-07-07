@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./news.css";
 
 export default function News() {

@@ -51,7 +51,7 @@ const dataProvider = (
         // console.log("Object is empty"); // 👉️ this runs
       } else {
         options.body = JSON.stringify(optionBody);
-  
+
         options.headers["Content-Type"] = "application/json";
         // console.log("Object is NOT empty");
       }

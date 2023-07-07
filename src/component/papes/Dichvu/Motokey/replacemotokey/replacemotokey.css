@@ -1,43 +1,48 @@
-
-
-.replacemotokey{
+.replacemotokey {
     text-align: left;
     padding-left: 20px;
     padding-top: 20px;
 }
-.replacemotokey p{
+
+.replacemotokey p {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.2;
 }
-.replacemotokey h2{
+
+.replacemotokey h2 {
     font-size: 18px;
 }
-.img-logo{
+
+.img-logo {
     width: 50%;
     height: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.replacemotokey p span{
+
+.replacemotokey p span {
     font-weight: 400;
 }
-@media (min-width: 62rem){
-    .replacemoto{
+
+@media (min-width: 62rem) {
+    .replacemoto {
         padding-left: 60px;
         font-size: 22px;
     }
-    .replacemotokey p{
+
+    .replacemotokey p {
         font-size: 22px;
     }
-    .replacemotokey h2{
+
+    .replacemotokey h2 {
         font-size: 24px;
     }
-   
-    .img-logo{
+
+    .img-logo {
         width: 50%;
-        height: 70%;   
-      
+        height: 70%;
+
     }
 }

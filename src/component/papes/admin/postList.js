@@ -158,7 +158,11 @@ const PostList = (props) => {
         <NumberField source="price" />
         <TextField source="description" />
         <TextField source="category" />
-        <ImageField source="image" title="title"  cellClassName={classes.image} />
+        <ImageField
+          source="image"
+          title="title"
+          cellClassName={classes.image}
+        />
         <DateField source="date" />
         <PostListActionToolbar>
           <EditButton />

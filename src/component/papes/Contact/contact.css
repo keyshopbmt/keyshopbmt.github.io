@@ -1,71 +1,86 @@
-.contact{
+.contact {
     padding-top: 20px;
 }
-.contact p{
+
+.contact p {
     font-size: 14px;
 }
-.contact p{
+
+.contact p {
     text-align: left;
     padding-left: 20px;
     font-size: 14px;
 }
-.image-face,.image-phone {
+
+.image-face, .image-phone {
     width: 15%;
     padding-top: 10px;
     padding-left: 20px;
 }
-.image-man{
+
+.image-man {
     width: 25%;
 }
-.contact h5{
-   padding-left: 15px;
+
+.contact h5 {
+    padding-left: 15px;
     padding-top: 5px;
 }
+
 .contact h2 {
-    text-align: left ;
+    text-align: left;
     padding-left: 15px;
 }
-.contact h3{
-    text-align: left ;
+
+.contact h3 {
+    text-align: left;
     padding-left: 20px;
 }
-.contact p{
-    text-align: left ;
+
+.contact p {
+    text-align: left;
     padding-left: 15px;
 }
 
 
 
-@media (min-width:62rem){
-    .contact{
+@media (min-width:62rem) {
+    .contact {
         margin-top: 30px;
     }
-    .image-face,.image-phone {
+
+    .image-face, .image-phone {
         width: 80%;
         padding-top: 40px;
         padding-left: 10px;
     }
-    .contact p{
+
+    .contact p {
         font-size: 18px;
     }
-    .contact h5{
+
+    .contact h5 {
         text-align: center;
         padding-top: 5px;
     }
+
     .contact h2 {
-        text-align: left ;
+        text-align: left;
         padding-left: 5.2rem;
     }
-    .contact h3{
-        text-align: left ;
+
+    .contact h3 {
+        text-align: left;
         padding-left: 5.2rem;
     }
-    .contact p{
-        text-align: left ;
+
+    .contact p {
+        text-align: left;
         padding-left: 5.2rem;
         font-size: 18px;
     }
-    .image-man{
+
+    .image-man {
         width: 50%;
     }
 }

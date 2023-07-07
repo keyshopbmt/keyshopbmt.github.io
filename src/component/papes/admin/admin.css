@@ -1,27 +1,45 @@
 .css-9lo51-MuiDrawer-docked-RaSidebar-root .MuiPaper-root {
     width: 140px !important;
 }
+
 .css-16c50h-MuiInputBase-root-MuiTablePagination-select {
     margin-top: -12px !important;
 }
+
 .css-i4bv87-MuiSvgIcon-root {
     width: 20px !important;
     margin-top: -2px !important;
 }
+
 .css-1d6wzja-MuiButton-startIcon {
     margin-top: 10px;
 }
+
 .css-uwxfgq-MuiPaper-root-MuiAppBar-root-RaAppBar-root .RaAppBar-menuButton {
     margin-right: 0.2em;
     margin-top: 10px;
 }
+
 .css-krc73u-MuiButtonBase-root-MuiMenuItem-root-RaMenuItemLink-root .RaMenuItemLink-icon {
     min-width: 40px;
     margin-top: 11px;
 }
+
 .css-y6rp3m-MuiButton-startIcon {
     display: inherit;
     margin-top: 10px;
     margin-right: 8px;
     margin-left: -2px;
+}
+
+.css-1l0huk-RaLoadingIndicator-root .RaLoadingIndicator-loadedIcon {
+    margin-top: 12px;
+}
+
+.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar .MuiTablePagination-actions {
+    margin-top: -15px;
+}
+
+.css-levciy-MuiTablePagination-displayedRows {
+    margin-top: 5px;
 }

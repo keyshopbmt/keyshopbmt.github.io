@@ -99,12 +99,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     z-index: 5;
-    
+
 }
 
-.iconbox_content span{
+.iconbox_content span {
     color: red;
-    
+
 }
 
 .iconbox3 .iconbox_wrapper .iconbox_icon .second_icon {
@@ -171,7 +171,7 @@ img {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-   
+
     text-align: left;
 }
 
@@ -181,16 +181,19 @@ img {
     right: 15px;
     bottom: -15px;
 }
+
 .iconbox3 .iconbox_wrapper .iconbox_image {
     position: relative;
     margin-right: 40px;
     min-width: 70px;
 }
+
 .iconbox3 .iconbox_wrapper {
     display: flex;
     padding: 60px;
-    
+
 }
+
 .iconbox3.second {
     background: #1e1e2a;
 }
@@ -203,9 +206,11 @@ img {
     overflow: hidden;
     transition: all 0.5s ease;
 }
+
 .pd_0 {
     padding: 0px;
 }
+
 .iconbox3.third:after {
     content: url("/public/assets/services/shadow_icon2.png");
     position: absolute;
@@ -231,11 +236,12 @@ img {
         max-width: 33.333333%;
     }
 }
+
 @media (min-width: 768px) {
 
-    
+
     .col-md-6 {
-       
+
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -246,25 +252,28 @@ img {
         max-width: 50%;
     }
 }
-@media (min-width: 992px){
-.col-lg-4 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
+
+@media (min-width: 768px) {
+    .col-md-6 {
+
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
-@media (min-width: 768px){
-.col-md-6 {
-    
--webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-}
-@media screen and (min-width: 992px){
+
+@media screen and (min-width: 992px) {
     .iconbox3 {
         min-height: 360px;
     }
-} 
+}

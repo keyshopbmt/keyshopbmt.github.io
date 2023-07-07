@@ -1,22 +1,26 @@
-.title-services{
+.title-services {
     padding-top: 10px;
 }
-.title-services h2{
+
+.title-services h2 {
     font-weight: 600;
 }
 
 
 .title-services a {
     text-decoration: none;
-    color: black;    
+    color: black;
 }
-.title-services a:hover{
+
+.title-services a:hover {
     background-color: unset !important;
     color: unset !important;
 }
+
 .title-dichvu {
     padding-left: 10px;
 }
+
 .title-dichvu h4 {
     padding-top: 15px;
     padding-left: 10px;
@@ -29,78 +33,92 @@
     font-size: 14px;
     font-weight: 300;
 }
+
 .title-dichvu span {
     padding-left: 10px;
-    color: rgba(48,118,178,1);
+    color: rgba(48, 118, 178, 1);
     text-decoration: underline;
 }
-.btn{
+
+.btn {
     --bs-btn-padding-x: 2.75rem !important;
     --bs-btn-padding-y: 0.75rem !important;
 }
-.table-services{
+
+.table-services {
     padding-top: 10px;
     padding-left: 10px;
 }
 
-.title-eight p{
+.title-eight p {
     padding-top: 10px;
     font-size: 14px;
 }
+
 .title-phone {
     color: aliceblue;
-    background-color: rgba(31,109,238,1) !important;
+    background-color: rgba(31, 109, 238, 1) !important;
 }
-.title-phone h2{
+
+.title-phone h2 {
     font-size: 20px;
     font-weight: 600;
 }
-.title-phone p{
+
+.title-phone p {
     font-size: 10px;
     font-weight: 300;
 }
 
-@media (min-width:62rem){
-    .title-services{
+@media (min-width:62rem) {
+    .title-services {
         padding-top: 20px;
     }
+
     .title-dichvu {
         padding-top: 10px;
         padding-left: 30px;
     }
-    .title-dichvu h4{
+
+    .title-dichvu h4 {
         font-size: 22px;
         padding-top: 10px;
         width: 400;
         padding-left: 30px;
     }
-    .title-dichvu p{
-        font-size: 18px; 
+
+    .title-dichvu p {
+        font-size: 18px;
         width: 400;
         padding-left: 30px;
     }
+
     .title-dichvu span {
         padding-left: 30px;
     }
-    .table-services{
+
+    .table-services {
         padding-top: 10px;
         padding-left: 25px;
     }
-   
-    .title-eight p{
+
+    .title-eight p {
         padding-top: 15px;
         font-size: 18px;
     }
+
     .title-phone {
-       padding-top: 15px;
+        padding-top: 15px;
         text-align: center;
-        background-color: rgba(31,109,238,1) !important;
+        background-color: rgba(31, 109, 238, 1) !important;
     }
-    .title-phone h2{
+
+    .title-phone h2 {
         font-size: 32px;
         font-weight: 600;
     }
-    .title-phone p{
+
+    .title-phone p {
         font-size: 12px;
         font-weight: 300;
     }

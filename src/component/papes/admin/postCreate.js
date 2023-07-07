@@ -8,7 +8,7 @@ import {
   NumberInput,
 } from "react-admin";
 import { useFormContext } from "react-hook-form";
-import "./postCreate.css"
+
 
 const CloudinaryImageInput = () => {
   const [image, setImage] = useState("");

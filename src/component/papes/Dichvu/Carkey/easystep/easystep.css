@@ -1,5 +1,4 @@
-
-.easy-step h4{
+.easy-step h4 {
     font-size: 15px;
     font-weight: 300;
 }
@@ -8,14 +7,17 @@
 .step-image {
     padding-top: 20px;
 }
+
 .image-no1 {
     padding-left: 10px;
     width: 40%;
 
 }
+
 .image-call {
     width: 51%;
 }
+
 @media (min-width:768px) {
     .image-no1 {
         padding-left: 4.1rem;
@@ -26,6 +28,7 @@
         padding-left: 3rem;
         width: 50%;
     }
+
     .easy-step h4 span {
         padding-left: 2.2rem;
     }

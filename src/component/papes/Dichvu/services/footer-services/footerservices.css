@@ -1,68 +1,82 @@
-.google-map{
+.google-map {
     padding-top: 20px;
 }
-.google-map p{
+
+.google-map p {
     font-size: 14px;
 }
-.google-map p{
+
+.google-map p {
     text-align: left;
     padding-left: 20px;
     font-size: 14px;
 }
-.image-face,.image-phone {
+
+.image-face, .image-phone {
     width: 15%;
     padding-top: 10px;
     padding-left: 20px;
 }
-.image-man{
+
+.image-man {
     width: 25%;
 }
-.google-map h5{
-   padding-left: 15px;
+
+.google-map h5 {
+    padding-left: 15px;
     padding-top: 5px;
 }
+
 .google-map h2 {
-    text-align: left ;
+    text-align: left;
     padding-left: 15px;
 }
-.google-map h3{
-    text-align: left ;
+
+.google-map h3 {
+    text-align: left;
     padding-left: 20px;
 }
-.google-map p{
-    text-align: left ;
+
+.google-map p {
+    text-align: left;
     padding-left: 15px;
 }
 
 
 
-@media (min-width:62rem){
-    .image-face,.image-phone {
+@media (min-width:62rem) {
+    .image-face, .image-phone {
         width: 80%;
         padding-top: 40px;
         padding-left: 10px;
     }
-    .google-map p{
+
+    .google-map p {
         font-size: 18px;
     }
-    .google-map h5{
+
+    .google-map h5 {
         text-align: center;
         padding-top: 5px;
     }
+
     .google-map h2 {
-        text-align: left ;
+        text-align: left;
         padding-left: 5.2rem;
     }
-    .google-map h3{
-        text-align: left ;
+
+    .google-map h3 {
+        text-align: left;
         padding-left: 5.2rem;
     }
-    .google-map p{
-        text-align: left ;
+
+    .google-map p {
+        text-align: left;
         padding-left: 5.2rem;
         font-size: 18px;
     }
-    .image-man{
+
+    .image-man {
         width: 35%;
     }
 }

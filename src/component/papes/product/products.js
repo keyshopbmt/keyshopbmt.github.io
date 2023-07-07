@@ -11,14 +11,13 @@ import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import List from "@material-ui/core/List";
 
-
 let searchParams = {};
 
 export default function Products() {
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [minMaxPrice, setMinMaxPrice] = useState([0, 1]);
-  const [pageLimit, setLimt] = useState(6);
+  const [pageLimit, setLimit] = useState(6);
   const [open, setOpen] = useState(false);
 
   const getProductPriceRange = () => {
@@ -40,14 +39,6 @@ export default function Products() {
         // console.log(category);
       });
   };
-
-  // const getProduuctPageLimit = () => {
-  //   fetch("http://localhost:8000/products/pageLimit")
-  //     .then((res) => res.json())
-  //     .then((pageLimit) => {
-  //       setLimt(pageLimit);
-  //     });
-  // };
 
   const buildUrl = (params) => {
     const filtered = { where: {} };
@@ -83,8 +74,6 @@ export default function Products() {
   };
 
   const fetchUserData = (params) => {
-    // console.log(params);
-    // console.log(categories);
     let url = buildUrl(params);
     fetch(url)
       .then((response) => {
@@ -142,17 +131,8 @@ export default function Products() {
     addCategoriesFilter(item.category);
   };
 
-  const filteredPrices = (event) => {
-    // event.preventDefault();
-    // const searchMin = Number(document.getElementById("min").value);
-    // const searchMax = Number(document.getElementById("max").value);
-    // searchParams["minPrice"] = searchMin;
-    // searchParams["maxPrice"] = searchMax;
-
-    fetchUserData(searchParams);
-  };
   const loadMore = () => {
-    setLimt((prevValue) => prevValue + 6);
+    setLimit((prevValue) => prevValue + 6);
   };
 
   return (
@@ -178,21 +158,20 @@ export default function Products() {
             <Hidden xsDown>
               <div className="categoryProduct">
                 <h4>Loại:</h4>
-                
-                  {categories.map((item) => (
-                    <div className="checkbox" key={item.category}>
-                      <label className="mylabel">
-                        <input
-                          type="checkbox"
-                          value={item.category}
-                          onChange={() => updateCategory(item)}
-                          checked={item.checked}
-                        />
-                        <p>{item.category}</p>
-                      </label>
-                    </div>
-                  ))}
-                
+
+                {categories.map((item) => (
+                  <div className="checkbox" key={item.category}>
+                    <label className="mylabel">
+                      <input
+                        type="checkbox"
+                        value={item.category}
+                        onChange={() => updateCategory(item)}
+                        checked={item.checked}
+                      />
+                      <p>{item.category}</p>
+                    </label>
+                  </div>
+                ))}
               </div>
 
               <div className="price">
@@ -235,7 +214,7 @@ export default function Products() {
                   className="btn btn-light btn-sm clearFilter"
                   onClick={(e) => resetSearch()}
                 >
-                  Clear Filters
+                  XÓA TẤT CẢ
                 </button>
               </div>
             </Hidden>
@@ -316,7 +295,7 @@ export default function Products() {
                   className="btn btn-light btn-sm clearFilter"
                   onClick={(e) => resetSearch()}
                 >
-                  Clear Filters
+                  XÓA TẤT CẢ
                 </button>
               </div>
             </List>
@@ -349,7 +328,7 @@ export default function Products() {
           ))}
           <div className="col-12 p-3">
             <div className="btn btn-primary pageLimit" onClick={loadMore}>
-              Load More
+              Xem thêm
             </div>
           </div>
         </div>

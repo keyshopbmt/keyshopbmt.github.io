@@ -2,35 +2,39 @@
     padding-top: 20px;
     text-align: left;
     padding-left: 20px;
-   
-    
+
+
     line-height: 1;
 }
-.type-keycar h2{
+
+.type-keycar h2 {
     font-size: 24px;
     font-weight: 400;
 }
 
-.type-keycar-title h3 p{
+.type-keycar-title h3 p {
     font-size: 18px;
     padding-top: 20px;
     font-weight: 400;
-    
+
 }
-@media (min-width:768px){
+
+@media (min-width:768px) {
     .type-keycar h2 {
         font-size: 1.4rem;
         font-weight: 500;
         line-height: 1.2;
-       
+
     }
+
     .type-keycar-title h3 {
-        font-size:1.4rem
+        font-size: 1.4rem
     }
-    .type-keycar-title p{
+
+    .type-keycar-title p {
         font-size: 1rem;
     }
 
 
-    
+
 }

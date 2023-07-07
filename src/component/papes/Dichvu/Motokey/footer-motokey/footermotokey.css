@@ -1,11 +1,11 @@
-.footer-keymoto p{
+.footer-keymoto p {
     text-align: left;
     padding-left: 20px;
     font-size: 14px;
 }
 
-@media (min-width :62rem){
-    .footer-keymoto p{
+@media (min-width :62rem) {
+    .footer-keymoto p {
         font-size: 18px;
-    } 
+    }
 }

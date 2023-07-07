@@ -1,11 +1,12 @@
-.chip-key{
+.chip-key {
     text-align: center;
     padding-top: 10px;
     padding-left: 10px;
     font-size: 18px;
     width: 400;
 }
-.chip-key-title{
+
+.chip-key-title {
     text-align: left;
     padding-top: 10px;
     font-size: 14px;
@@ -13,7 +14,8 @@
     line-height: 1.2;
     padding-left: 10px;
 }
-.chip-key-title button{
+
+.chip-key-title button {
     text-align: left;
     font-size: 16px;
     padding-left: 10px;
@@ -24,13 +26,14 @@
 
 
 
-@media (min-width : 62rem){
-    .chip-key{
+@media (min-width : 62rem) {
+    .chip-key {
         text-align: left;
         padding-top: 20px;
         padding-left: 20px;
     }
-    .chip-key-title{
+
+    .chip-key-title {
         text-align: left;
         padding-top: 20px;
         font-size: 18px;
@@ -38,13 +41,15 @@
         line-height: 1.2;
         padding-left: 10px;
     }
-    .chip-key-title button{
+
+    .chip-key-title button {
         text-align: left;
         font-size: 20px;
         padding-left: 10px;
     }
-   .chip-title-key{
-    padding-top: 10px;
-   }
-    
+
+    .chip-title-key {
+        padding-top: 10px;
+    }
+
 }

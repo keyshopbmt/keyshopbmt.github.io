@@ -8,7 +8,7 @@ body {
     font-weight: 400;
     text-align: left;
     -moz-osx-font-smoothing: grayscale;
-    
+
 }
 
 ::after, ::before {
@@ -21,7 +21,7 @@ body {
     color: #ffffff;
     display: block;
     outline: none;
-   
+
 }
 
 
@@ -123,10 +123,12 @@ img {
     color: #ffffff;
     margin: 0px 40px;
 }
-.navbar-toggler-icon{
-   
+
+.navbar-toggler-icon {
+
     margin-left: 17.5rem;
 }
+
 .header .header_info {
     display: flex;
     align-items: center;
@@ -148,34 +150,38 @@ img {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    position: relative;  
+    position: relative;
 }
 
 .header .top_bar {
     position: relative;
     background: #1e1e2a;
     z-index: 2;
-    
+
 }
-.button-services{
+
+.button-services {
     padding-right: 5.5rem;
-      
+
 }
-.button-product{
+
+.button-product {
     padding-right: 5.1rem;
-      
+
 }
-.nav-item{
+
+.nav-item {
     margin-left: 0rem;
 }
- 
 
 
-.nav a{
-    color:#000000b3
+
+.nav a {
+    color: #000000b3
 }
-.dropdown-menu{
-    width:132% !important;
+
+.dropdown-menu {
+    width: 132% !important;
 }
 
 
@@ -186,33 +192,40 @@ img {
         padding-left: 0px;
         padding-right: 0px;
     }
-    .button-services{
+
+    .button-services {
         padding-right: 0.7rem;
     }
+
     .nav-services {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    .nav-product{
+
+    .nav-product {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    .button-product{
+
+    .button-product {
         padding-right: 2.7rem;
     }
-    .navbar-expand-lg .navbar-collapse{
+
+    .navbar-expand-lg .navbar-collapse {
         --bs-navbar-nav-link-padding-x: 1.5rem;
         margin-left: 17.5rem;
     }
+
     .header .logo a {
         display: inline-block;
         margin-top: -70px;
     }
+
     .header .logo img {
         transition: all 0.5s ease;
     }
 }
-    
+
 
 
 
@@ -220,24 +233,29 @@ img {
     .containern {
         max-width: 960px;
     }
-    .button-services{
+
+    .button-services {
         padding-right: 2.7rem;
     }
-    .button-product{
+
+    .button-product {
         padding-right: 2.7rem;
     }
-    .dropdown-menu{
+
+    .dropdown-menu {
         width: 166% !important;
     }
+
     .nav-services {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-    .nav-product{
+
+    .nav-product {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
-   
+
 }
 
 @media (min-width: 768px) {
@@ -245,12 +263,13 @@ img {
         max-width: 720px;
         margin-left: 34.2rem;
     }
-    .nav-item{
+
+    .nav-item {
         margin-left: 0rem;
     }
-    
-    
-  
+
+
+
 }
 
 
@@ -259,18 +278,20 @@ img {
         max-width: 100%;
         margin-left: 1.2rem;
     }
-    .nav{
+
+    .nav {
         padding-left: 91px;
     }
+
     .navbar-toggler-icon {
         margin-left: 17.5rem;
-       
+
     }
 }
 
 .header .logo a {
     display: inline-block;
-   
+
 }
 
 a {
@@ -286,20 +307,22 @@ a {
     text-align: center;
 }
 
-@media screen and (max-width: 991px){
-.header .logo img {
-    max-width: 100px;
-    margin-top: -20px;
-}
+@media screen and (max-width: 991px) {
+    .header .logo img {
+        max-width: 100px;
+        margin-top: -20px;
+    }
 
-.nav-services{
-    padding-left: 6.8rem;   
-}
-.nav-product{
-    padding-left: 6.8rem;   
-}
-.nav{
-    margin-left: 91px;
-}
+    .nav-services {
+        padding-left: 6.8rem;
+    }
+
+    .nav-product {
+        padding-left: 6.8rem;
+    }
+
+    .nav {
+        margin-left: 91px;
+    }
 
 }

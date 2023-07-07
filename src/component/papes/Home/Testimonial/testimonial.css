@@ -1,19 +1,22 @@
-.active{
+.active {
     padding-top: 70px;
 }
-.text-h1{
+
+.text-h1 {
     color: #ff3b3e;
 }
-.text-h1 img{
+
+.text-h1 img {
     width: 15%;
 }
+
 .text-h1 h1 {
     margin-top: -48px;
 }
- 
+
 @media (min-width: 1200px) {
 
-    .text-h1 img{
+    .text-h1 img {
         width: 4%;
     }
 }
