@@ -6,7 +6,7 @@
 export const authProvider = {
   // authentication
   login: ({ username, password }) => {
-    const request = new Request("http://localhost:8000/users/login", {
+    const request = new Request("https://test-api.lthoang.com/users/login", {
       method: "POST",
       body: JSON.stringify({ email: username, password }),
       headers: new Headers({ "Content-Type": "application/json" }),

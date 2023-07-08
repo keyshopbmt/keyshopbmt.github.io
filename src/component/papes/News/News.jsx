@@ -30,6 +30,7 @@ export default function News() {
         <div>
           <img
             src="../assets/9_right.png"
+            alt=""
             style={{
               display: "block",
               position: "absolute",
@@ -54,13 +55,14 @@ export default function News() {
         >
           <div>
             <iframe
+              title="This is facebook"
               src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftienphatexpertkeyworld&tabs=timeline&width=290&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
               width="290"
               height="500"
               style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
               frameborder="0"
-              allowfullscreen="true"
+              allowFullScreen
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
           </div>

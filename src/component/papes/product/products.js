@@ -21,7 +21,7 @@ export default function Products() {
   const [open, setOpen] = useState(false);
 
   const getProductPriceRange = () => {
-    fetch("http://localhost:8000/products/priceRange")
+    fetch("https://test-api.lthoang.com/products/priceRange")
       .then((res) => res.json())
       .then((res) => {
         searchParams.minPrice = res["min"];
@@ -32,7 +32,7 @@ export default function Products() {
       });
   };
   const getProductCategories = () => {
-    fetch("http://localhost:8000/products/category")
+    fetch("https://test-api.lthoang.com/products/category")
       .then((res) => res.json())
       .then((categories) => {
         setCategories(categories);
@@ -68,7 +68,7 @@ export default function Products() {
 
     // console.log(JSON.stringify(filtered));
     return (
-      "http://localhost:8000/products?filter=" +
+      "https://test-api.lthoang.com/products?filter=" +
       encodeURIComponent(JSON.stringify(filtered))
     );
   };
@@ -164,7 +164,7 @@ export default function Products() {
                     <label className="mylabel">
                       <input
                         type="checkbox"
-                        value={item.category}
+                        value={item.category ||''}
                         onChange={() => updateCategory(item)}
                         checked={item.checked}
                       />
@@ -181,7 +181,7 @@ export default function Products() {
                     <input
                       type="text"
                       id="min"
-                      value={searchParams.minPrice}
+                      value={searchParams.minPrice ||''}
                       onChange={(e) => (searchParams.minPrice = e.target.value)}
                       placeholder="min"
                     />
@@ -191,7 +191,7 @@ export default function Products() {
                     <input
                       type="text"
                       id="max"
-                      value={searchParams.maxPrice}
+                      value={searchParams.maxPrice ||''}
                       onChange={(e) => (searchParams.maxPrice = e.target.value)}
                       placeholder="max"
                     />
@@ -200,7 +200,7 @@ export default function Products() {
                 <div className="slider-input">
                   <Slider
                     getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice]}
+                    value={[searchParams.maxPrice, searchParams.minPrice] ||''}
                     min={minMaxPrice[0]}
                     max={minMaxPrice[1]}
                     onChange={debouncedHandler}
@@ -249,7 +249,7 @@ export default function Products() {
                     <label className="mylabel">
                       <input
                         type="checkbox"
-                        value={item.category}
+                        value={item.category ||''}
                         onChange={() => updateCategory(item)}
                         checked={item.checked}
                       />
@@ -265,14 +265,14 @@ export default function Products() {
                   <input
                     type="text"
                     id="min"
-                    value={searchParams.minPrice}
+                    value={searchParams.minPrice ||''}
                     onChange={(e) => (searchParams.minPrice = e.target.value)}
                     placeholder="min"
                   />
                   <input
                     type="text"
                     id="max"
-                    value={searchParams.maxPrice}
+                    value={searchParams.maxPrice ||''}
                     onChange={(e) => (searchParams.maxPrice = e.target.value)}
                     placeholder="max"
                   />
@@ -280,7 +280,7 @@ export default function Products() {
                 <div className="slider-input">
                   <Slider
                     getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice]}
+                    value={[searchParams.maxPrice, searchParams.minPrice] ||''}
                     min={minMaxPrice[0]}
                     max={minMaxPrice[1]}
                     onChange={debouncedHandler}

@@ -17,7 +17,7 @@ export const httpClient = () => {
 function Ad() {
   return (
     <Admin
-      dataProvider={dataProvider("http://localhost:8000/", httpClient)}
+      dataProvider={dataProvider("https://test-api.lthoang.com/", httpClient)}
       i18nProvider={i18nProvider}
       dashBoard={Dashboard}
       authProvider={authProvider}

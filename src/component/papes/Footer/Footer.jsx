@@ -31,7 +31,7 @@ export default function Footer() {
                     <ul className="footer_menu">
                       <li className="menu-item">
                         <a
-                          href="/carkey"
+                          href="./carkey"
                           style={{ textDecoration: "none", color: "#dc3545" }}
                         >
                           Mở Khóa Cửa Ôtô
@@ -39,7 +39,7 @@ export default function Footer() {
                       </li>
                       <li className="menu-item">
                         <a
-                          href="#"
+                          href="./#"
                           style={{ textDecoration: "none", color: "#dc3545" }}
                         >
                           Mở Cửa Nhà Bị Khóa
@@ -48,7 +48,7 @@ export default function Footer() {
 
                       <li className="menu-item">
                         <a
-                          href="#"
+                          href="./#"
                           style={{ textDecoration: "none", color: "#dc3545" }}
                         >
                           Làm Lại Chìa Khóa
@@ -56,7 +56,7 @@ export default function Footer() {
                       </li>
                       <li className="menu-item">
                         <a
-                          href="#"
+                          href="./#"
                           style={{ textDecoration: "none", color: "#dc3545" }}
                         >
                           Làm Lại Remote Cửa Cuốn
@@ -110,13 +110,14 @@ export default function Footer() {
                     <span className="title_line"></span>
                   </h4>
                   <iframe
+                    title="This is a unique title"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433.45701398121344!2d108.06488454818692!3d12.693019242281123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7931e050c67%3A0x696c4c914d9cb2d0!2zU-G7rWEgS2jDs2EgQnXDtG4gTWEgVGh14buZdCBUaeG7h20gS2jDs2EgVGnhur9uIFBow6F0!5e0!3m2!1svi!2s!4v1673438520489!5m2!1svi!2s"
                     width="350"
                     height="300"
                     style={{ border: "0" }}
-                    allowfullscreen=""
+                    allowFullScreen
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
               </div>

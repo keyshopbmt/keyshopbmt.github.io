@@ -3,14 +3,16 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 function Product() {
-  const { id } = useParams();
+  const {id} = useParams({});
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getProduct = async () => {
       setLoading(true);
-      const response = await fetch(`http://localhost:8000/products/${id}`);
+      const response = await fetch(
+        `https://test-api.lthoang.com/products/${id}`
+      );
       setProduct(await response.json());
       setLoading(false);
     };
