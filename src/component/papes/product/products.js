@@ -10,6 +10,7 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import List from "@material-ui/core/List";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 let searchParams = {};
 
@@ -17,7 +18,7 @@ export default function Products() {
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [minMaxPrice, setMinMaxPrice] = useState([0, 1]);
-  const [pageLimit, setLimit] = useState(6);
+  const [pageLimit, setLimit] = useState(9);
   const [open, setOpen] = useState(false);
 
   const getProductPriceRange = () => {
@@ -64,6 +65,9 @@ export default function Products() {
       filtered["where"]["price"] = {
         between: [params["minPrice"], params["maxPrice"]],
       };
+    }
+    if (params["limit"]) {
+      filtered["limit"] = { pageLimit };
     }
 
     // console.log(JSON.stringify(filtered));
@@ -132,7 +136,8 @@ export default function Products() {
   };
 
   const loadMore = () => {
-    setLimit((prevValue) => prevValue + 6);
+    setLimit(pageLimit + 6);
+    resetSearch();
   };
 
   return (
@@ -164,7 +169,7 @@ export default function Products() {
                     <label className="mylabel">
                       <input
                         type="checkbox"
-                        value={item.category ||''}
+                        value={item.category || ""}
                         onChange={() => updateCategory(item)}
                         checked={item.checked}
                       />
@@ -181,7 +186,7 @@ export default function Products() {
                     <input
                       type="text"
                       id="min"
-                      value={searchParams.minPrice ||''}
+                      value={searchParams.minPrice || ""}
                       onChange={(e) => (searchParams.minPrice = e.target.value)}
                       placeholder="min"
                     />
@@ -191,7 +196,7 @@ export default function Products() {
                     <input
                       type="text"
                       id="max"
-                      value={searchParams.maxPrice ||''}
+                      value={searchParams.maxPrice || ""}
                       onChange={(e) => (searchParams.maxPrice = e.target.value)}
                       placeholder="max"
                     />
@@ -200,7 +205,7 @@ export default function Products() {
                 <div className="slider-input">
                   <Slider
                     getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice] ||''}
+                    value={[searchParams.maxPrice, searchParams.minPrice] || ""}
                     min={minMaxPrice[0]}
                     max={minMaxPrice[1]}
                     onChange={debouncedHandler}
@@ -249,7 +254,7 @@ export default function Products() {
                     <label className="mylabel">
                       <input
                         type="checkbox"
-                        value={item.category ||''}
+                        value={item.category || ""}
                         onChange={() => updateCategory(item)}
                         checked={item.checked}
                       />
@@ -265,14 +270,14 @@ export default function Products() {
                   <input
                     type="text"
                     id="min"
-                    value={searchParams.minPrice ||''}
+                    value={searchParams.minPrice || ""}
                     onChange={(e) => (searchParams.minPrice = e.target.value)}
                     placeholder="min"
                   />
                   <input
                     type="text"
                     id="max"
-                    value={searchParams.maxPrice ||''}
+                    value={searchParams.maxPrice || ""}
                     onChange={(e) => (searchParams.maxPrice = e.target.value)}
                     placeholder="max"
                   />
@@ -280,7 +285,7 @@ export default function Products() {
                 <div className="slider-input">
                   <Slider
                     getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice] ||''}
+                    value={[searchParams.maxPrice, searchParams.minPrice] || ""}
                     min={minMaxPrice[0]}
                     max={minMaxPrice[1]}
                     onChange={debouncedHandler}
@@ -301,37 +306,44 @@ export default function Products() {
             </List>
           </SwipeableDrawer>
         </div>
-
-        <div className="row col-md-9 d-flex ">
-          {data.slice(0, pageLimit).map((product) => (
-            <div className="col-md-3" key={product.id}>
-              <div className="card-product">
-                <Link to={`/product/${product.id}`}>
-                  <img
-                    src={product.image}
-                    className="card-img-product"
-                    alt={product.title}
-                  />
-                </Link>
-                <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.price}</p>
-                  <Link
-                    to={`/product/${product.id}`}
-                    className="btn btn-primary"
-                  >
-                    Chi tiết
+        <InfiniteScroll
+          dataLength={data.length}
+          next={loadMore}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+          scrollableTarget="scrollableDiv"
+        >
+          <div className="row col-md-12 d-flex ">
+            {data.slice(0, pageLimit).map((product) => (
+              <div className="col-md-3" key={product.id}>
+                <div className="card-product">
+                  <Link to={`/product/${product.id}`}>
+                    <img
+                      src={product.image}
+                      className="card-img-product"
+                      alt={product.title}
+                    />
                   </Link>
+                  <div className="card-body">
+                    <h5 className="card-title">{product.title}</h5>
+                    <p className="card-text">{product.price}</p>
+                    <Link
+                      to={`/product/${product.id}`}
+                      className="btn btn-primary"
+                    >
+                      Chi tiết
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          <div className="col-12 p-3">
+            ))}
+            {/* <div className="col-12 p-3">
             <div className="btn btn-primary pageLimit" onClick={loadMore}>
               Xem thêm
             </div>
+          </div> */}
           </div>
-        </div>
+        </InfiniteScroll>
       </div>
     </div>
   );

@@ -61,7 +61,7 @@ export default function News() {
               height="500"
               style={{ border: "none", overflow: "hidden" }}
               scrolling="no"
-              frameborder="0"
+              frameBorder="0"
               allowFullScreen
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             ></iframe>
