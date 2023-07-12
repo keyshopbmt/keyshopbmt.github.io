@@ -60,6 +60,8 @@ export default function Replacemotokey() {
             className="img-logo"
           />
         </MDBCol>
+      </MDBRow>
+      <MDBRow>
         <MDBCol md="3">
           <img
             src="../assets/services/moto/VinFast_2017.png"
@@ -67,8 +69,6 @@ export default function Replacemotokey() {
             className="img-logo"
           />
         </MDBCol>
-      </MDBRow>
-      <MDBRow>
         <MDBCol md="3">
           <img
             src="../assets/services/moto/pngegg.png"

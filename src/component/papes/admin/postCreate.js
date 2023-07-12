@@ -9,7 +9,6 @@ import {
 } from "react-admin";
 import { useFormContext } from "react-hook-form";
 
-
 const CloudinaryImageInput = () => {
   const [image, setImage] = useState("");
   const formContext = useFormContext();

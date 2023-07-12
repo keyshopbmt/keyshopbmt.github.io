@@ -151,6 +151,7 @@ const PostList = (props) => {
       bulkActionButtons={<PostListBulkActions />}
       filters={<PostFilter />}
       actions={<ListActions />}
+      exporter={exporter}
     >
       <Datagrid rowClick={rowClick} optimized>
         <TextField source="id" />
