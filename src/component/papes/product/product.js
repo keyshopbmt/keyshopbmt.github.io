@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 
 function Product() {
-  const {id} = useParams({});
+  const {id} = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -17,7 +17,7 @@ function Product() {
       setLoading(false);
     };
     getProduct();
-  }, []);
+  }, [id]);
 
   const Loading = () => {
     return <>Loading...</>;
@@ -32,6 +32,11 @@ function Product() {
             alt="product.title"
             height="350px"
             width="650px"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src =
+                "https://res.cloudinary.com/dbs44uzyv/image/upload/v1688996217/1_zhb8tr.jpg";
+            }}
           />
         </div>
         <div className="col-md-6 ps-5">

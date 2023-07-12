@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import "./products.css";
@@ -97,13 +97,12 @@ export default function Products() {
 
   useEffect(() => {
     resetSearch();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const addCategoriesFilter = (category) => {
     if (!searchParams["categories"]) {
       searchParams["categories"] = [];
     }
-
     if (!searchParams["categories"].includes(category)) {
       searchParams["categories"].push(category);
     } else {
@@ -118,17 +117,14 @@ export default function Products() {
     searchParams["title"] = query;
     fetchUserData(searchParams);
   };
-  const debouncedChangeHandler = useMemo(
-    () => debounce(filterBySearch, 300),
-    []
-  );
+  const debouncedChangeHandler = debounce(filterBySearch, 300);
   const handleInput = (event, newValue) => {
     searchParams.minPrice = newValue[0];
     searchParams.maxPrice = newValue[1];
     // console.log(newValue);
     fetchUserData(searchParams);
   };
-  const debouncedHandler = useMemo(() => debounce(handleInput, 50), []);
+  const debouncedHandler = debounce(handleInput, 50);
 
   const updateCategory = (item) => {
     item.checked = !item.checked;
@@ -146,43 +142,141 @@ export default function Products() {
         <h1 className="display-6 fw-bolder text-center">Sản Phẩm</h1>
         <hr />
       </div>
-      <div className="products">
-        <div className="col-md-3 category">
-          <h3>BỘ LỌC TÌM KIẾM:</h3>
-          <div className="input-box">
-            <input
-              type="search"
-              name="search-form"
-              id="search-form"
-              className="search-input"
-              onChange={debouncedChangeHandler}
-              placeholder="Search user"
-            />
-          </div>
-          <div>
-            <Hidden xsDown>
-              <div className="categoryProduct">
-                <h4>Loại:</h4>
+      <InfiniteScroll
+        dataLength={data.length}
+        next={loadMore}
+        hasMore={true}
+        style={{ display: "flex", flexDirection: "column", overflow: "hidden" }}
+        loader={<h4 style={{ fontSize: 5, color: "aliceblue" }}>Loading...</h4>}
+        // scrollableTarget="scrollableDiv"
+      >
+        <div className="products">
+          <div className="col-md-3 category">
+            <h3>BỘ LỌC TÌM KIẾM:</h3>
+            <div className="input-box">
+              <input
+                type="search"
+                name="search-form"
+                id="search-form"
+                className="search-input"
+                onChange={debouncedChangeHandler}
+                placeholder="Search user"
+              />
+            </div>
+            <div>
+              <Hidden xsDown>
+                <div className="categoryProduct">
+                  <h4>Loại:</h4>
 
-                {categories.map((item) => (
-                  <div className="checkbox" key={item.category}>
-                    <label className="mylabel">
+                  {categories.map((item) => (
+                    <div className="checkbox" key={item.category}>
+                      <label className="mylabel">
+                        <input
+                          type="checkbox"
+                          value={item.category || ""}
+                          onChange={() => updateCategory(item)}
+                          checked={item.checked}
+                        />
+                        <p>{item.category}</p>
+                      </label>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="price">
+                  <h4>Khoảng Giá:</h4>
+                  <div className="price-row">
+                    <div className="field">
                       <input
-                        type="checkbox"
-                        value={item.category || ""}
-                        onChange={() => updateCategory(item)}
-                        checked={item.checked}
+                        type="text"
+                        id="min"
+                        value={searchParams.minPrice || ""}
+                        onChange={(e) =>
+                          (searchParams.minPrice = e.target.value)
+                        }
+                        placeholder="min"
                       />
-                      <p>{item.category}</p>
-                    </label>
+                    </div>
+                    <div className="separator">-</div>
+                    <div className="field">
+                      <input
+                        type="text"
+                        id="max"
+                        value={searchParams.maxPrice || ""}
+                        onChange={(e) =>
+                          (searchParams.maxPrice = e.target.value)
+                        }
+                        placeholder="max"
+                      />
+                    </div>
                   </div>
-                ))}
+                  <div className="slider-input">
+                    <Slider
+                      getAriaLabel={() => "Price range"}
+                      value={
+                        [searchParams.maxPrice, searchParams.minPrice] || ""
+                      }
+                      min={minMaxPrice[0]}
+                      max={minMaxPrice[1]}
+                      onChange={debouncedHandler}
+                      valueLabelDisplay="auto"
+                      // getAriaValueText={valuetext}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <button
+                    className="btn btn-light btn-sm clearFilter"
+                    onClick={(e) => resetSearch()}
+                  >
+                    XÓA TẤT CẢ
+                  </button>
+                </div>
+              </Hidden>
+              <Hidden smUp>
+                <IconButton onClick={() => setOpen(true)}>
+                  <FilterAltIcon />
+                </IconButton>
+              </Hidden>
+            </div>
+            <SwipeableDrawer
+              anchor="right"
+              open={open}
+              onOpen={() => setOpen(true)}
+              onClose={() => setOpen(false)}
+            >
+              <div
+                onClick={() => setOpen(false)}
+                onKeyPress={() => setOpen(false)}
+                role="button"
+                tabIndex={0}
+              >
+                <IconButton>
+                  <ChevronRightIcon />
+                </IconButton>
               </div>
+              <Divider />
+              <List>
+                <div className="categoryProduct">
+                  <h4>Loại:</h4>
+                  {categories.map((item) => (
+                    <div className="checkbox" key={item.category}>
+                      <label className="mylabel">
+                        <input
+                          type="checkbox"
+                          value={item.category || ""}
+                          onChange={() => updateCategory(item)}
+                          checked={item.checked}
+                        />
+                        <p>{item.category}</p>
+                      </label>
+                    </div>
+                  ))}
+                </div>
 
-              <div className="price">
-                <h4>Khoảng Giá:</h4>
-                <div className="price-row">
-                  <div className="field">
+                <div className="price">
+                  <h4>Khoảng Giá:</h4>
+                  <div className="price-row">
                     <input
                       type="text"
                       id="min"
@@ -190,9 +284,6 @@ export default function Products() {
                       onChange={(e) => (searchParams.minPrice = e.target.value)}
                       placeholder="min"
                     />
-                  </div>
-                  <div className="separator">-</div>
-                  <div className="field">
                     <input
                       type="text"
                       id="max"
@@ -201,119 +292,34 @@ export default function Products() {
                       placeholder="max"
                     />
                   </div>
-                </div>
-                <div className="slider-input">
-                  <Slider
-                    getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice] || ""}
-                    min={minMaxPrice[0]}
-                    max={minMaxPrice[1]}
-                    onChange={debouncedHandler}
-                    valueLabelDisplay="auto"
-                    // getAriaValueText={valuetext}
-                  />
-                </div>
-              </div>
-              <div>
-                <button
-                  className="btn btn-light btn-sm clearFilter"
-                  onClick={(e) => resetSearch()}
-                >
-                  XÓA TẤT CẢ
-                </button>
-              </div>
-            </Hidden>
-            <Hidden smUp>
-              <IconButton onClick={() => setOpen(true)}>
-                <FilterAltIcon />
-              </IconButton>
-            </Hidden>
-          </div>
-          <SwipeableDrawer
-            anchor="right"
-            open={open}
-            onOpen={() => setOpen(true)}
-            onClose={() => setOpen(false)}
-          >
-            <div
-              onClick={() => setOpen(false)}
-              onKeyPress={() => setOpen(false)}
-              role="button"
-              tabIndex={0}
-            >
-              <IconButton>
-                <ChevronRightIcon />
-              </IconButton>
-            </div>
-            <Divider />
-            <List>
-              <div className="categoryProduct">
-                <h4>Loại:</h4>
-                {categories.map((item) => (
-                  <div className="checkbox" key={item.category}>
-                    <label className="mylabel">
-                      <input
-                        type="checkbox"
-                        value={item.category || ""}
-                        onChange={() => updateCategory(item)}
-                        checked={item.checked}
-                      />
-                      <p>{item.category}</p>
-                    </label>
+                  <div className="slider-input">
+                    <Slider
+                      getAriaLabel={() => "Price range"}
+                      value={
+                        [searchParams.maxPrice, searchParams.minPrice] || ""
+                      }
+                      min={minMaxPrice[0]}
+                      max={minMaxPrice[1]}
+                      onChange={debouncedHandler}
+                      valueLabelDisplay="auto"
+
+                      // getAriaValueText={valuetext}
+                    />
                   </div>
-                ))}
-              </div>
-
-              <div className="price">
-                <h4>Khoảng Giá:</h4>
-                <div className="price-row">
-                  <input
-                    type="text"
-                    id="min"
-                    value={searchParams.minPrice || ""}
-                    onChange={(e) => (searchParams.minPrice = e.target.value)}
-                    placeholder="min"
-                  />
-                  <input
-                    type="text"
-                    id="max"
-                    value={searchParams.maxPrice || ""}
-                    onChange={(e) => (searchParams.maxPrice = e.target.value)}
-                    placeholder="max"
-                  />
                 </div>
-                <div className="slider-input">
-                  <Slider
-                    getAriaLabel={() => "Price range"}
-                    value={[searchParams.maxPrice, searchParams.minPrice] || ""}
-                    min={minMaxPrice[0]}
-                    max={minMaxPrice[1]}
-                    onChange={debouncedHandler}
-                    valueLabelDisplay="auto"
-
-                    // getAriaValueText={valuetext}
-                  />
+                <div className="filter-clear">
+                  <button
+                    className="btn btn-light btn-sm clearFilter"
+                    onClick={(e) => resetSearch()}
+                  >
+                    XÓA TẤT CẢ
+                  </button>
                 </div>
-              </div>
-              <div className="filter-clear">
-                <button
-                  className="btn btn-light btn-sm clearFilter"
-                  onClick={(e) => resetSearch()}
-                >
-                  XÓA TẤT CẢ
-                </button>
-              </div>
-            </List>
-          </SwipeableDrawer>
-        </div>
-        <InfiniteScroll
-          dataLength={data.length}
-          next={loadMore}
-          hasMore={true}
-          loader={<h4>Loading...</h4>}
-          scrollableTarget="scrollableDiv"
-        >
-          <div className="row col-md-12 d-flex ">
+              </List>
+            </SwipeableDrawer>
+          </div>
+
+          <div className="row col-md-9 d-flex ">
             {data.slice(0, pageLimit).map((product) => (
               <div className="col-md-3" key={product.id}>
                 <div className="card-product">
@@ -322,6 +328,11 @@ export default function Products() {
                       src={product.image}
                       className="card-img-product"
                       alt={product.title}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src =
+                          "https://res.cloudinary.com/dbs44uzyv/image/upload/v1688996217/1_zhb8tr.jpg";
+                      }}
                     />
                   </Link>
                   <div className="card-body">
@@ -343,8 +354,8 @@ export default function Products() {
             </div>
           </div> */}
           </div>
-        </InfiniteScroll>
-      </div>
+        </div>
+      </InfiniteScroll>
     </div>
   );
 }
