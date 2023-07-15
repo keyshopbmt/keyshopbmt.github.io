@@ -109,6 +109,9 @@
 .price h4 {
     margin-left: 20px;
 }
+.card-body{
+    margin-top: 5px;
+}
 
 .pageLimit {
     width: 85%;
@@ -474,8 +477,8 @@
 
     .card-product {
         border-radius: 5px;
-        width: 100%;
-        height: 100%;
+        width: 230px;
+        height: 225px;
         --bs-card-spacer-y: 0rem;
     }
 

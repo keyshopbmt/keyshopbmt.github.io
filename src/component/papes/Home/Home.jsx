@@ -8,8 +8,11 @@ import Testimonial from "./Testimonial/Testimonial";
 import Footer from "../Footer/Footer";
 import { keyShop } from "../Db";
 import News from "../News/News";
+import { TableTitle } from "../GeneralFuntions";
 
-export default function Home() {
+const Home = () => {
+  TableTitle("Key Shop BMT");
+
   return (
     <div className="home">
       <Navbar />
@@ -42,4 +45,5 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+export default Home;

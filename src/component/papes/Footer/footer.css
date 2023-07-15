@@ -278,6 +278,10 @@ img {
         line-height: 20px;
     }
 
+    [data-aos^=fade][data-aos^=fade].aos-animate {
+        margin-top: 40px;
+    }
+
 }
 
 @media (min-width: 768px) {

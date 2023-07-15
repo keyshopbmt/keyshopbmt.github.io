@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import "./products.css";
@@ -11,15 +11,20 @@ import Divider from "@material-ui/core/Divider";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import List from "@material-ui/core/List";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { TableTitle } from "../GeneralFuntions";
 
 let searchParams = {};
 
 export default function Products() {
+  TableTitle("Sản Phẩm | Key Shop BMT");
+
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [minMaxPrice, setMinMaxPrice] = useState([0, 1]);
-  const [pageLimit, setLimit] = useState(9);
+  const [pageLimit, setPageLimit] = useState(9);
   const [open, setOpen] = useState(false);
+  const [totalCount, setTotalCount] = useState(0);
+  const [isHasMore, setIsHasMore] = useState(true);
 
   const getProductPriceRange = () => {
     fetch("https://test-api.lthoang.com/products/priceRange")
@@ -37,54 +42,87 @@ export default function Products() {
       .then((res) => res.json())
       .then((categories) => {
         setCategories(categories);
-        // console.log(category);
       });
   };
 
-  const buildUrl = (params) => {
-    const filtered = { where: {} };
+  const getWhereObject = (params) => {
+    const whereObject = {};
     if (params["categories"] && params["categories"].length > 0) {
-      filtered["where"]["or"] = [];
+      whereObject["or"] = [];
       for (let i = 0; i < params["categories"].length; i++) {
-        filtered["where"]["or"].push({ category: params["categories"][i] });
+        whereObject["or"].push({ category: params["categories"][i] });
       }
     }
 
     if (params["title"] && params["title"].length > 0) {
-      filtered["where"]["title"] = { like: "%" + params["title"] + "%" };
+      whereObject["title"] = { like: "%" + params["title"] + "%" };
     }
     if (params["minPrice"] && !params["maxPrice"]) {
-      filtered["where"]["price"] = { gte: params["minPrice"] };
+      whereObject["price"] = { gte: params["minPrice"] };
     }
 
     if (params["maxPrice"] && !params["minPrice"]) {
-      filtered["where"]["price"] = { lte: params["maxPrice"] };
+      whereObject["price"] = { lte: params["maxPrice"] };
     }
 
     if (params["maxPrice"] && params["minPrice"]) {
-      filtered["where"]["price"] = {
+      whereObject["price"] = {
         between: [params["minPrice"], params["maxPrice"]],
       };
     }
+    return whereObject;
+  };
+
+  const getFilteredObject = (params) => {
+    const filtered = { where: getWhereObject(params) };
     if (params["limit"]) {
       filtered["limit"] = { pageLimit };
     }
+    return filtered;
+  };
 
-    // console.log(JSON.stringify(filtered));
+  const buildCountUrl = (params) => {
+    const whereObject = getWhereObject(params);
+    return (
+      "https://test-api.lthoang.com/products/count?" +
+      encodeURIComponent(JSON.stringify(whereObject))
+    );
+  };
+
+  const buildSearchUrl = (params, reset = true) => {
+    const filtered = getFilteredObject(params);
+    if (reset) {
+      filtered["skip"] = 0;
+    } else {
+      filtered["skip"] = data.length;
+    }
     return (
       "https://test-api.lthoang.com/products?filter=" +
       encodeURIComponent(JSON.stringify(filtered))
     );
   };
 
-  const fetchUserData = (params) => {
-    let url = buildUrl(params);
+  const fetchUserData = (params, reset = true) => {
+    const countUrl = buildCountUrl(params);
+    fetch(countUrl)
+      .then((res) => {
+        return res.json();
+      })
+      .then((countObject) => {
+        setTotalCount(countObject["count"]);
+        setIsHasMore(totalCount > data.length);
+      });
+    let url = buildSearchUrl(params, reset);
     fetch(url)
       .then((response) => {
         return response.json();
       })
-      .then((data) => {
-        setData(data);
+      .then((currentData) => {
+        if (reset) {
+          setData(currentData);
+        } else {
+          setData(data.concat(currentData));
+        }
       });
   };
 
@@ -92,7 +130,7 @@ export default function Products() {
     searchParams = {};
     getProductPriceRange();
     getProductCategories();
-    fetchUserData(searchParams);
+    fetchUserData(searchParams, true);
   };
 
   useEffect(() => {
@@ -108,21 +146,19 @@ export default function Products() {
     } else {
       searchParams["categories"].pop(category);
     }
-    // console.log(searchParams);
-    fetchUserData(searchParams);
+    fetchUserData(searchParams, true);
   };
 
   const filterBySearch = (event) => {
     const query = event.target.value;
     searchParams["title"] = query;
-    fetchUserData(searchParams);
+    fetchUserData(searchParams, true);
   };
   const debouncedChangeHandler = debounce(filterBySearch, 300);
   const handleInput = (event, newValue) => {
     searchParams.minPrice = newValue[0];
     searchParams.maxPrice = newValue[1];
-    // console.log(newValue);
-    fetchUserData(searchParams);
+    fetchUserData(searchParams, true);
   };
   const debouncedHandler = debounce(handleInput, 50);
 
@@ -132,8 +168,8 @@ export default function Products() {
   };
 
   const loadMore = () => {
-    setLimit(pageLimit + 6);
-    resetSearch();
+    fetchUserData(searchParams, false);
+    setPageLimit(pageLimit + 6);
   };
 
   return (
@@ -143,12 +179,11 @@ export default function Products() {
         <hr />
       </div>
       <InfiniteScroll
-        dataLength={data.length}
+        dataLength={totalCount}
         next={loadMore}
-        hasMore={true}
+        hasMore={isHasMore}
         style={{ display: "flex", flexDirection: "column", overflow: "hidden" }}
-        loader={<h4 style={{ fontSize: 5, color: "aliceblue" }}>Loading...</h4>}
-        // scrollableTarget="scrollableDiv"
+        loader={<h4>Loading...</h4>}
       >
         <div className="products">
           <div className="col-md-3 category">
@@ -160,7 +195,7 @@ export default function Products() {
                 id="search-form"
                 className="search-input"
                 onChange={debouncedChangeHandler}
-                placeholder="Search user"
+                placeholder="Tìm kiếm"
               />
             </div>
             <div>
@@ -220,7 +255,6 @@ export default function Products() {
                       max={minMaxPrice[1]}
                       onChange={debouncedHandler}
                       valueLabelDisplay="auto"
-                      // getAriaValueText={valuetext}
                     />
                   </div>
                 </div>
@@ -302,8 +336,6 @@ export default function Products() {
                       max={minMaxPrice[1]}
                       onChange={debouncedHandler}
                       valueLabelDisplay="auto"
-
-                      // getAriaValueText={valuetext}
                     />
                   </div>
                 </div>
@@ -320,39 +352,30 @@ export default function Products() {
           </div>
 
           <div className="row col-md-9 d-flex ">
-            {data.slice(0, pageLimit).map((product) => (
+            {data.map((product) => (
               <div className="col-md-3" key={product.id}>
                 <div className="card-product">
-                  <Link to={`/product/${product.id}`}>
+                  <Link
+                    to={`/product/${product.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
                     <img
                       src={product.image}
                       className="card-img-product"
                       alt={product.title}
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src =
-                          "https://res.cloudinary.com/dbs44uzyv/image/upload/v1688996217/1_zhb8tr.jpg";
+                        e.target.src = "./assets/1.jpg";
                       }}
                     />
+                    <div className="card-body" style={{ color: "black" }}>
+                      <h5 className="card-title">{product.title}</h5>
+                      <p className="card-text">{product.price}</p>
+                    </div>
                   </Link>
-                  <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
-                    <p className="card-text">{product.price}</p>
-                    <Link
-                      to={`/product/${product.id}`}
-                      className="btn btn-primary"
-                    >
-                      Chi tiết
-                    </Link>
-                  </div>
                 </div>
               </div>
             ))}
-            {/* <div className="col-12 p-3">
-            <div className="btn btn-primary pageLimit" onClick={loadMore}>
-              Xem thêm
-            </div>
-          </div> */}
           </div>
         </div>
       </InfiniteScroll>

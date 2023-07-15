@@ -7,8 +7,11 @@ import Proceduremoto from "./proceduremoto/Proceduremoto";
 import Footermotokey from "./footer-motokey/Footermotokey";
 import Footer from "../../Footer/Footer";
 import News from "../../News/News";
+import { TableTitle } from "../../GeneralFuntions";
 
 export default function Motokey() {
+  TableTitle("Chìa Khóa Xe Máy | Key Shop BMT");
+
   return (
     <div>
       <Navbar />

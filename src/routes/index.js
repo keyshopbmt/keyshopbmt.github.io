@@ -8,7 +8,7 @@ import ProductList from "../component/papes/product/ProductList";
 import  Product  from "../component/papes/product/product";
 
 const publicRoutes = [
-  { path: "/", component: Home },
+  { path: "/", title:"Trang Chủ Key Shop BMT", component: Home },
   { path: "/dichvu", component: Dichvu },
   { path: "/contact", component: Contact },
   { path: "/carkey", component: Carkey },

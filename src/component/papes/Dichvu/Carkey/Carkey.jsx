@@ -11,8 +11,11 @@ import Replacing from "./replacing/Replacing";
 import Titlecar from "./titlecar/Titlecar";
 import Transponder from "./transponder/Transponder";
 import Typekeycar from "./typekeycar/Typekeycar";
+import { TableTitle } from "../../GeneralFuntions";
 
 export default function Carkey() {
+  TableTitle("Chìa Khóa Ôtô | Key Shop BMT");
+
   return (
     <div>
       <Navbar />

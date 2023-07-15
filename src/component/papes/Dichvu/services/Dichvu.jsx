@@ -9,8 +9,11 @@ import Chipkey from "./chip-key/Chipkey";
 import Footerservices from "./footer-services/Footerservices";
 import Footer from "../../Footer/Footer";
 import News from "../../News/News";
+import { TableTitle } from "../../GeneralFuntions";
 
 export default function Dichvu() {
+  TableTitle("Dịch Vụ | Key Shop BMT");
+
   return (
     <div>
       <Navbar />
