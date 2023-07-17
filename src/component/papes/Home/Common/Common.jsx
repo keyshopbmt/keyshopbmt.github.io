@@ -95,7 +95,10 @@ export default function Common() {
           </div>
           <h6 className="explore_all">
             Nếu Bạn Gặp Các Vấn Đề Về Khóa,
-            <a href="/" style={{ textDecoration: "none", textAlign: "center" }}>
+            <a
+              href="/dichvu"
+              style={{ textDecoration: "none", textAlign: "center" }}
+            >
               Hãy Khám Phá Các Dịch Vụ
             </a>{" "}
             Hoặc Gọi Tới{" "}
