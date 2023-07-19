@@ -30,7 +30,7 @@ function Product() {
           <img
             src={product.image}
             alt="product.title"
-            height="350px"
+            height="600px"
             width="650px"
             onError={(e) => {
               e.target.onerror = null;

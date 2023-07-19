@@ -477,8 +477,8 @@
 
     .card-product {
         border-radius: 5px;
-        width: 230px;
-        height: 225px;
+        width: 250px;
+        height: 260px;
         --bs-card-spacer-y: 0rem;
     }
 
