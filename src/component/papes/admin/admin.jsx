@@ -16,19 +16,20 @@ export const httpClient = () => {
 
 function Ad() {
   return (
-    <Admin
-      dataProvider={dataProvider("https://test-api.lthoang.com/", httpClient)}
-      i18nProvider={i18nProvider}
-      dashBoard={Dashboard}
-      authProvider={authProvider}
-    >
-      <Resource
-        name="products"
-        list={PostList}
-        edit={PostEdit}
-        create={PostCreate}
-      />
-    </Admin>
+      <Admin
+        basename="/admin"
+        dataProvider={dataProvider("https://test-api.lthoang.com/", httpClient)}
+        i18nProvider={i18nProvider}
+        dashBoard={Dashboard}
+        authProvider={authProvider}
+      >
+        <Resource
+          name="products"
+          list={PostList}
+          edit={PostEdit}
+          create={PostCreate}
+        />
+      </Admin>
   );
 }
 export default Ad;

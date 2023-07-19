@@ -15,7 +15,7 @@ const publicRoutes = [
   { path: "/motokey", component: Motokey },
   { path: "/product", component: ProductList },
   { path: "/product/:id", component: Product },
-  { path: "/*", component: Ad },
+  { path: "/admin/*", component: Ad },
 ];
 
 const privateRoutes = [];

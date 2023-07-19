@@ -64,6 +64,20 @@ export default function Footer() {
                       </li>
                     </ul>
                   </div>
+                  <h4 className="widget_title">
+                    Đường dẫn đến trang admin
+                    <span className="title_line"></span>
+                  </h4>
+                  <div className="footer_nav">
+                    <ul className="footer_menu">
+                      <a
+                        href="./admin"
+                        style={{ textDecoration: "none", color: "#dc3545" }}
+                      >
+                        Admin
+                      </a>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-6 col-sm-6 pd_lr_65">
