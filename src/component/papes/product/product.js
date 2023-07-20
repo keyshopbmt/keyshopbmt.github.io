@@ -43,11 +43,11 @@ function Product() {
           <h4 className="text-uppercase text-black-50">{product.category}</h4>
           <h2 className="display-5">{product.title}</h2>
           <h4 className="display-6 fw-bold my-4">
-            Giá:
+            Giá:{' '}
             {product.price?.toLocaleString(navigator.language, {
               minimumFractionDigits: 0,
             })}
-            vnđ
+            {' '}vnđ
           </h4>
           <p className="lead">{product.description}</p>
         </div>

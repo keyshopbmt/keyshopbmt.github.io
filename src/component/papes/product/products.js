@@ -370,13 +370,13 @@ export default function Products() {
                     />
                     <div className="card-body" style={{ color: "black" }}>
                       <h5 className="card-title">{product.title}</h5>
-                      <p className="card-text">
-                        Giá từ:
-                        {product.price.toLocaleString(navigator.language, {
+                      <h6 className="card-text">
+                        <span>Giá từ:</span>
+                        {' '} {product.price.toLocaleString(navigator.language, {
                           minimumFractionDigits: 0,
                         })}
-                        vnđ
-                      </p>
+                         {' '}vnđ
+                      </h6>
                     </div>
                   </Link>
                 </div>
