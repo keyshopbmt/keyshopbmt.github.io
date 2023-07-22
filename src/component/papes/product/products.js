@@ -375,7 +375,7 @@ export default function Products() {
                         {' '} {product.price.toLocaleString(navigator.language, {
                           minimumFractionDigits: 0,
                         })}
-                         {' '}vnđ
+                        {' '}vnđ
                       </h6>
                     </div>
                   </Link>
