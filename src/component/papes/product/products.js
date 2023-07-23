@@ -25,6 +25,7 @@ export default function Products() {
   const [open, setOpen] = useState(false);
   const [totalCount, setTotalCount] = useState(0);
   const [isHasMore, setIsHasMore] = useState(true);
+  const [priceRange, setPriceRange] = useState([0, 1]);
 
   const getProductPriceRange = () => {
     fetch("https://test-api.lthoang.com/products/priceRange")
@@ -33,6 +34,7 @@ export default function Products() {
         searchParams.minPrice = res["min"];
         searchParams.maxPrice = res["max"];
         setMinMaxPrice([searchParams.minPrice, searchParams.maxPrice]);
+        setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
         const step = Math.round((res["max"] - res["min"]) / 1000);
         searchParams.step = step;
       });
@@ -155,9 +157,11 @@ export default function Products() {
     fetchUserData(searchParams, true);
   };
   const debouncedChangeHandler = debounce(filterBySearch, 300);
+
   const handleInput = (event, newValue) => {
     searchParams.minPrice = newValue[0];
     searchParams.maxPrice = newValue[1];
+    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
     fetchUserData(searchParams, true);
   };
   const debouncedHandler = debounce(handleInput, 50);
@@ -166,6 +170,19 @@ export default function Products() {
     item.checked = !item.checked;
     addCategoriesFilter(item.category);
   };
+  const updateMinPrice = (value) => {
+    searchParams.minPrice = value;
+    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
+    fetchUserData(searchParams, true);
+  };
+  const debouncedMinPriceHandler = debounce(updateMinPrice, 100);
+
+  const updateMaxPrice = (value) => {
+    searchParams.maxPrice = value;
+    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
+    fetchUserData(searchParams, true);
+  };
+  const debouncedMaxPriceHandler = debounce(updateMaxPrice, 100);
 
   const loadMore = () => {
     fetchUserData(searchParams, false);
@@ -225,9 +242,9 @@ export default function Products() {
                       <input
                         type="text"
                         id="min"
-                        value={searchParams.minPrice || ""}
+                        value={searchParams.minPrice}
                         onChange={(e) =>
-                          (searchParams.minPrice = e.target.value)
+                          debouncedMinPriceHandler(e.target.value)
                         }
                         placeholder="min"
                       />
@@ -237,20 +254,19 @@ export default function Products() {
                       <input
                         type="text"
                         id="max"
-                        value={searchParams.maxPrice || ""}
+                        value={searchParams.maxPrice}
                         onChange={(e) =>
-                          (searchParams.maxPrice = e.target.value)
+                          debouncedMaxPriceHandler(e.target.value)
                         }
                         placeholder="max"
                       />
                     </div>
                   </div>
+
                   <div className="slider-input">
                     <Slider
                       getAriaLabel={() => "Price range"}
-                      value={
-                        [searchParams.maxPrice, searchParams.minPrice] || ""
-                      }
+                      value={priceRange}
                       min={minMaxPrice[0]}
                       max={minMaxPrice[1]}
                       onChange={debouncedHandler}
@@ -315,23 +331,21 @@ export default function Products() {
                       type="text"
                       id="min"
                       value={searchParams.minPrice || ""}
-                      onChange={(e) => (searchParams.minPrice = e.target.value)}
+                      onChange={(e) => debouncedMinPriceHandler(e.target.value)}
                       placeholder="min"
                     />
                     <input
                       type="text"
                       id="max"
                       value={searchParams.maxPrice || ""}
-                      onChange={(e) => (searchParams.maxPrice = e.target.value)}
+                      onChange={(e) => debouncedMaxPriceHandler(e.target.value)}
                       placeholder="max"
                     />
                   </div>
                   <div className="slider-input">
                     <Slider
                       getAriaLabel={() => "Price range"}
-                      value={
-                        [searchParams.maxPrice, searchParams.minPrice] || ""
-                      }
+                      value={priceRange}
                       min={minMaxPrice[0]}
                       max={minMaxPrice[1]}
                       onChange={debouncedHandler}
@@ -371,11 +385,11 @@ export default function Products() {
                     <div className="card-body" style={{ color: "black" }}>
                       <h5 className="card-title">{product.title}</h5>
                       <h6 className="card-text">
-                        <span>Giá từ:</span>
-                        {' '} {product.price.toLocaleString(navigator.language, {
+                        <span>Giá từ:</span>{" "}
+                        {product.price.toLocaleString(navigator.language, {
                           minimumFractionDigits: 0,
-                        })}
-                        {' '}vnđ
+                        })}{" "}
+                        vnđ
                       </h6>
                     </div>
                   </Link>
