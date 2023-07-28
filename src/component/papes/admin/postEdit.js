@@ -105,7 +105,7 @@ const dateParser = (value) => {
 };
 
 const PostEdit = (props) => (
-  <Edit {...props} title="Edit Data Honda">
+  <Edit {...props} title="Edit Data Product">
     <SimpleForm>
       <TextInput disabled source="id" />
       <TextInput source="title" validate={[required()]} fullWidth />
