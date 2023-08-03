@@ -12,6 +12,8 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import List from "@material-ui/core/List";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { TableTitle } from "../GeneralFuntions";
+import { NumericFormat } from "react-number-format";
+import { InputAdornment } from "@mui/material";
 
 let searchParams = {};
 
@@ -27,6 +29,9 @@ export default function Products() {
   const [isHasMore, setIsHasMore] = useState(true);
   const [priceRange, setPriceRange] = useState([0, 1]);
 
+  function customParseFloat(value) {
+    return parseFloat(String(value).replaceAll(".", "").replaceAll(",", "."));
+  }
   const getProductPriceRange = () => {
     fetch("https://test-api.lthoang.com/products/priceRange")
       .then((res) => res.json())
@@ -60,16 +65,19 @@ export default function Products() {
       whereObject["title"] = { like: "%" + params["title"] + "%" };
     }
     if (params["minPrice"] && !params["maxPrice"]) {
-      whereObject["price"] = { gte: params["minPrice"] };
+      whereObject["price"] = { gte: customParseFloat(params["minPrice"]) };
     }
 
     if (params["maxPrice"] && !params["minPrice"]) {
-      whereObject["price"] = { lte: params["maxPrice"] };
+      whereObject["price"] = { lte: customParseFloat(params["maxPrice"]) };
     }
 
     if (params["maxPrice"] && params["minPrice"]) {
       whereObject["price"] = {
-        between: [params["minPrice"], params["maxPrice"]],
+        between: [
+          customParseFloat(params["minPrice"]),
+          customParseFloat(params["maxPrice"]),
+        ],
       };
     }
     return whereObject;
@@ -105,6 +113,7 @@ export default function Products() {
   };
 
   const fetchUserData = (params, reset = true) => {
+    console.log(params);
     const countUrl = buildCountUrl(params);
     fetch(countUrl)
       .then((res) => {
@@ -161,7 +170,10 @@ export default function Products() {
   const handleInput = (event, newValue) => {
     searchParams.minPrice = newValue[0];
     searchParams.maxPrice = newValue[1];
-    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
+    setPriceRange([
+      customParseFloat(searchParams.minPrice),
+      customParseFloat(searchParams.maxPrice),
+    ]);
     fetchUserData(searchParams, true);
   };
   const debouncedHandler = debounce(handleInput, 50);
@@ -170,16 +182,23 @@ export default function Products() {
     item.checked = !item.checked;
     addCategoriesFilter(item.category);
   };
+
   const updateMinPrice = (value) => {
     searchParams.minPrice = value;
-    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
+    setPriceRange([
+      customParseFloat(searchParams.minPrice),
+      customParseFloat(searchParams.maxPrice),
+    ]);
     fetchUserData(searchParams, true);
   };
   const debouncedMinPriceHandler = debounce(updateMinPrice, 100);
 
   const updateMaxPrice = (value) => {
     searchParams.maxPrice = value;
-    setPriceRange([searchParams.minPrice, searchParams.maxPrice]);
+    setPriceRange([
+      customParseFloat(searchParams.minPrice),
+      customParseFloat(searchParams.maxPrice),
+    ]);
     fetchUserData(searchParams, true);
   };
   const debouncedMaxPriceHandler = debounce(updateMaxPrice, 100);
@@ -187,6 +206,14 @@ export default function Products() {
   const loadMore = () => {
     fetchUserData(searchParams, false);
     setPageLimit(pageLimit + 6);
+  };
+  const materialUiTextFieldProps = {
+    required: true,
+    fullWidth: true,
+    label: "Total Amount",
+    InputProps: {
+      startAdornment: <InputAdornment position="start">$</InputAdornment>,
+    },
   };
 
   return (
@@ -239,7 +266,7 @@ export default function Products() {
                   <h4>Khoảng Giá:</h4>
                   <div className="price-row">
                     <div className="field">
-                      <input
+                      <NumericFormat
                         type="text"
                         id="min"
                         value={searchParams.minPrice}
@@ -247,11 +274,14 @@ export default function Products() {
                           debouncedMinPriceHandler(e.target.value)
                         }
                         placeholder="min"
+                        decimalSeparator=","
+                        thousandSeparator="."
+                        {...materialUiTextFieldProps}
                       />
                     </div>
                     <div className="separator">-</div>
                     <div className="field">
-                      <input
+                      <NumericFormat
                         type="text"
                         id="max"
                         value={searchParams.maxPrice}
@@ -259,6 +289,9 @@ export default function Products() {
                           debouncedMaxPriceHandler(e.target.value)
                         }
                         placeholder="max"
+                        decimalSeparator=","
+                        thousandSeparator="."
+                        {...materialUiTextFieldProps}
                       />
                     </div>
                   </div>
