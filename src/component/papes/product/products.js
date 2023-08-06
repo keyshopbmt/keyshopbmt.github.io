@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import "./products.css";
@@ -14,6 +14,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { TableTitle } from "../GeneralFuntions";
 import { NumericFormat } from "react-number-format";
 import { InputAdornment } from "@mui/material";
+import { Cartcontext } from "../context/Context";
 
 let searchParams = {};
 
@@ -215,6 +216,9 @@ export default function Products() {
       startAdornment: <InputAdornment position="start">$</InputAdornment>,
     },
   };
+  const Globalstate = useContext(Cartcontext);
+  const dispatch = Globalstate.dispatch;
+
 
   return (
     <div>
@@ -399,8 +403,10 @@ export default function Products() {
           </div>
 
           <div className="row col-md-9 d-flex ">
-            {data.map((product) => (
-              <div className="col-md-3" key={product.id}>
+            {data.map((product, index) => {
+              product.quantity = 1;
+              return(
+              <div className="col-md-3" key={index.id}>
                 <div className="card-product">
                   <Link
                     to={`/product/${product.id}`}
@@ -426,9 +432,19 @@ export default function Products() {
                       </h6>
                     </div>
                   </Link>
+                  <div className="shopCart">
+                    <button
+                      onClick={() =>
+                        dispatch({ type: "ADD", payload: product })
+                      }
+                    >
+                      Thêm Vào Giỏ Hàng
+                    </button>
+                  </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </InfiniteScroll>

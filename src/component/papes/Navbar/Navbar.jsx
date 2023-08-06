@@ -1,11 +1,14 @@
-import { React, useState } from "react";
+import { React, useState  } from "react";
 import "./navbar.css";
 import { keyShop } from "../Db";
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
 
+
+
 export default function Navbar() {
   const [isServiceButtonHovering, setIsHoveringServiceButton] = useState(false);
+
 
   const handleMouseEnterServiceButton = () => {
     setIsHoveringServiceButton(true);
@@ -164,6 +167,22 @@ export default function Navbar() {
                         to="/contact"
                       >
                         Liên Hệ
+                      </Link>
+                    </li>
+                    <li className="nav">
+                      <Link
+                        className="nav-link"
+                        style={{
+                          color: isServiceButtonContact
+                            ? "#000000b3"
+                            : "#0000008c",
+                        }}
+                        onMouseEnter={handleMouseEnterServiceButtonContact}
+                        onMouseLeave={handleMouseLeaveServiceButtonContact}
+                        to="/cart"
+                      >
+                        <i className="fa fa-shopping-cart" aria-hidden="true"/>
+                       
                       </Link>
                     </li>
                   </ul>

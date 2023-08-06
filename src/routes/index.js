@@ -5,14 +5,16 @@ import Motokey from "../component/papes/Dichvu/Motokey/Motokey";
 import Contact from "../component/papes/Contact/Contact";
 import Ad from "../component/papes/admin/admin";
 import ProductList from "../component/papes/product/ProductList";
-import  Product  from "../component/papes/product/product";
+import Product from "../component/papes/product/product";
+import Cart from "../component/papes/cart/Cart";
 
 const publicRoutes = [
-  { path: "/", title:"Trang Chủ Key Shop BMT", component: Home },
+  { path: "/", title: "Trang Chủ Key Shop BMT", component: Home },
   { path: "/dichvu", component: Dichvu },
   { path: "/contact", component: Contact },
   { path: "/carkey", component: Carkey },
   { path: "/motokey", component: Motokey },
+  { path: "/cart", component: Cart },
   { path: "/product", component: ProductList },
   { path: "/product/:id", component: Product },
   { path: "/admin/*", component: Ad },
