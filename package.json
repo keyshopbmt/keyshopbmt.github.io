@@ -40,6 +40,7 @@
     "react-facebook": "^9.0.12",
     "react-final-form": "^6.5.9",
     "react-fontawesome": "^1.7.1",
+    "react-icons": "^4.10.1",
     "react-infinite-scroll-component": "^6.1.0",
     "react-input-range-format-labels": "^0.8.0",
     "react-leaflet": "^4.2.0",
