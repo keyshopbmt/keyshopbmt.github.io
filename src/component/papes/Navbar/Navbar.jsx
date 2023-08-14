@@ -1,14 +1,16 @@
-import { React, useState  } from "react";
+import React, { useContext, useState } from "react";
 import "./navbar.css";
 import { keyShop } from "../Db";
 import { Link } from "react-router-dom";
 import { MDBIcon } from "mdb-react-ui-kit";
-
-
+import { BiCart} from 'react-icons/bi';
+import { useCart } from "react-use-cart";
 
 export default function Navbar() {
   const [isServiceButtonHovering, setIsHoveringServiceButton] = useState(false);
+  // const { cartItems, showHideCart } = useContext(Cartcontext);
 
+  const { isEmpty, totalItems } = useCart();
 
   const handleMouseEnterServiceButton = () => {
     setIsHoveringServiceButton(true);
@@ -181,8 +183,18 @@ export default function Navbar() {
                         onMouseLeave={handleMouseLeaveServiceButtonContact}
                         to="/cart"
                       >
-                        <i className="fa fa-shopping-cart" aria-hidden="true"/>
-                       
+                        <BiCart size="2rem" />
+                        {!isEmpty && (
+                          <span
+                            style={{
+                              position: "relative",
+                              left: "-21px",
+                              top: "-18px",
+                            }}
+                          >
+                            {totalItems}
+                          </span>
+                        )}
                       </Link>
                     </li>
                   </ul>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import debounce from "lodash.debounce";
 import "./products.css";
@@ -14,7 +14,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { TableTitle } from "../GeneralFuntions";
 import { NumericFormat } from "react-number-format";
 import { InputAdornment } from "@mui/material";
-import { Cartcontext } from "../context/Context";
+import { useThemeHook } from "../GlobalComponents/ThemeProvider";
+import { useCart } from "react-use-cart";
 
 let searchParams = {};
 
@@ -216,9 +217,9 @@ export default function Products() {
       startAdornment: <InputAdornment position="start">$</InputAdornment>,
     },
   };
-  const Globalstate = useContext(Cartcontext);
-  const dispatch = Globalstate.dispatch;
 
+  const [theme] = useThemeHook();
+  const { addItem } = useCart();
 
   return (
     <div>
@@ -405,44 +406,48 @@ export default function Products() {
           <div className="row col-md-9 d-flex ">
             {data.map((product, index) => {
               product.quantity = 1;
-              return(
-              <div className="col-md-3" key={index.id}>
-                <div className="card-product">
-                  <Link
-                    to={`/product/${product.id}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <img
-                      src={product.image}
-                      className="card-img-product"
-                      alt={product.title}
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "./assets/1.jpg";
-                      }}
-                    />
-                    <div className="card-body" style={{ color: "black" }}>
-                      <h5 className="card-title">{product.title}</h5>
-                      <h6 className="card-text">
-                        <span>Giá từ:</span>{" "}
-                        {product.price.toLocaleString(navigator.language, {
-                          minimumFractionDigits: 0,
-                        })}{" "}
-                        vnđ
-                      </h6>
-                    </div>
-                  </Link>
-                  <div className="shopCart">
-                    <button
-                      onClick={() =>
-                        dispatch({ type: "ADD", payload: product })
-                      }
+              return (
+                <div className="col-md-3" key={index.id}>
+                  <div className="card-product">
+                    <Link
+                      to={`/product/${product.id}`}
+                      style={{ textDecoration: "none" }}
                     >
-                      Thêm Vào Giỏ Hàng
-                    </button>
+                      <img
+                        src={product.image}
+                        className="card-img-product"
+                        alt={product.title}
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = "./assets/1.jpg";
+                        }}
+                      />
+                      <div className="card-body" style={{ color: "black" }}>
+                        <h5 className="card-title">{product.title}</h5>
+                        <h6 className="card-text">
+                          <span>Giá từ:</span>{" "}
+                          {product.price.toLocaleString(navigator.language, {
+                            minimumFractionDigits: 0,
+                          })}{" "}
+                          vnđ
+                        </h6>
+                      </div>
+                    </Link>
+                    <div className="shopCart">
+                      <button
+                        onClick={() => addItem(product)}
+                        className={
+                          theme
+                            ? "bg-dark-primary text-black"
+                            : "bg-light-primary"
+                        }
+                        style={{ borderRadius: "0", border: 0 }}
+                      >
+                        Thêm Vào Giỏ Hàng
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
               );
             })}
           </div>

@@ -39,6 +39,7 @@ const CloudinaryImageInput = () => {
             .getElementById("uploadedimage")
             .setAttribute("src", result.info.secure_url);
           setImage(result.info.secure_url);
+          console.log(result.info);
           // updateImageSoure(result.info.secure_url);
           // document
           //   .getElementById("input_image")
