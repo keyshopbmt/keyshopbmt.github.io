@@ -6,7 +6,7 @@ import Contact from "../component/papes/Contact/Contact";
 import Ad from "../component/papes/admin/admin";
 import ProductList from "../component/papes/product/ProductList";
 import Product from "../component/papes/product/product";
-import  Cart  from "../component/papes/cart/Cart";
+import  Cart  from "../component/papes/cart/index";
 
 
 const publicRoutes = [

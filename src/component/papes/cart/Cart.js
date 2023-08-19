@@ -1,8 +1,9 @@
 import React from "react";
-import { Button, Container, Col, Row, Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import { useThemeHook } from "../GlobalComponents/ThemeProvider";
 import { BsCartCheck, BsCartX } from "react-icons/bs";
+
+import "./cart.css";
 
 const Cart = () => {
   const [theme] = useThemeHook();
@@ -15,7 +16,7 @@ const Cart = () => {
     emptyCart,
   } = useCart();
   return (
-    <Container className="py-4 mt-5">
+    <div className="py-4 mt-5">
       <h1
         className={`${
           theme ? "text-light" : "text-light-primary"
@@ -23,8 +24,8 @@ const Cart = () => {
       >
         {isEmpty ? "GIỎ HÀNG CỦA BẠN TRỐNG" : "GIỎ HÀNG"}
       </h1>
-      <Row className="justify-content-center">
-        <Table
+      <div className="justify-content-center">
+        <div
           responsive="sm"
           striped
           bordered
@@ -35,111 +36,100 @@ const Cart = () => {
           <tbody>
             {items.map((item, index) => {
               return (
-                <tr key={index}>
-                  <td>
-                    <div
-                      style={{
-                        background: "white",
-                        height: "8rem",
-                        overflow: "hidden",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div style={{ padding: ".5rem" }}>
-                        <img
-                          src={item.image}
-                          style={{ width: "4rem" }}
-                          alt={item.title}
-                        />
+                <tr key={index} className="cart-card">
+                  <td className="cart-td">
+                    <div>
+                      <div className="cart-image">
+                        <img src={item.image} alt={item.title} />
                       </div>
                     </div>
                   </td>
-                  <td>
-                    <h6
-                      style={{
-                        whiteSpace: "nowrap",
-                        width: "100%",
-                        overflow: "hidden",
-                        textOverFlow: "ellipsis",
-                      }}
-                    >
-                      {item.title}
-                    </h6>
+                  <td className="cart-td">
+                    <div className="cart-title">
+                      <h6>{item.title}</h6>
+                    </div>
                   </td>
-                  <td>
-                    Giá:{" "}
-                    {item.price.toLocaleString(navigator.language, {
-                      minimumFractionDigits: 0,
-                    })}{" "}
-                    vnđ
+                  <td className="cart-td">
+                    <div className="cart-price">
+                      <h6>
+                        Giá:{" "}
+                        {item.price.toLocaleString(navigator.language, {
+                          minimumFractionDigits: 0,
+                        })}{" "}
+                        vnđ
+                      </h6>
+                    </div>
                   </td>
-                  <td> Số lượng ({item.quantity})</td>
-                  <td>
-                    <Button
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity - 1)
-                      }
-                      className="ms-2"
-                    >
-                      -
-                    </Button>
-                    <Button
-                      onClick={() =>
-                        updateItemQuantity(item.id, item.quantity + 1)
-                      }
-                      className="ms-2"
-                    >
-                      +
-                    </Button>
-                    <Button
-                      variant="danger"
-                      onClick={() => removeItem(item.id)}
-                      className="ms-2"
-                    >
-                      Xóa Sản Phẩm
-                    </Button>
+                  <td className="cart-td">
+                    <div className="cart-quantity">
+                      <h6>Số lượng ({item.quantity})</h6>
+                    </div>
+                  </td>
+                  <td className="cart-td">
+                    <div className="cart-button">
+                      <button
+                        onClick={() =>
+                          updateItemQuantity(item.id, item.quantity + 1)
+                        }
+                        className="ms-2 itemQuantity "
+                      >
+                        <span>+</span>
+                      </button>
+                      <button
+                        onClick={() =>
+                          updateItemQuantity(item.id, item.quantity - 1)
+                        }
+                        className="ms-2 itemQuantity"
+                      >
+                        <span>-</span>
+                      </button>
+                      <button
+                        variant="danger"
+                        onClick={() => removeItem(item.id)}
+                        className="ms-2 btn btn-danger"
+                      >
+                        remote
+                      </button>
+                    </div>
                   </td>
                 </tr>
               );
             })}
           </tbody>
-        </Table>
+        </div>
         {!isEmpty && (
-          <Row
-            style={{ position: "fixed", bottom: 0 }}
+          <div
             className={`${
               theme ? "bg-light-black text-light" : "bg-light text-balck"
-            } justify-content-center w-100`}
+            } justify-content-center w-100 h-100`}
           >
-            <Col className="py-2">
-              <h4>
-                Giá:{" "}
-                {cartTotal.toLocaleString(navigator.language, {
-                  minimumFractionDigits: 0,
-                })}{" "}
-                vnđ
-              </h4>
-            </Col>
-            <Col className="p-0" md={4}>
-              <Button
+            <div className="cartAll">
+              <div className="cartAllPrice">
+                <h4>
+                  Giá:{" "}
+                  {cartTotal.toLocaleString(navigator.language, {
+                    minimumFractionDigits: 0,
+                  })}{" "}
+                  vnđ
+                </h4>
+              </div>
+              <div className="cartAllButon" md={4}></div>
+              <button variant="success" className="m-2 btn btn-success">
+                <BsCartCheck size="1.7rem" />
+              </button>
+              <button
                 variant="danger"
-                className="m-2"
+                className="m-2 btn btn-danger"
                 onClick={() => emptyCart()}
               >
                 <BsCartX size="1.7rem" />
-                Xóa Sản Phẩm
-              </Button>
-              <Button variant="success" className="m-2">
-                <BsCartCheck size="1.7rem" />
-                Clear Cart
-              </Button>
-            </Col>
-          </Row>
+                Xóa Tất Cả Sản Phẩm
+              </button>
+            </div>
+          </div>
         )}
-      </Row>
-    </Container>
+      </div>
+    </div>
   );
 };
 
